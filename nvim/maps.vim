@@ -7,7 +7,7 @@ nmap <Leader>v <C-w>v
 nmap <Leader>t :tabe<space>.<CR>
 nmap , 10<C-e>
 nmap . 10<C-y>
-nmap <Leader>; $a;<Esc>o
+nmap ; $a;<Esc>o
 nmap <Leader>o :noh<CR>
 
 nmap <Leader>s <Plug>(easymotion-s2)
