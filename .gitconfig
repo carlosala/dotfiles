@@ -1,0 +1,7 @@
+[user]
+	name = Carlo Sala
+	email = carlosalag@protonmail.com
+[init]
+	defaultBranch = main
+[pull]
+	rebase = false
