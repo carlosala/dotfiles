@@ -2,10 +2,11 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # ADDING PATHS
-export PATH="/home/carlo/.deno/bin:$PATH"
-export PATH="/home/carlo/.node/bin:$PATH"
-export PATH="/home/carlo/.local/bin:$PATH"
 export PATH="/home/carlo/.cargo/bin:$PATH"
+export PATH="/home/carlo/.deno/bin:$PATH"
+export PATH="/home/carlo/.flutter/bin:$PATH"
+export PATH="/home/carlo/.local/bin:$PATH"
+export PATH="/home/carlo/.node/bin:$PATH"
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/carlo/.oh-my-zsh"
