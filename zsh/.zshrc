@@ -2,11 +2,20 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # ADDING PATHS
-export PATH="/home/carlo/.cargo/bin:$PATH"
-export PATH="/home/carlo/.deno/bin:$PATH"
-export PATH="/home/carlo/.flutter/bin:$PATH"
-export PATH="/home/carlo/.local/bin:$PATH"
-export PATH="/home/carlo/.node/bin:$PATH"
+export PATH="$PATH:/home/carlo/.cargo/bin"
+export PATH="$PATH:/home/carlo/.deno/bin"
+export PATH="$PATH:/home/carlo/.flutter/bin"
+export PATH="$PATH:/home/carlo/.local/bin"
+export PATH="$PATH:/home/carlo/.node/bin"
+
+# ANDROID STUDIO SETUP
+export ANDROID_SDK_ROOT="/home/carlo/.android/sdk"
+export ANDROID_HOME="/home/carlo/.android/sdk"
+export JAVA_HOME="/home/carlo/.android-studio/jre"
+export PATH="$PATH:$ANDROID_HOME/emulator"
+export PATH="$PATH:$ANDROID_HOME/tools"
+export PATH="$PATH:$ANDROID_HOME/tools/bin"
+export PATH="$PATH:$ANDROID_HOME/platform-tools"
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/carlo/.oh-my-zsh"
