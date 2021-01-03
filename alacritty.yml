@@ -5,6 +5,7 @@ window:
   padding:
     x: 6
     y: 4
+  dynamic_title: false
 
 font:
   normal:

@@ -5,6 +5,7 @@
 export PATH="$PATH:/home/carlo/.cargo/bin"
 export PATH="$PATH:/home/carlo/.deno/bin"
 export PATH="$PATH:/home/carlo/.flutter/bin"
+export PATH="$PATH:/home/carlo/.go/bin"
 export PATH="$PATH:/home/carlo/.local/bin"
 export PATH="$PATH:/home/carlo/.node/bin"
 
@@ -84,7 +85,7 @@ ZSH_THEME="nt-modif"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git npm deno)
+plugins=(deno git golang npm rustup)
 
 source $ZSH/oh-my-zsh.sh
 
