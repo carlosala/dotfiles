@@ -2,7 +2,7 @@
 let g:polyglot_disabled = ['javascript']
 
 " indentLine
-autocmd FileType tex :IndentLinesToggle
+autocmd FileType tex let g:indentLine_enabled = 0
 
 " vim-closetag
 let g:closetag_filenames = '*.html,*.js,*.jsx'
