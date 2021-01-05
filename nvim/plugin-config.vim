@@ -1,6 +1,9 @@
 " vim-polyglot
 let g:polyglot_disabled = ['javascript']
 
+" indentLine
+autocmd FileType tex :IndentLinesToggle
+
 " vim-closetag
 let g:closetag_filenames = '*.html,*.js,*.jsx'
 

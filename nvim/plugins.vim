@@ -2,7 +2,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 " Visual
 Plug 'itchyny/lightline.vim'
-Plug 'Yggdroot/indentline'
+Plug 'Yggdroot/indentLine'
 Plug 'morhetz/gruvbox'
 Plug 'shinchu/lightline-gruvbox.vim'
 
@@ -14,6 +14,7 @@ Plug 'yuezk/vim-js'
 Plug 'alvan/vim-closetag'
 Plug 'jiangmiao/auto-pairs'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+Plug 'lervag/vimtex'
 
 " Navigation
 Plug 'easymotion/vim-easymotion'
@@ -25,5 +26,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'preservim/nerdtree'
 Plug 'preservim/nerdcommenter'
 Plug 'turbio/bracey.vim', { 'do': 'npm install --prefix server' }
+Plug 'xuhdev/vim-latex-live-preview'
 
 call plug#end()

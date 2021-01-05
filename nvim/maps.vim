@@ -20,3 +20,5 @@ nmap gd <Plug>(coc-definition)
 nmap gy <Plug>(coc-type-definition)
 nmap gi <Plug>(coc-implementation)
 nmap gr <Plug>(coc-references)
+
+nmap <Leader>l :LLPStartPreview<CR>
