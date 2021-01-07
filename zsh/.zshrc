@@ -120,17 +120,9 @@ function openNvim {
   fi
 }
 
-function sshCompatible {
-  if [ $TERM != "xterm-256color" ]; then
-    TERM=xterm-256color ssh $1
-  else
-    ssh $1
-  fi
-}
-
 ### ALIAS
 alias v=openNvim
-alias ssh=sshCompatible
+alias ssh="TERM=xterm-256color ssh"
 alias cdd="cd ~/Documentos/dev/"
 alias c="clear"
 alias s="sudo"
