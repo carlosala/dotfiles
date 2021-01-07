@@ -27,5 +27,6 @@ Plug 'preservim/nerdtree'
 Plug 'preservim/nerdcommenter'
 Plug 'turbio/bracey.vim', { 'do': 'npm install --prefix server' }
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
+Plug 'SirVer/ultisnips'
 
 call plug#end()

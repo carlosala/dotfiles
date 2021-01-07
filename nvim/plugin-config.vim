@@ -21,6 +21,12 @@ let g:NERDToggleCheckAllLines = 1
 let g:NERDDefaultAlign = 'left'
 let g:NERDCommentEmptyLines = 1
 
+" ultisnips
+let g:UltiSnipsSnippetDirectories = ['~/.config/nvim/ultisnips']
+let g:UltiSnipsExpandTrigger = "<M-l>"
+let g:UltiSnipsJumpForwardTrigger = "<M-l>"
+let g:UltiSnipsJumpBackwardTrigger = "<M-h>"
+
 " coc.nvim
 set hidden
 set nobackup
@@ -29,11 +35,8 @@ set cmdheight=2
 set updatetime=300
 set shortmess+=c
 inoremap <silent><expr> <c-space> coc#refresh()
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " lightline.vim
 let g:lightline = {
