@@ -29,6 +29,5 @@ Plug 'junegunn/fzf.vim'
 
 " Others
 Plug 'preservim/nerdcommenter'
-Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 
 call plug#end()

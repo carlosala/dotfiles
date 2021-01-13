@@ -136,7 +136,6 @@ alias c="clear"
 alias s="sudo"
 alias e="exit"
 alias au="sudo apt update && apt list --upgradable"
-alias rmtex="rm *.bcf *.aux *.log *.run.xml *.toc"
 
 ### NEOFETCH INIT
 neofetch

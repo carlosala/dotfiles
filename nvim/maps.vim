@@ -21,4 +21,5 @@ nmap gy <Plug>(coc-type-definition)
 nmap gi <Plug>(coc-implementation)
 nmap gr <Plug>(coc-references)
 
-nmap <Leader>l :LLPStartPreview<CR>
+nmap <Leader>lp <Plug>(vimtex-compile)
+nmap <Leader>lc <Plug>(vimtex-clean-full)
