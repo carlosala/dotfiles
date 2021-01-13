@@ -1,0 +1,7 @@
+set default-bg "#32302f"
+set default-fg "#ebdbb2"
+
+set recolor-lightcolor "#32302f"
+set recolor-darkcolor "#ebdbb2"
+
+set font "inconsolata normal 11"
