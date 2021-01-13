@@ -29,7 +29,6 @@ Plug 'junegunn/fzf.vim'
 
 " Others
 Plug 'preservim/nerdcommenter'
-Plug 'turbio/bracey.vim', { 'do': 'npm install --prefix server' }
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 
 call plug#end()
