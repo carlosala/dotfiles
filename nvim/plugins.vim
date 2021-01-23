@@ -8,7 +8,7 @@ Plug 'shinchu/lightline-gruvbox.vim'
 
 " Syntax
 Plug 'sheerun/vim-polyglot'
-Plug 'yuezk/vim-js'
+Plug 'yuezk/vim-js', { 'for': 'javascript' }
 
 " Typing
 Plug 'alvan/vim-closetag'
