@@ -1,14 +1,12 @@
 " vim-polyglot
 let g:polyglot_disabled = ['javascript']
 
-" indentLine
-autocmd FileType help,markdown,tex let g:indentLine_enabled = 0
-
 " vim-closetag
 let g:closetag_filenames = '*.html,*.js,*.jsx'
 
 " vimtex
 let g:vimtex_view_method = 'zathura'
+let g:vimtex_compiler_progname = 'nvr'
 
 " nerdtree
 let g:NERDTreeQuitOnOpen = 1

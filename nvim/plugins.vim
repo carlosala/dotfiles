@@ -2,7 +2,6 @@ call plug#begin('~/.config/nvim/plugged')
 
 " Visual
 Plug 'itchyny/lightline.vim'
-Plug 'Yggdroot/indentLine'
 Plug 'morhetz/gruvbox'
 Plug 'shinchu/lightline-gruvbox.vim'
 
