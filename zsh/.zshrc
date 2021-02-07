@@ -10,13 +10,14 @@ export PATH="$PATH:/home/carlo/.local/bin"
 export PATH="$PATH:/home/carlo/.node/bin"
 
 # ANDROID STUDIO SETUP
-export ANDROID_SDK_ROOT="/home/carlo/.android/sdk"
 export ANDROID_HOME="/home/carlo/.android/sdk"
-export JAVA_HOME="/home/carlo/.android-studio/jre"
+export ANDROID_SDK_ROOT=$ANDROID_HOME
+export PATH="$PATH:$ANDROID_HOME/cmdline-tools/latest/bin"
 export PATH="$PATH:$ANDROID_HOME/emulator"
+export PATH="$PATH:$ANDROID_HOME/platform-tools"
 export PATH="$PATH:$ANDROID_HOME/tools"
 export PATH="$PATH:$ANDROID_HOME/tools/bin"
-export PATH="$PATH:$ANDROID_HOME/platform-tools"
+# export JAVA_HOME="/home/carlo/.android-studio/jre"
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/carlo/.oh-my-zsh"
