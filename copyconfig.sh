@@ -1,14 +1,12 @@
-cp alacritty/alacritty.yml ~/.config/alacritty/
+cp -r alacritty/ ~/.config/
 
 cp git/.gitconfig ~/
 
-cp neofetch/config.conf ~/.config/neofetch/
+cp -r neofetch/ ~/.config/
 
-cp nvim/init.vim nvim/maps.vim ~/.config/nvim/
-cp nvim/plugins.vim nvim/plugin-config.vim ~/.config/nvim/
-cp -r nvim/ultisnips/ ~/.config/nvim/
+cp -r nvim/ ~/.config/
 
-cp zathura/zathurarc ~/.config/zathura/
+cp -r zathura/ ~/.config/
 
 cp zsh/.zshrc ~/
 cp zsh/nt-modif.zsh-theme zsh/nanotech-24h.zsh-theme ~/.oh-my-zsh/custom/themes/
