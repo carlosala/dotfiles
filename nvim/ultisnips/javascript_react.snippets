@@ -1,0 +1,28 @@
+snippet imr "import React from 'react'"
+import React from 'react';
+endsnippet
+
+snippet rc "React Component Function"
+import React from 'react';
+
+const $1 = ($2) => {
+  $0
+};
+
+export default $1;
+endsnippet
+
+snippet rcp "React Component Function (propTypes)"
+import React from 'react';
+import PropTypes from 'prop-types';
+
+const $1 = ($2) => {
+  $0
+};
+
+$1.propTypes = {
+
+};
+
+export default $1;
+endsnippet
