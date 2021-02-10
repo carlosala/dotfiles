@@ -121,14 +121,6 @@ function openNvim {
   fi
 }
 
-function ghc {
-  if [ $# -eq 2 ]; then
-    git clone git@github.com:$1/$2
-  else
-    echo 'Just two parameters!'
-  fi
-}
-
 ### ALIAS
 alias v=openNvim
 alias ssh="TERM=xterm-256color ssh"
