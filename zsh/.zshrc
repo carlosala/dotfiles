@@ -86,7 +86,7 @@ ZSH_THEME="nt-modif"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(deno git npm yarn)
+plugins=( git npm )
 
 source $ZSH/oh-my-zsh.sh
 
