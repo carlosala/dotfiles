@@ -15,7 +15,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
 
 " Autocompletion
-Plug 'SirVer/ultisnips'
+Plug 'sirver/ultisnips'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'lervag/vimtex', { 'for': 'tex' }
 
@@ -23,8 +23,8 @@ Plug 'lervag/vimtex', { 'for': 'tex' }
 Plug 'easymotion/vim-easymotion'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'preservim/nerdtree'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+" Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+" Plug 'junegunn/fzf.vim'
 
 " Others
 Plug 'preservim/nerdcommenter'

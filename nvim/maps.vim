@@ -12,7 +12,7 @@ nmap <Leader>o :noh<CR>
 
 nmap <Leader>s <Plug>(easymotion-s2)
 nmap <Leader>n :NERDTreeFind<CR>
-nmap <Leader>ff :Files<CR>
+" nmap <Leader>ff :Files<CR>
 nmap <Leader>c <Plug>NERDCommenterToggle
 vmap <Leader>c <Plug>NERDCommenterToggle
 
