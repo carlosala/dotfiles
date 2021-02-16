@@ -113,6 +113,22 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 
 ### CUSTOM FUNCTIONS
+function gccom {
+  if [ $# -eq 0 ]; then
+    echo 'Minimum one C file!'
+  fi
+  for i in "$@"; do
+    if [ ${i: -2} != '.c' ]; then
+      echo "$i is not a C file! :("
+    elif [ -f $i ]; then
+      gcc -o ${i/.c} -g -Wall $i -lm
+      echo "$i compiled! :)"
+    else
+      echo "$i does not exist!"
+    fi
+  done
+}
+
 function openNvim {
   if [ $# -eq 0 ]; then
     nvim .
