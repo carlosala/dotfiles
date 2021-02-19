@@ -1,8 +1,8 @@
 call plug#begin('~/.config/nvim/plugged')
 
 " Visual
-Plug 'itchyny/lightline.vim'
 Plug 'morhetz/gruvbox'
+Plug 'itchyny/lightline.vim'
 Plug 'shinchu/lightline-gruvbox.vim'
 
 " Syntax
@@ -13,10 +13,11 @@ Plug 'yuezk/vim-js', { 'for': 'javascript' }
 Plug 'alvan/vim-closetag'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
+Plug 'preservim/nerdcommenter'
 
-" Autocompletion
-Plug 'sirver/ultisnips'
+" Completion
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+Plug 'sirver/ultisnips'
 Plug 'lervag/vimtex', { 'for': 'tex' }
 
 " Navigation
@@ -25,8 +26,5 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'preservim/nerdtree'
 " Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 " Plug 'junegunn/fzf.vim'
-
-" Others
-Plug 'preservim/nerdcommenter'
 
 call plug#end()
