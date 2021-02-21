@@ -140,7 +140,7 @@ function ltc {
         [ $j = '.out' ] ||
         [ $j = '.snm' ] ||
         [ $j = '.toc' ] ||
-        [ $j = '.xml' ] ||; then
+        [ $j = '.xml' ]; then
         rm -f $i
         echo "$i removed!"
       fi
