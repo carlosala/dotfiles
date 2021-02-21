@@ -125,6 +125,29 @@ function gccom {
   done
 }
 
+function ltc {
+  for i in *; do
+    if [ -f $i ]; then
+      j=${i: -4}
+      if [ ${i: -8} = '_latexmk' ] ||
+        [ $j = '.aux' ] ||
+        [ $j = '.bbl' ] ||
+        [ $j = '.bcf' ] ||
+        [ $j = '.blg' ] ||
+        [ $j = '.fls' ] ||
+        [ $j = '.log' ] ||
+        [ $j = '.nav' ] ||
+        [ $j = '.out' ] ||
+        [ $j = '.snm' ] ||
+        [ $j = '.toc' ] ||
+        [ $j = '.xml' ] ||; then
+        rm -f $i
+        echo "$i removed!"
+      fi
+    fi
+  done
+}
+
 function openNvim {
   if [ $# -eq 0 ]; then
     nvim .
