@@ -114,15 +114,23 @@ source $ZSH/oh-my-zsh.sh
 
 ### CUSTOM FUNCTIONS
 function gccom {
-  if [ $# -eq 0 ]; then; echo 'Minimum one C file!'; fi
-  for i in "$@"; do
-    if [ ${i: -2} != '.c' ] || [ ! -f $i ]; then
-      echo "$i is not a C file! :("
-    else
-      gcc -o ${i/.c} -g -Wall $i -lm
-      echo "$i compiled! :)"
-    fi
-  done
+  if [ $# -eq 0 ]; then
+    for i in *; do
+      if [ ${i: -2} = '.c' ] && [ -f $i ]; then
+        gcc -o ${i/.c} -g -Wall $i -lm
+        echo "$i compiled! :)"
+      fi
+    done
+  else
+    for j in "$@"; do
+      if [ ${j: -2} != '.c' ] || [ ! -f $j ]; then
+        echo "$j is not a C file! :("
+      else
+        gcc -o ${j/.c} -g -Wall $j -lm
+        echo "$j compiled! :)"
+      fi
+    done
+  fi
 }
 
 function ltc {
