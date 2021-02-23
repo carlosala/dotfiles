@@ -22,8 +22,7 @@ nmap <Leader>n :NERDTreeFind<CR>
 nmap <Leader>c <Plug>NERDCommenterToggle
 
 " vimtex
-nmap <Leader>lp <Plug>(vimtex-compile)
-nmap <Leader>lc <Plug>(vimtex-clean-full)
+nmap <Leader>lc <Plug>(vimtex-compile)
 
 " other
 nmap <Leader>s <Plug>(easymotion-s2)

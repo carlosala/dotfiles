@@ -8,6 +8,7 @@ export PATH="$PATH:/home/carlo/.flutter/bin"
 export PATH="$PATH:/home/carlo/.go/bin"
 export PATH="$PATH:/home/carlo/.local/bin"
 export PATH="$PATH:/home/carlo/.node/bin"
+export PATH="$PATH:/home/carlo/.texlab/target/release"
 
 # ANDROID STUDIO SETUP
 export ANDROID_HOME="/home/carlo/.android/sdk"
@@ -137,7 +138,7 @@ function ltc {
   for i in *; do
     if [ -f $i ]; then
       j=${i: -4}
-      if [ ${i: -8} = '_latexmk' ] ||
+      if [ ${i: -8} = '_latexmk' ] || [ ${i: -11} = '.synctex.gz' ] ||
         [ $j = '.aux' ] ||
         [ $j = '.bbl' ] ||
         [ $j = '.bcf' ] ||
