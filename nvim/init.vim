@@ -9,6 +9,8 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 set noshowmode
+set ignorecase
+set smartcase
 
 so ~/.config/nvim/plugin-config.vim
 so ~/.config/nvim/plugins.vim
