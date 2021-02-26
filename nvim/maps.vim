@@ -26,4 +26,4 @@ nmap <Leader>lc <Plug>(vimtex-compile)
 
 " other
 nmap <Leader>s <Plug>(easymotion-s2)
-" nmap <Leader>f :Files<CR>
+nmap <Leader>f :Files<CR>
