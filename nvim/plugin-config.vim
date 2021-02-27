@@ -35,9 +35,6 @@ set nowritebackup
 set cmdheight=2
 set updatetime=300
 set shortmess+=c
-inoremap <silent><expr> <c-space> coc#refresh()
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " lightline.vim
 let g:lightline = {
