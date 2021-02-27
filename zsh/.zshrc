@@ -8,7 +8,7 @@ export PATH="$PATH:/home/carlo/.flutter/bin"
 export PATH="$PATH:/home/carlo/.go/bin"
 export PATH="$PATH:/home/carlo/.local/bin"
 export PATH="$PATH:/home/carlo/.node/bin"
-export PATH="$PATH:/home/carlo/.texlab/target/release"
+export PATH="$PATH:/home/carlo/.yarn/bin"
 
 # ANDROID STUDIO SETUP
 export ANDROID_HOME="/home/carlo/.android/sdk"
