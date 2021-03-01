@@ -1,13 +1,27 @@
-snippet bg "\begin{}"
+snippet beg "\begin{}"
 \begin{$1}
 	$0
 \end{$1}
 endsnippet
 
-snippet up "\usepackage{}"
-\usepackage{$0}
+snippet enum "\begin{enumerate}"
+\begin{enumerate}
+	\item $0
+\end{enumerate}
 endsnippet
 
-snippet upd "\usepackage[]{}"
-\usepackage[$0]{$1}
+snippet item "\begin{itemize}"
+\begin{itemize}
+	\item $0
+\end{itemize}
+endsnippet
+
+snippet equa "\begin{equation}"
+\begin{equation}
+	$0
+\end{equation}
+endsnippet
+
+snippet frac "\frac{}{}"
+\frac{$1}{$2}$0
 endsnippet
