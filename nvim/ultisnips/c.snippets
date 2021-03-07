@@ -1,12 +1,13 @@
-snippet cmat "c template"
+snippet temp "C template"
 #include<stdio.h>
 #include<math.h>
+#include<stdlib.h>
 
-int main () {
-	$0
+int main (${1:int argc, char* argv[]}) {
+	$2
 }
 endsnippet
 
-snippet pr "printf()"
-printf("$0\n")
+snippet pf "printf()"
+printf("$0\n");
 endsnippet

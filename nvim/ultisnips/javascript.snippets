@@ -4,14 +4,14 @@ endsnippet
 
 snippet fn "() => {}"
 const $1 = ($2) => {
-  $0
+  $3
 }
 endsnippet
 
 snippet afn "() => {}"
-($1) => {$0}
+${1:($2)} => ${3:\{$4\}}
 endsnippet
 
 snippet imp "import x from y"
-import $0 from '$1';
+import $2 from '$1';
 endsnippet
