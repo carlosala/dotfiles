@@ -1,5 +1,5 @@
 snippet imr "import React from 'react'"
-import React from 'react';
+import React, {$1} from 'react';
 endsnippet
 
 snippet rc "React Component Function"
@@ -25,4 +25,8 @@ $1.propTypes = {
 };
 
 export default $1;
+endsnippet
+
+snippet use "useState"
+const [${1:state}, set$1] = useState(${3:initialState});
 endsnippet
