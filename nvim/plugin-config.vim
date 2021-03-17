@@ -11,9 +11,10 @@ let g:vimtex_compiler_progname = 'nvr'
 " nerdtree
 let g:NERDTreeQuitOnOpen = 1
 let g:NERDTreeMinimalUI = 1
-let g:NERDTreeDirArrows = 1
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeAutoDeleteBuffer = 1
+let g:NERDTreeDirArrowExpandable = ''
+let g:NERDTreeDirArrowCollapsible = ''
 
 " nerdcommenter
 let g:NERDCreateDefaultMappings = 0 
