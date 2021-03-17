@@ -50,6 +50,7 @@ let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['html'] = ''
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['css'] = ''
 let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols['.gitignore'] = ''
 let g:NERDTreeExactMatchHighlightColor['.gitignore'] = 'F54D27'
+let g:NERDTreeExactMatchHighlightColor['LICENSE'] = 'F09F17'
 
 " lightline.vim
 let g:lightline = {
