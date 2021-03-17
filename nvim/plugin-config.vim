@@ -36,6 +36,20 @@ set cmdheight=2
 set updatetime=300
 set shortmess+=c
 
+" vim-devicons & vim-nerdtree-syntax-highlight
+let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols = {}
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {}
+let g:NERDTreeExactMatchHighlightColor = {}
+let g:NERDTreeHighlightFolders = 1
+let g:NERDTreeHighlightFoldersFullName = 1
+let g:DevIconsEnableFoldersOpenClose = 1
+let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+let g:WebDevIconsDefaultFileSymbolColor = '689FB6'
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['html'] = ''
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['css'] = ''
+let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols['.gitignore'] = ''
+let g:NERDTreeExactMatchHighlightColor['.gitignore'] = 'F54D27'
+
 " lightline.vim
 let g:lightline = {
       \ 'active': {
@@ -47,7 +61,8 @@ let g:lightline = {
       \     'right': []
       \ },
       \ 'component_function': {
-      \     'cocstatus': 'coc#status'
+      \     'cocstatus': 'coc#status',
+      \     'filetype': 'MyFiletype'
       \ },
       \ 'colorscheme': 'gruvbox',
       \ 'subseparator': {
@@ -55,3 +70,7 @@ let g:lightline = {
       \     'right': ''
       \ }
       \}
+
+function! MyFiletype()
+  return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
+endfunction
