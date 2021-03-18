@@ -1,6 +1,6 @@
 let mapleader=' '
 
-" Basic keymaps
+" basic keymaps
 nmap <Leader>w :w<CR>
 nmap <Leader>q :q<CR>
 nmap <Leader>h <C-w>s
