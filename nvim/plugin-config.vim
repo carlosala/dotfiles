@@ -37,7 +37,7 @@ set cmdheight=2
 set updatetime=300
 set shortmess+=c
 
-" vim-devicons & vim-nerdtree-syntax-highlight
+" vim-devicons
 let g:DevIconsEnableFoldersOpenClose = 1
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 let g:WebDevIconsDefaultFileSymbolColor = '689FB6'
