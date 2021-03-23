@@ -6,21 +6,21 @@ Plug 'sirver/ultisnips'
 Plug 'lervag/vimtex', { 'for': 'tex' }
 
 " navigation
+" Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+" Plug 'junegunn/fzf.vim'
+Plug 'preservim/nerdtree'
 Plug 'easymotion/vim-easymotion'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'preservim/nerdtree'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
 
 " syntax
-Plug 'sheerun/vim-polyglot'
 Plug 'yuezk/vim-js', { 'for': 'javascript' }
+Plug 'sheerun/vim-polyglot'
 
 " typing
-Plug 'alvan/vim-closetag'
 Plug 'jiangmiao/auto-pairs'
-Plug 'tpope/vim-surround'
 Plug 'preservim/nerdcommenter'
+Plug 'alvan/vim-closetag'
+Plug 'tpope/vim-surround'
 
 " visual
 Plug 'morhetz/gruvbox'
