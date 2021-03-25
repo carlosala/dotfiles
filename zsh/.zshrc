@@ -166,13 +166,14 @@ function openNvim {
 }
 
 ### ALIAS
-alias v=openNvim
-alias ssh="TERM=xterm-256color ssh"
-alias cdd="cd ~/Documentos/dev/"
 alias c="clear"
-alias s="sudo"
 alias e="exit"
+alias s="sudo"
 alias au="sudo apt update && apt list --upgradable"
+alias cdd="cd ~/Documentos/dev/"
+alias py=python3
+alias ssh="TERM=xterm-256color ssh"
+alias v=openNvim
 
 ### NEOFETCH INIT
 neofetch
