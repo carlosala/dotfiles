@@ -11,7 +11,7 @@ font:
   normal:
     family: Inconsolata Nerd Font Mono
     style: Regular
-  size: 13.0
+  size: 13
 
 draw_bold_text_with_bright_colors: true
 
