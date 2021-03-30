@@ -21,13 +21,9 @@ inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
-" nerdtree
+" other
 nmap <Leader>n :NERDTreeFind<CR>
 nmap <Leader>c <Plug>NERDCommenterToggle
-
-" vimtex
-nmap <Leader>lc <Plug>(vimtex-compile)
-
-" other
 nmap <Leader>s <Plug>(easymotion-s2)
-nmap <Leader>f :Files<CR>
+nmap <Leader>lc <Plug>(vimtex-compile)
+" nmap <Leader>f :Files<CR>

@@ -26,6 +26,7 @@ Plug 'tpope/vim-surround'
 Plug 'morhetz/gruvbox'
 Plug 'itchyny/lightline.vim'
 Plug 'shinchu/lightline-gruvbox.vim'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
