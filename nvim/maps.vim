@@ -26,4 +26,3 @@ nmap <Leader>n :NERDTreeFind<CR>
 nmap <Leader>c <Plug>NERDCommenterToggle
 nmap <Leader>s <Plug>(easymotion-s2)
 nmap <Leader>lc <Plug>(vimtex-compile)
-" nmap <Leader>f :Files<CR>
