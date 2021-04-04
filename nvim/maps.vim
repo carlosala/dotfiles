@@ -25,4 +25,3 @@ inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 nmap <Leader>n :NERDTreeFind<CR>
 nmap <Leader>c <Plug>NERDCommenterToggle
 nmap <Leader>s <Plug>(easymotion-s2)
-nmap <Leader>lc <Plug>(vimtex-compile)

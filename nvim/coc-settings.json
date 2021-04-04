@@ -9,5 +9,10 @@
     "markdown",
     "typescript",
     "yaml"
-  ]
+  ],
+  "latex.build.onSave": true,
+  "latex.build.forwardSearchAfter": true,
+  "latex.forwardSearch.args": ["--synctex-forward", "%l:1:%f", "%p"],
+  "latex.forwardSearch.executable": "zathura",
+  "latex.lint.onSave": false
 }

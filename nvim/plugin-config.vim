@@ -4,10 +4,6 @@ let g:polyglot_disabled = ['javascript']
 " vim-closetag
 let g:closetag_filenames = '*.html,*.js,*.jsx'
 
-" vimtex
-let g:vimtex_view_method = 'zathura'
-let g:vimtex_compiler_progname = 'nvr'
-
 " nerdtree
 let g:NERDTreeQuitOnOpen = 1
 let g:NERDTreeMinimalUI = 1
