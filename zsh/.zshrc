@@ -20,6 +20,9 @@ export PATH="$PATH:$ANDROID_HOME/tools"
 export PATH="$PATH:$ANDROID_HOME/tools/bin"
 # export JAVA_HOME="/home/carlo/.android-studio/jre"
 
+# SOME VARIABLES
+export XZ_DEFAULTS="-9 -T0"
+
 # Path to your oh-my-zsh installation.
 export ZSH="/home/carlo/.oh-my-zsh"
 
