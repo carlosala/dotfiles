@@ -4,8 +4,6 @@
 # ADDING PATHS
 export PATH="$PATH:/home/carlo/.cargo/bin"
 export PATH="$PATH:/home/carlo/.deno/bin"
-export PATH="$PATH:/home/carlo/.flutter/bin"
-export PATH="$PATH:/home/carlo/.go/bin"
 export PATH="$PATH:/home/carlo/.local/bin"
 export PATH="$PATH:/home/carlo/.node/bin"
 export PATH="$PATH:/home/carlo/.yarn/bin"
