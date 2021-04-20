@@ -1,9 +1,11 @@
-[user]
-	name = Carlo Sala
-	email = carlosalag@protonmail.com
+[advice]
+	detachedHead = false
+[core]
+	editor = vim
 [init]
 	defaultBranch = main
 [pull]
 	rebase = false
-[advice]
-	detachedHead = false
+[user]
+	name = Carlo Sala
+	email = carlosalag@protonmail.com
