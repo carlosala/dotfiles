@@ -10,6 +10,7 @@
     "typescript",
     "yaml"
   ],
+  "latex.build.args": ["%f", "-pdf", "-interaction=nonstopmode", "-synctex=1"],
   "latex.build.onSave": true,
   "latex.build.forwardSearchAfter": true,
   "latex.forwardSearch.args": ["--synctex-forward", "%l:1:%f", "%p"],
