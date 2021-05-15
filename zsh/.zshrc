@@ -141,25 +141,33 @@ function gccom {
 }
 
 function ltc {
+  for a in $@; do; if [[ $a == '-p' ]]; then; p=1; else; p=0; fi; done
   for i in *; do
-    if [ -f $i ]; then
-      j=${i: -4}
+    if [[ -f $i ]]; then
       if [[ $i == *'latexmk'* ]] || [[ $i == *'synctex'* ]] ||
-        [[ $j == '.aux' ]] ||
-        [[ $j == '.bbl' ]] ||
-        [[ $j == '.bcf' ]] ||
-        [[ $j == '.blg' ]] ||
-        [[ $j == '.fls' ]] ||
-        [[ $j == '.log' ]] ||
-        [[ $j == '.nav' ]] ||
-        [[ $j == '.out' ]] ||
-        [[ $j == '.snm' ]] ||
-        [[ $j == '.toc' ]] ||
-        [[ $j == '.xml' ]]; then
+        [[ $i == *'.aux' ]] ||
+        [[ $i == *'.bbl' ]] ||
+        [[ $i == *'.bcf' ]] ||
+        [[ $i == *'.blg' ]] ||
+        [[ $i == *'.fls' ]] ||
+        [[ $i == *'.log' ]] ||
+        [[ $i == *'.nav' ]] ||
+        [[ $i == *'.out' ]] ||
+        [[ $i == *'.pdf' ]] ||
+        [[ $i == *'.snm' ]] ||
+        [[ $i == *'.toc' ]] ||
+        [[ $i == *'.xml' ]]; then
+        if [[ $i != *'.pdf' ]]; then
           rm -f $i
           if [[ $? -eq 0 ]]; then
             echo "$i removed!"
           fi
+        elif [[ $p -eq 1 ]]; then
+          rm -f $i
+          if [[ $? -eq 0 ]]; then
+            echo "$i purged!"
+          fi
+        fi
       fi
     fi
   done
