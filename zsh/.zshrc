@@ -121,16 +121,16 @@ source $ZSH/oh-my-zsh.sh
 
 ### CUSTOM FUNCTIONS
 function gccom {
-  if [ $# -eq 0 ]; then
+  if [[ $# -eq 0 ]]; then
     for i in *; do
-      if [ ${i: -2} = '.c' ] && [ -f $i ]; then
+      if [[ ${i: -2} = '.c' ]] && [[ -f $i ]]; then
         gcc -o ${i/.c} -g -Wall $i -lm
         echo "$i compiled! :)"
       fi
     done
   else
-    for j in "$@"; do
-      if [ ${j: -2} != '.c' ] || [ ! -f $j ]; then
+    for j in $@; do
+      if [[ ${j: -2} != '.c' ]] || [[ ! -f $j ]]; then
         echo "$j is not a C file! :("
       else
         gcc -o ${j/.c} -g -Wall $j -lm
@@ -144,27 +144,29 @@ function ltc {
   for i in *; do
     if [ -f $i ]; then
       j=${i: -4}
-      if [ ${i: -8} = '_latexmk' ] || [ ${i: -11} = '.synctex.gz' ] ||
-        [ $j = '.aux' ] ||
-        [ $j = '.bbl' ] ||
-        [ $j = '.bcf' ] ||
-        [ $j = '.blg' ] ||
-        [ $j = '.fls' ] ||
-        [ $j = '.log' ] ||
-        [ $j = '.nav' ] ||
-        [ $j = '.out' ] ||
-        [ $j = '.snm' ] ||
-        [ $j = '.toc' ] ||
-        [ $j = '.xml' ] ||
-        then; rm -f $i
-        echo "$i removed!"
+      if [[ $i == *'latexmk'* ]] || [[ $i == *'synctex'* ]] ||
+        [[ $j == '.aux' ]] ||
+        [[ $j == '.bbl' ]] ||
+        [[ $j == '.bcf' ]] ||
+        [[ $j == '.blg' ]] ||
+        [[ $j == '.fls' ]] ||
+        [[ $j == '.log' ]] ||
+        [[ $j == '.nav' ]] ||
+        [[ $j == '.out' ]] ||
+        [[ $j == '.snm' ]] ||
+        [[ $j == '.toc' ]] ||
+        [[ $j == '.xml' ]]; then
+          rm -f $i
+          if [[ $? -eq 0 ]]; then
+            echo "$i removed!"
+          fi
       fi
     fi
   done
 }
 
 function openNvim {
-  if [ $# -eq 0 ]; then
+  if [[ $# -eq 0 ]]; then
     nvim .
   else
     nvim $1
