@@ -16,6 +16,7 @@ Plug 'sheerun/vim-polyglot'
 
 " typing
 Plug 'jiangmiao/auto-pairs'
+Plug 'psf/black'
 Plug 'preservim/nerdcommenter'
 Plug 'alvan/vim-closetag'
 Plug 'tpope/vim-surround'

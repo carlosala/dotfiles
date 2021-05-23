@@ -11,6 +11,8 @@ set shiftwidth=2
 set noshowmode
 set ignorecase
 
+let g:python3_host_prog = '/usr/bin/python3'
+
 so ~/.config/nvim/plugin-config.vim
 so ~/.config/nvim/plugins.vim
 so ~/.config/nvim/maps.vim

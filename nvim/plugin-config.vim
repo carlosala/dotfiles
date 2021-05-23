@@ -4,6 +4,9 @@ let g:polyglot_disabled = ['javascript']
 " vim-closetag
 let g:closetag_filenames = '*.html,*.js,*.jsx'
 
+" black
+autocmd BufWritePre *.py execute ':Black'
+
 " nerdtree
 let g:NERDTreeQuitOnOpen = 1
 let g:NERDTreeMinimalUI = 1
