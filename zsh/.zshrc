@@ -190,6 +190,3 @@ alias cdd="cd ~/Documentos/dev/"
 alias py=python3
 alias ssh="TERM=xterm-256color ssh"
 alias v=openNvim
-
-### NEOFETCH INIT
-neofetch
