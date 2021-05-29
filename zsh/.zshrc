@@ -141,7 +141,7 @@ function gccom {
 }
 
 function ltc {
-  for a in $@; do; if [[ $a == '-p' ]]; then; p=1; else; p=0; fi; done
+  if [[ $1 == 'p' ]]; then; p=1; else; p=0; fi
   for i in *; do
     if [[ -f $i ]]; then
       if [[ $i == *'latexmk'* ]] || [[ $i == *'synctex'* ]] ||
