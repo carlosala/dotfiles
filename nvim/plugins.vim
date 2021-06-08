@@ -3,7 +3,10 @@ call plug#begin('~/.config/nvim/plugged')
 " completion
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'sirver/ultisnips'
-Plug 'lervag/vimtex', { 'for': 'tex' }
+
+" formatting
+Plug 'psf/black'
+Plug 'rhysd/vim-clang-format'
 
 " navigation
 Plug 'preservim/nerdtree'
@@ -13,10 +16,10 @@ Plug 'christoomey/vim-tmux-navigator'
 " syntax
 Plug 'yuezk/vim-js', { 'for': 'javascript' }
 Plug 'sheerun/vim-polyglot'
+Plug 'lervag/vimtex', { 'for': 'tex' }
 
 " typing
 Plug 'jiangmiao/auto-pairs'
-Plug 'psf/black'
 Plug 'preservim/nerdcommenter'
 Plug 'alvan/vim-closetag'
 Plug 'tpope/vim-surround'

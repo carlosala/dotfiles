@@ -7,6 +7,9 @@ let g:closetag_filenames = '*.html,*.js,*.jsx'
 " black
 autocmd BufWritePre *.py execute ':Black'
 
+" vim-clang-format
+let g:clang_format#auto_format = 1
+
 " nerdtree
 let g:NERDTreeQuitOnOpen = 1
 let g:NERDTreeMinimalUI = 1
