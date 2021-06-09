@@ -122,7 +122,7 @@ source $ZSH/oh-my-zsh.sh
 ### CUSTOM FUNCTIONS
 function gccom {
   if [[ $# -eq 0 ]]; then
-    for i in *; do
+    for i in $(find -type f); do
       if [[ ${i: -2} = '.c' ]] && [[ -f $i ]]; then
         gcc -o ${i/.c} -g -Wall $i -lm
         echo "$i compiled! :)"
@@ -141,33 +141,27 @@ function gccom {
 }
 
 function ltc {
-  if [[ $1 == 'p' ]]; then; p=1; else; p=0; fi
-  for i in *; do
-    if [[ -f $i ]]; then
-      if [[ $i == *'latexmk'* ]] || [[ $i == *'synctex'* ]] ||
-        [[ $i == *'.aux' ]] ||
-        [[ $i == *'.bbl' ]] ||
-        [[ $i == *'.bcf' ]] ||
-        [[ $i == *'.blg' ]] ||
-        [[ $i == *'.fls' ]] ||
-        [[ $i == *'.log' ]] ||
-        [[ $i == *'.nav' ]] ||
-        [[ $i == *'.out' ]] ||
-        [[ $i == *'.pdf' ]] ||
-        [[ $i == *'.snm' ]] ||
-        [[ $i == *'.toc' ]] ||
-        [[ $i == *'.xml' ]]; then
-        if [[ $i != *'.pdf' ]]; then
-          rm -f $i
-          if [[ $? -eq 0 ]]; then
-            echo "$i removed!"
-          fi
-        elif [[ $p -eq 1 ]]; then
-          rm -f $i
-          if [[ $? -eq 0 ]]; then
-            echo "$i purged!"
-          fi
-        fi
+  if [[ $(pwd) == '/home/carlo' ]]; then
+    echo 'You are in the root folder, exiting...'
+    return 1
+  fi
+  if [[ $1 == 'p' ]]; then; local p=1; fi
+  for i in $(find -maxdepth 1 -type f); do
+    if [[ $i == *'latexmk'* ]] || [[ $i == *'synctex'* ]] ||
+      [[ $i == *'.aux' ]] || [[ $i == *'.bbl' ]] ||
+      [[ $i == *'.bcf' ]] || [[ $i == *'.blg' ]] ||
+      [[ $i == *'.fls' ]] || [[ $i == *'.log' ]] ||
+      [[ $i == *'.nav' ]] || [[ $i == *'.out' ]] ||
+      [[ $i == *'.snm' ]] || [[ $i == *'.toc' ]] ||
+      [[ $i == *'.xml' ]]; then
+      rm -f $i
+      if [[ $? -eq 0 ]]; then
+        echo "$i removed!"
+      fi
+    elif [[ $p -eq 1 ]] && [[ $i == *'.pdf' ]]; then
+      rm -f $i
+      if [[ $? -eq 0 ]]; then
+        echo "$i purged!"
       fi
     fi
   done
