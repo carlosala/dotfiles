@@ -8,7 +8,7 @@ let g:closetag_filenames = '*.html,*.js,*.jsx'
 autocmd BufWritePre *.py execute ':Black'
 
 " vim-clang-format
-let g:clang_format#auto_format = 1
+autocmd FileType c,cpp ClangFormatAutoEnable
 
 " nerdtree
 let g:NERDTreeQuitOnOpen = 1
