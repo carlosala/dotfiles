@@ -1,6 +1,7 @@
 ### ADDING PATHS
 export PATH="$PATH:/home/carlo/.cargo/bin"
 export PATH="$PATH:/home/carlo/.deno/bin"
+export PATH="$PATH:/home/carlo/.go/bin"
 export PATH="$PATH:/home/carlo/.local/bin"
 export PATH="$PATH:/home/carlo/.node/bin"
 export PATH="$PATH:/home/carlo/.yarn/bin"
@@ -21,7 +22,7 @@ export XZ_DEFAULTS="-9 -T0"
 ### OMZ
 export ZSH="/home/carlo/.oh-my-zsh";
 ZSH_THEME="nt-modif"
-plugins=( deno git npm yarn )
+plugins=( deno git golang npm yarn )
 source $ZSH/oh-my-zsh.sh
 
 ### CUSTOM FUNCTIONS
