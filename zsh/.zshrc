@@ -22,7 +22,7 @@ export XZ_DEFAULTS="-9 -T0"
 ### OMZ
 export ZSH="/home/carlo/.oh-my-zsh";
 ZSH_THEME="nt-modif"
-plugins=( deno git golang npm yarn )
+plugins=( git )
 source $ZSH/oh-my-zsh.sh
 
 ### CUSTOM FUNCTIONS
