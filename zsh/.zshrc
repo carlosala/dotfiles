@@ -27,8 +27,12 @@ source $ZSH/oh-my-zsh.sh
 
 ### CUSTOM FUNCTIONS
 function gccom {
+  if [[ $(pwd) = ~ ]]; then
+    echo "Don't use this function in your root folder!"
+    return 1
+  fi
   if [[ $# -eq 0 ]]; then
-    for i in $(find -type f); do
+    for i in $(find -maxdepth 2 -type f); do
       if [[ ${i: -2} = '.c' ]] && [[ -f $i ]]; then
         gcc -o ${i/.c} -g -Wall $i -lm
         echo "$i compiled! :)"
@@ -47,6 +51,10 @@ function gccom {
 }
 
 function ltc {
+  if [[ $(pwd) = ~ ]]; then
+    echo "Don't use this function in your root folder!"
+    return 1
+  fi
   if [[ $1 == 'p' ]]; then; local p=1; fi
   for i in $(find -maxdepth 2 -type f); do
     if [[ $i == *'latexmk'* ]] || [[ $i == *'synctex'* ]] ||
