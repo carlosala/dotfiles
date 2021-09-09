@@ -1,11 +1,12 @@
-[advice]
-	detachedHead = false
 [core]
 	editor = vim
+
 [init]
-	defaultBranch = main
+	defaultbranch = main
+
 [pull]
 	rebase = false
+
 [user]
 	name = Carlo Sala
 	email = carlosalag@protonmail.com
