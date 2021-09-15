@@ -1,5 +1,5 @@
 " vim-polyglot
-let g:polyglot_disabled = ['javascript']
+let g:polyglot_disabled = ['javascript', 'tex']
 
 " vim-closetag
 let g:closetag_filenames = '*.html,*.js,*.jsx'
@@ -9,6 +9,9 @@ autocmd BufWritePre *.py execute ':Black'
 
 " vim-clang-format
 autocmd FileType c,cpp ClangFormatAutoEnable
+
+" vimtex
+let g:vimtex_enabled = 0
 
 " nerdtree
 let g:NERDTreeQuitOnOpen = 1
