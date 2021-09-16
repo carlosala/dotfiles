@@ -13,6 +13,16 @@ autocmd FileType c,cpp ClangFormatAutoEnable
 " vimtex
 let g:vimtex_enabled = 0
 
+" fzf
+command! -bang -complete=dir FilesCustom
+  \ call fzf#vim#files(<q-args>, fzf#vim#with_preview({
+  \ 'source': 'fd -t f -i -H -E .git',
+  \ 'options': '--info=inline'}), <bang>0)
+command! -bang RgCustom
+  \ call fzf#vim#grep(
+  \ 'rg -n --color=always -i --hidden -g "!*.git/*" -- '.shellescape(<q-args>),
+  \ 1, fzf#vim#with_preview({'options': '--info=inline'}), <bang>0)
+
 " nerdtree
 let g:NERDTreeQuitOnOpen = 1
 let g:NERDTreeMinimalUI = 1
@@ -61,24 +71,24 @@ let g:NERDTreeExactMatchHighlightColor['LICENSE'] = 'F09F17'
 
 " lightline.vim
 let g:lightline = {
-      \ 'active': {
-      \     'left': [['mode', 'paste'], [], ['relativepath', 'modified']],
-      \     'right': [['cocstatus'], ['filetype', 'percent', 'lineinfo'], ['readonly']]
-      \ },
-      \ 'inactive': {
-      \     'left': [['relativepath']],
-      \     'right': []
-      \ },
-      \ 'component_function': {
-      \     'cocstatus': 'coc#status',
-      \     'filetype': 'MyFiletype'
-      \ },
-      \ 'colorscheme': 'gruvbox',
-      \ 'subseparator': {
-      \     'left': '',
-      \     'right': ''
-      \ }
-      \}
+  \ 'active': {
+  \   'left': [['mode', 'paste'], [], ['relativepath', 'modified']],
+  \   'right': [['cocstatus'], ['filetype', 'percent', 'lineinfo'], ['readonly']]
+  \ },
+  \ 'inactive': {
+  \   'left': [['relativepath']],
+  \   'right': []
+  \ },
+  \ 'component_function': {
+  \   'cocstatus': 'coc#status',
+  \   'filetype': 'MyFiletype'
+  \ },
+  \ 'colorscheme': 'gruvbox',
+  \ 'subseparator': {
+  \   'left': '',
+  \   'right': ''
+  \ }
+  \ }
 
 function! MyFiletype()
   return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''

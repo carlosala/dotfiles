@@ -27,5 +27,6 @@ inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 nmap <Leader>n :NERDTreeFind<CR>
 nmap <Leader>c <Plug>NERDCommenterToggle
 nmap <Leader>s <Plug>(easymotion-s2)
-nmap <Leader>f :Rg<CR>
+nmap <Leader>f :FilesCustom<CR>
+nmap <Leader>g :RgCustom<CR>
 nmap <Leader>lc :CocCommand latex.Build<CR>
