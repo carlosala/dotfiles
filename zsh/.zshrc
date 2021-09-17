@@ -27,14 +27,10 @@ source $ZSH/oh-my-zsh.sh
 
 ### CUSTOM FUNCTIONS
 function gccom {
-  if [[ $(pwd) = ~ ]]; then
-    echo "Don't use this function in your root folder!"
-    return 1
-  fi
   if [[ $# -eq 0 ]]; then
-    for i in $(find -maxdepth 2 -type f); do
-      if [[ ${i: -2} = '.c' ]] && [[ -f $i ]]; then
-        gcc -o ${i/.c} -g -Wall $i -lm
+    for i in $(fd -t f -d 2 -e c -HI); do
+      gcc -o ${i/.c} -g -Wall $i -lm
+      if [[ $? -eq 0 ]]; then
         echo "$i compiled! :)"
       fi
     done
@@ -44,7 +40,9 @@ function gccom {
         echo "$j is not a C file! :("
       else
         gcc -o ${j/.c} -g -Wall $j -lm
-        echo "$j compiled! :)"
+        if [[ $? -eq 0 ]]; then
+          echo "$j compiled! :)"
+        fi
       fi
     done
   fi
@@ -56,7 +54,7 @@ function ltc {
     return 1
   fi
   if [[ $1 == 'p' ]]; then; local p=1; fi
-  for i in $(find -maxdepth 2 -type f); do
+  for i in $(fd -t f -d 2 -HI); do
     if [[ $i == *'latexmk'* ]] || [[ $i == *'synctex'* ]] ||
       [[ $i == *'.aux' ]] || [[ $i == *'.bbl' ]] ||
       [[ $i == *'.bcf' ]] || [[ $i == *'.blg' ]] ||
