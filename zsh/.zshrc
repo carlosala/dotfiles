@@ -79,7 +79,7 @@ function openNvim {
   if [[ $# -eq 0 ]]; then
     nvim .
   else
-    nvim $1
+    nvim $@
   fi
 }
 
