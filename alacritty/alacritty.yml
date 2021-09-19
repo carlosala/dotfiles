@@ -11,7 +11,7 @@ font:
   normal:
     family: Inconsolata Nerd Font Mono
     style: Regular
-  size: 13
+  size: 14
 
 draw_bold_text_with_bright_colors: true
 
@@ -19,6 +19,8 @@ colors:
   primary:
     background: "#32302f"
     foreground: "#ebdbb2"
+    bright_foreground: "#fbf1c7"
+    dim_foreground: "#a89984"
   normal:
     black: "#282828"
     red: "#cc241d"
@@ -37,3 +39,12 @@ colors:
     magenta: "#d3869b"
     cyan: "#8ec07c"
     white: "#ebdbb2"
+  dim:
+    black: "#32302f"
+    red: "#9d0006"
+    green: "#79740e"
+    yellow: "#b57614"
+    blue: "#076678"
+    magenta: "#8f3f71"
+    cyan: "#427b58"
+    white: "#928374"
