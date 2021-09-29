@@ -18,6 +18,7 @@ export PATH="$PATH:$ANDROID_HOME/tools/bin"
 
 ### SOME VARIABLES
 export XZ_DEFAULTS="-9 -T0"
+export DEV_PATH="~/Documents/dev"
 
 ### OMZ
 export ZSH="/home/carlo/.oh-my-zsh";
@@ -88,7 +89,7 @@ alias c="clear"
 alias e="exit"
 alias s="sudo"
 alias au="sudo apt update && apt list --upgradable"
-alias cdd="cd ~/Documentos/dev/"
+alias cdd="cd $DEV_PATH"
 alias py=python3
 alias ssh="TERM=xterm-256color ssh"
 alias v=openNvim
