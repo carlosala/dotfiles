@@ -9,6 +9,7 @@ cp -r nvim/ ~/.config/
 cp -r zathura/ ~/.config/
 
 cp zsh/.zshrc ~/
-cp zsh/nt-modif.zsh-theme zsh/nanotech-24h.zsh-theme ~/.oh-my-zsh/custom/themes/
 
-echo 'Copiado!'
+cp zsh/nt-modif.zsh-theme ~/.oh-my-zsh/custom/themes/
+
+echo 'Done!'
