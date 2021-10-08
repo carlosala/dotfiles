@@ -2,6 +2,7 @@ let mapleader=' '
 
 " basic keymaps
 nmap <Leader>w :w<CR>
+nmap <Leader>W :noa w<CR>
 nmap <Leader>q :q<CR>
 nmap <Leader>h <C-w>s
 nmap <Leader>v <C-w>v
