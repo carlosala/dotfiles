@@ -1,3 +1,6 @@
+" gruvbox
+let g:gruvbox_contrast_dark = 'soft'
+
 " vim-polyglot
 let g:polyglot_disabled = ['javascript', 'tex']
 

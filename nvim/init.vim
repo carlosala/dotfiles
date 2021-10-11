@@ -17,10 +17,10 @@ if empty(glob('$HOME/.local/share/nvim/site/autoload/plug.vim'))
 endif
 
 let g:python3_host_prog = '/usr/bin/python3'
+let g:tex_flavor = 'latex'
 
 so ~/.config/nvim/plugin-config.vim
 so ~/.config/nvim/plugins.vim
 so ~/.config/nvim/maps.vim
 
-let g:gruvbox_contrast_dark = 'soft'
 colorscheme gruvbox
