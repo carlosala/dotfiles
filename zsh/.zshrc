@@ -23,7 +23,7 @@ export DEV_PATH="~/Documents/dev"
 ### OMZ
 export ZSH="/home/carlo/.oh-my-zsh";
 ZSH_THEME="nt-modif"
-plugins=( git )
+plugins=( gh git yarn )
 source $ZSH/oh-my-zsh.sh
 
 ### CUSTOM FUNCTIONS
