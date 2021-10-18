@@ -16,9 +16,8 @@ Plug 'easymotion/vim-easymotion'
 Plug 'christoomey/vim-tmux-navigator'
 
 " syntax
-Plug 'yuezk/vim-js', { 'for': 'javascript' }
 Plug 'sheerun/vim-polyglot'
-Plug 'lervag/vimtex', { 'for': 'tex' }
+Plug 'lervag/vimtex'
 
 " typing
 Plug 'jiangmiao/auto-pairs'
