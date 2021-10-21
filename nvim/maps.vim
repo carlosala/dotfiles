@@ -4,8 +4,8 @@ let mapleader=' '
 nmap <Leader>w :w<CR>
 nmap <Leader>W :noa w<CR>
 nmap <Leader>q :q<CR>
-nmap <Leader>h <C-w>s
-nmap <Leader>v <C-w>v
+nmap <Leader>h <C-w>v
+nmap <Leader>v <C-w>s
 nmap <Leader>t :tabe<Space>.<CR>
 nmap <M-j> 10<C-e>
 nmap <M-k> 10<C-y>
