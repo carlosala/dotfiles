@@ -1,16 +1,4 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": [
-    "css",
-    "go",
-    "html",
-    "javascript",
-    "javascriptreact",
-    "json",
-    "jsonc",
-    "markdown",
-    "typescript",
-    "yaml"
-  ],
   "eslint.autoFixOnSave": true,
   "texlab.build.forwardSearchAfter": true,
   "texlab.forwardSearch.executable": "zathura",

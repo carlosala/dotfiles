@@ -6,6 +6,7 @@ Plug 'sirver/ultisnips'
 
 " formatting
 Plug 'psf/black'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'rhysd/vim-clang-format'
 
 " navigation
