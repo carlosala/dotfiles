@@ -27,10 +27,13 @@ def installPackage(app: str, package: str, command: list[str]):
         print("\n")
         try:
             subprocess.run(command)
+            return 1
         except:
             print(strings.notRequiredFailed(i))
+            return 0
     else:
         print(strings.notRequiredNotInstalled(package))
+        return 0
 
 
 def checkingBasicRequirements():
@@ -49,9 +52,16 @@ def checkingBasicRequirements():
 
 def installingPackages():
     installPackage("nvim", "pynvim (pip)", ["pip3", "install", "pynvim"])
-    installPackage(
-        "nvim", "neovim (node integration)", ["npm", "install", "-g", "neovim"]
-    )
+    yarnResult = installPackage("nvim", "yarn", ["npm", "install", "-g", "yarn"])
+    if yarnResult == 1:
+        installPackage(
+            "nvim", "neovim (node integration)", ["yarn", "global", "add", "neovim"]
+        )
+    else:
+        installPackage(
+            "nvim", "neovim (node integration)", ["npm", "install", "-g", "neovim"]
+        )
+
     print(strings.rustNvimUtilities)
     installPackage("nvim", "bat", ["cargo", "install", "bat"])
     installPackage("nvim", "fd-find", ["cargo", "install", "fd-find"])
