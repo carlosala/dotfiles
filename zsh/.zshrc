@@ -1,4 +1,5 @@
 ### ADDING PATHS
+export PATH="$PATH:/home/carlo/.bin"
 export PATH="$PATH:/home/carlo/.cargo/bin"
 export PATH="$PATH:/home/carlo/.deno/bin"
 export PATH="$PATH:/home/carlo/.go/bin"
