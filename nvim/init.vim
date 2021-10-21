@@ -19,8 +19,6 @@ endif
 let g:python3_host_prog = '/usr/bin/python3'
 let g:tex_flavor = 'latex'
 
-so ~/.config/nvim/plugin-config.vim
-so ~/.config/nvim/plugins.vim
-so ~/.config/nvim/maps.vim
+runtime! config/plugin-config/*.vim config/*.vim
 
 colorscheme gruvbox
