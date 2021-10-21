@@ -12,7 +12,6 @@ Plug 'rhysd/vim-clang-format'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'preservim/nerdtree'
-Plug 'easymotion/vim-easymotion'
 Plug 'christoomey/vim-tmux-navigator'
 
 " syntax
