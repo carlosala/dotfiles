@@ -15,6 +15,7 @@ Plug 'preservim/nerdtree'
 Plug 'christoomey/vim-tmux-navigator'
 
 " syntax
+Plug 'neoclide/jsonc.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'lervag/vimtex'
 
