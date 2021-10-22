@@ -20,8 +20,17 @@ colors:
     foreground: "#ebdbb2"
     bright_foreground: "#fbf1c7"
     dim_foreground: "#a89984"
+  cursor:
+    text: CellBackground
+    cursor: CellForeground
+  vi_mode_cursor:
+    text: CellBackground
+    cursor: CellForeground
+  selection:
+    text: CellBackground
+    background: CellForeground
   normal:
-    black: "#282828"
+    black: "#32302f"
     red: "#cc241d"
     green: "#98971a"
     yellow: "#d79921"
