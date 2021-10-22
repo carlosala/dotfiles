@@ -1,5 +1,6 @@
 " gruvbox
 let g:gruvbox_contrast_dark = 'soft'
+let g:gruvbox_italic = 1
 
 " lightline.vim
 let g:lightline = {

@@ -10,6 +10,7 @@ set tabstop=2
 set shiftwidth=2
 set noshowmode
 set ignorecase
+set termguicolors
 
 if empty(glob('$HOME/.local/share/nvim/site/autoload/plug.vim'))
   silent !curl -fLo $HOME/.local/share/nvim/site/autoload/plug.vim --create-dirs
