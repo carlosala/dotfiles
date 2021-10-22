@@ -2,6 +2,8 @@ cp -r alacritty/ ~/.config/
 
 cp git/.gitconfig ~/
 
+cp -r fonts/ ~/.local/share/
+
 cp -r neofetch/ ~/.config/
 
 cp -r nvim/ ~/.config/
