@@ -38,6 +38,7 @@ let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols = {}
 let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols['.gitignore'] = ''
 
 " vim-nerdtree-syntax-highlight
+let g:NERDTreeLimitedSyntax = 1
 let g:NERDTreeHighlightFolders = 1
 let g:NERDTreeHighlightFoldersFullName = 1
 let g:NERDTreeExactMatchHighlightColor = {}
