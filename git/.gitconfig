@@ -1,3 +1,6 @@
+[commit]
+	gpgsign = true
+
 [core]
 	editor = nvim
 
@@ -10,3 +13,4 @@
 [user]
 	name = Carlo Sala
 	email = carlosalag@protonmail.com
+	signingkey = 71E76A85CBE2E96904B3CC19DA6FB450C1A4FE9A
