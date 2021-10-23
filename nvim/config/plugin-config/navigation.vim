@@ -15,6 +15,3 @@ let g:NERDTreeShowHidden = 1
 let g:NERDTreeAutoDeleteBuffer = 1
 let g:NERDTreeDirArrowExpandable = ''
 let g:NERDTreeDirArrowCollapsible = ''
-
-" vim-easymotion
-let g:EasyMotion_do_mapping = 0
