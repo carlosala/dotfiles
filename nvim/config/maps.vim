@@ -4,7 +4,7 @@ let mapleader=' '
 nmap <Leader>w :w<CR>
 nmap <Leader>W :noa w<CR>
 nmap <Leader>q :q<CR>
-nmap <Leader>h <C-w>v
+nmap <Leader>s <C-w>v
 nmap <Leader>v <C-w>s
 nmap <Leader>t :tabe<Space>.<CR>
 nmap <M-j> 10<C-e>
@@ -31,3 +31,4 @@ nmap <Leader>n :NERDTreeFind<CR>
 nmap <Leader>c <Plug>NERDCommenterToggle
 nmap <Leader>f :FilesCustom<CR>
 nmap <Leader>g :RgCustom<CR>
+nmap <Leader>h :Helptags<CR>
