@@ -24,4 +24,6 @@ zshNoDefault = "Zsh is not your default shell. This dotfiles are intended to be 
 
 rustNvimUtilities = "You will need some rust utilities necessary for nvim usage. Them are bat, fd-find and ripgrep. You will be asked for each one."
 
-theEnd = "\nYou are ready to go! Now you can use some of my config without (theorically) any issue. Just in the case (really, just in that case) you are SO enthusiastic, you can use the copyconfig.sh script. But it's going to DESTROY every single config in you computer that it's in conflict with mine! I encourage you not doing that, but it's your choice!\nHave a nice day, and thank you for using my dotfiles ;)"
+theEnd = (
+    "\nYou are ready to go!\nHave a nice day, and thank you for using my dotfiles ;)"
+)

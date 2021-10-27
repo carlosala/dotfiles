@@ -51,7 +51,10 @@ def checkingBasicRequirements():
 
 
 def installingPackages():
-    installPackage("nvim", "pynvim (pip)", ["pip3", "install", "pynvim"])
+    installPackage("nvim", "pynvim (pip)", ["pip3", "install", "--user", "pynvim"])
+    installPackage(
+        "nvim", "neovim-remote (pip)", ["pip3", "install", "--user", "neovim-remote"]
+    )
     yarnResult = installPackage("nvim", "yarn", ["npm", "install", "-g", "yarn"])
     if yarnResult == 1:
         installPackage(
