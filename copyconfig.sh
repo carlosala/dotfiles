@@ -1,17 +1,12 @@
-cp -r alacritty/ ~/.config/
+DIR=$(dirname -z "$0")
 
-cp git/.gitconfig ~/
-
-cp -r fonts/ ~/.local/share/
-
-cp -r neofetch/ ~/.config/
-
-cp -r nvim/ ~/.config/
-
-cp -r zathura/ ~/.config/
-
-cp zsh/.zshrc ~/
-
-cp zsh/nt-modif.zsh-theme ~/.oh-my-zsh/custom/themes/
+cp -r $DIR/alacritty/ ~/.config/
+cp $DIR/git/.gitconfig ~/
+cp -r $DIR/fonts/ ~/.local/share/
+cp -r $DIR/neofetch/ ~/.config/
+cp -r $DIR/nvim/ ~/.config/
+cp -r $DIR/zathura/ ~/.config/
+cp $DIR/zsh/.zshrc ~/
+cp $DIR/zsh/nt-modif.zsh-theme ~/.oh-my-zsh/custom/themes/
 
 echo 'Done!'

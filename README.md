@@ -23,24 +23,19 @@ _As you could have imagined, this are requirements only for `zsh` and `nvim`_
 git clone git@github.com:carlosala/dotfiles.git
 ```
 
-2. Run installer script to check the requirements and install some small useful
-   packages (just if you want, you are going to be asked for):
+2. Run installer script to check the requirements and install some small useful packages (just if you want, you are going to be asked for):
 
 ```sh
 ./installer.py
 ```
 
 3. Copy the config you are interested to to your config directory. Config paths:
-
    - nvim: `~/.config/nvim`
    - zsh: `~/.zshrc`
-
 4. You are ready to go!
 
 ### Other config
 
-As you can see, there are many different tools that I use. I have not adapted
-the README and installer to them, I may do it (or not). Anyway, you can try
-them too.
+As you can see, there are many different tools that I use. I have not adapted the README and installer to them, I may do it (or not). Anyway, you can try them too.
 
 Thanks for giving my dotfiles a try!

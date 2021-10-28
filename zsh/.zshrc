@@ -92,6 +92,7 @@ alias e="exit"
 alias s="sudo"
 alias au="sudo apt update && apt list --upgradable"
 alias cdd="cd $DEV_PATH"
+alias cdot="$DEV_PATH/dotfiles/copyconfig.sh"
 alias py=python3
 alias ssh="TERM=xterm-256color ssh"
 alias v=openNvim
