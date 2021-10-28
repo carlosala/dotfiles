@@ -22,9 +22,10 @@ export XZ_DEFAULTS="-9 -T0"
 export DEV_PATH="~/Documents/dev"
 
 ### OMZ
-export ZSH="/home/carlo/.oh-my-zsh";
+export ZSH="/home/carlo/.oh-my-zsh"
+ZSH_DISABLE_COMPFIX=true
 ZSH_THEME="nt-modif"
-plugins=( gh git yarn )
+plugins=( deno gh git rbw yarn )
 source $ZSH/oh-my-zsh.sh
 
 ### CUSTOM FUNCTIONS
