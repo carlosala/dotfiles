@@ -21,9 +21,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'lervag/vimtex'
 
 " typing
-Plug 'jiangmiao/auto-pairs'
-Plug 'preservim/nerdcommenter'
-Plug 'alvan/vim-closetag'
+Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 
 " visual
