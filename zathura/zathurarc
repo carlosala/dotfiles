@@ -3,4 +3,4 @@ set default-fg "#ebdbb2"
 set recolor-lightcolor "#32302f"
 set recolor-darkcolor "#ebdbb2"
 set highlight-transparency 0
-set font "Inconsolata Nerd Font 12"
+set font "JetBrainsMono Nerd Font 11"

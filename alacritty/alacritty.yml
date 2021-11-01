@@ -9,8 +9,8 @@ window:
 
 font:
   normal:
-    family: Inconsolata Nerd Font
-  size: 14
+    family: JetBrainsMono Nerd Font
+  size: 12
 
 draw_bold_text_with_bright_colors: true
 
