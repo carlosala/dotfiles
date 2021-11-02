@@ -23,7 +23,7 @@ export DEV_PATH="~/Documents/dev"
 
 ### OMZ
 export ZSH="/home/carlo/.oh-my-zsh"
-ZSH_DISABLE_COMPFIX=true
+ZSH_DISABLE_COMPFIX="true"
 ZSH_THEME="nt-modif"
 plugins=( deno gh git rbw yarn )
 source $ZSH/oh-my-zsh.sh
@@ -93,6 +93,7 @@ alias s="sudo"
 alias au="sudo apt update && apt list --upgradable"
 alias cdd="cd $DEV_PATH"
 alias cdot="$DEV_PATH/dotfiles/copyconfig.sh"
-alias py=python3
-alias ssh="TERM=xterm-256color ssh"
-alias v=openNvim
+alias py="python3"
+alias sage="sage --notebook=jupyter"
+alias ssh="kitty kitten ssh"
+alias v="openNvim"
