@@ -1,6 +1,7 @@
 " gruvbox
-let g:gruvbox_contrast_dark = 'soft'
-let g:gruvbox_italic = 1
+let g:gruvbox_material_background = 'soft'
+let g:gruvbox_material_enable_italic = 1
+let g:gruvbox_material_diagnostic_text_highlight = 1
 
 " lightline.vim
 let g:lightline = {
@@ -16,7 +17,7 @@ let g:lightline = {
   \   'cocstatus': 'coc#status',
   \   'filetype': 'MyFiletype'
   \ },
-  \ 'colorscheme': 'gruvbox',
+  \ 'colorscheme': 'gruvbox_material',
   \ 'subseparator': {
   \   'left': '',
   \   'right': ''
@@ -38,7 +39,6 @@ let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols = {}
 let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols['.gitignore'] = ''
 
 " vim-nerdtree-syntax-highlight
-let g:NERDTreeLimitedSyntax = 1
 let g:NERDTreeHighlightFolders = 1
 let g:NERDTreeHighlightFoldersFullName = 1
 let g:NERDTreeExactMatchHighlightColor = {}

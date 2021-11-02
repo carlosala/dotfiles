@@ -1,4 +1,6 @@
 {
+  "diagnostic.virtualText": true,
+  "diagnostic.virtualTextCurrentLineOnly": false,
   "eslint.autoFixOnSave": true,
   "texlab.build.forwardSearchAfter": true,
   "texlab.forwardSearch.executable": "zathura",
