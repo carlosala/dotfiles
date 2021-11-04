@@ -27,8 +27,7 @@ nmap <Leader>lc :CocCommand latex.Build<CR>
 nmap <Leader>lf :CocCommand latex.ForwardSearch<CR>
 
 " other
-nmap <Leader>n :NERDTreeFind<CR>
-nmap <Leader>c <Plug>NERDCommenterToggle
+nmap <Leader>n :NvimTreeFindFile<CR>
 nmap <Leader>f :FilesCustom<CR>
 nmap <Leader>g :RgCustom<CR>
 nmap <Leader>h :Helptags<CR>

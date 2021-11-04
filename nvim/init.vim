@@ -20,6 +20,6 @@ endif
 let g:python3_host_prog = '/usr/bin/python3'
 let g:tex_flavor = 'latex'
 
-runtime! config/plugin-config/*.vim config/*.vim
+runtime! config/plugin-config/*.vim config/*.vim config/lua/*.lua
 
 colorscheme gruvbox-material

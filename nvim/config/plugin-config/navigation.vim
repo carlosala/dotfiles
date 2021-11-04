@@ -8,10 +8,5 @@ command! -bang RgCustom
   \ 'rg -n --color=always -i --hidden -g "!*.git/*" -- '.shellescape(<q-args>),
   \ 1, fzf#vim#with_preview({'options': '--info=inline'}), <bang>0)
 
-" nerdtree
-let g:NERDTreeQuitOnOpen = 1
-let g:NERDTreeMinimalUI = 1
-let g:NERDTreeShowHidden = 1
-let g:NERDTreeAutoDeleteBuffer = 1
-let g:NERDTreeDirArrowExpandable = ''
-let g:NERDTreeDirArrowCollapsible = ''
+" nvim-tree
+let g:nvim_tree_quit_on_open = 1
