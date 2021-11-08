@@ -1,6 +1,7 @@
 require'lualine'.setup {
   sections = {
-    lualine_x = {'filetype'},
+    lualine_x = {{'g:coc_status'}, 'progress'},
+    lualine_y = {'filetype'},
   },
   extensions = {
     'fzf',
