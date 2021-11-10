@@ -1,4 +1,4 @@
-DIR=$(dirname -z "$0")
+DIR=$(dirname "$0")
 
 cp -r $DIR/alacritty/ ~/.config/
 cp $DIR/git/.gitconfig ~/
