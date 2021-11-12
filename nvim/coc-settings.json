@@ -43,8 +43,10 @@
     "typeParameter": "",
     "default": ""
   },
+  "suggest.enablePreview": true,
   "texlab.build.forwardSearchAfter": true,
   "texlab.forwardSearch.executable": "zathura",
   "texlab.forwardSearch.args": ["--synctex-forward", "%l:1:%f", "%p"],
-  "texlab.chktex.onOpenAndSave": true
+  "texlab.chktex.onOpenAndSave": true,
+  "tsserver.implicitProjectConfig.checkJs": true
 }
