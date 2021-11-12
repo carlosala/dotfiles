@@ -7,6 +7,9 @@
 [init]
 	defaultbranch = main
 
+[push]
+  followTags = true
+
 [pull]
 	rebase = false
 
