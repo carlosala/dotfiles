@@ -19,6 +19,8 @@ Plug 'nvim-treesitter/nvim-treesitter', { 'do':  ':TSUpdate' }
 Plug 'neoclide/jsonc.vim'
 
 " typing
+Plug 'windwp/nvim-autopairs'
+Plug 'windwp/nvim-ts-autotag'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 
