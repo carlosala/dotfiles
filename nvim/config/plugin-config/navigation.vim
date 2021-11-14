@@ -5,7 +5,8 @@ command! -bang -nargs=? -complete=dir FilesCustom
   \ 'options': '--info=inline'}), <bang>0)
 command! -bang -nargs=* RgCustom
   \ call fzf#vim#grep(
-  \ 'rg -n --color=always -i --hidden -g "!*.git/*" -- '.shellescape(<q-args>),
+  \ 'rg -n --color=always -i --hidden -g "!*.git/*"
+  \ -g "!yarn.lock" -g "!package-lock.json" -- '.shellescape(<q-args>),
   \ 1, fzf#vim#with_preview({'options': '--info=inline'}), <bang>0)
 
 " nvim-tree
