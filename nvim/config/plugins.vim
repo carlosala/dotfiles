@@ -17,6 +17,7 @@ Plug 'christoomey/vim-tmux-navigator'
 " syntax
 Plug 'nvim-treesitter/nvim-treesitter', { 'do':  ':TSUpdate' }
 Plug 'neoclide/jsonc.vim'
+Plug 'heavenshell/vim-jsdoc', { 'do': 'make install' }
 
 " typing
 Plug 'windwp/nvim-autopairs'
