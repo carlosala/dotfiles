@@ -69,6 +69,7 @@ def installingPackages():
     installPackage("nvim", "bat", ["cargo", "install", "bat"])
     installPackage("nvim", "fd-find", ["cargo", "install", "fd-find"])
     installPackage("nvim", "ripgrep", ["cargo", "install", "ripgrep"])
+    installPackage("zsh", "exa", ["cargo", "install", "exa"])
 
 
 def main():
