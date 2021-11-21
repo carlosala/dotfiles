@@ -25,7 +25,7 @@ export DEV_PATH="~/Documents/dev"
 export ZSH="/home/carlo/.oh-my-zsh"
 ZSH_DISABLE_COMPFIX="true"
 ZSH_THEME="nt-modif"
-plugins=( deno gh git rbw yarn )
+plugins=( deno gh git rbw yarn z )
 source $ZSH/oh-my-zsh.sh
 
 ### CUSTOM FUNCTIONS
