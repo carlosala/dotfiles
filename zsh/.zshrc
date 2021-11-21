@@ -89,7 +89,7 @@ function openNvim {
 ### ALIASES
 alias c="clear"
 alias e="exit"
-alias l="exa -la --git --icons"
+alias l="exa -la --group-directories-first --git --icons"
 alias s="sudo"
 alias au="sudo apt update && apt list --upgradable"
 alias cdd="cd $DEV_PATH"
