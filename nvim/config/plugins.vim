@@ -5,7 +5,7 @@ Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'sirver/ultisnips'
 
 " formatting
-Plug 'psf/black'
+Plug 'psf/black', { 'do': ':BlackUpgrade' }
 Plug 'editorconfig/editorconfig-vim'
 Plug 'rhysd/vim-clang-format'
 
