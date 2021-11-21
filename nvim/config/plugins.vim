@@ -6,6 +6,7 @@ Plug 'sirver/ultisnips'
 
 " formatting
 Plug 'psf/black'
+Plug 'editorconfig/editorconfig-vim'
 Plug 'rhysd/vim-clang-format'
 
 " navigation
