@@ -2,7 +2,6 @@
 export PATH="$PATH:/home/carlo/.bin"
 export PATH="$PATH:/home/carlo/.cargo/bin"
 export PATH="$PATH:/home/carlo/.deno/bin"
-export PATH="$PATH:/home/carlo/.go/bin"
 export PATH="$PATH:/home/carlo/.local/bin"
 export PATH="$PATH:/home/carlo/.node/bin"
 export PATH="$PATH:/home/carlo/.yarn/bin"
@@ -11,10 +10,10 @@ export PATH="$PATH:/home/carlo/.yarn/bin"
 export ANDROID_HOME="/home/carlo/.android/sdk"
 export ANDROID_SDK_ROOT=$ANDROID_HOME
 export PATH="$PATH:$ANDROID_HOME/cmdline-tools/latest/bin"
-export PATH="$PATH:$ANDROID_HOME/emulator"
-export PATH="$PATH:$ANDROID_HOME/platform-tools"
-export PATH="$PATH:$ANDROID_HOME/tools"
-export PATH="$PATH:$ANDROID_HOME/tools/bin"
+# export PATH="$PATH:$ANDROID_HOME/emulator"
+# export PATH="$PATH:$ANDROID_HOME/platform-tools"
+# export PATH="$PATH:$ANDROID_HOME/tools"
+# export PATH="$PATH:$ANDROID_HOME/tools/bin"
 # export JAVA_HOME="/home/carlo/.android-studio/jre"
 
 ### SOME VARIABLES
