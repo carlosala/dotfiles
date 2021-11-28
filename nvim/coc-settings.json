@@ -12,6 +12,10 @@
     "typescriptreact",
     "yaml"
   ],
+  "coc.preferences.semanticTokensHighlights": false,
+  "diagnostic.errorSign": "",
+  "diagnostic.infoSign": "",
+  "diagnostic.warningSign": "",
   "diagnostic.virtualText": true,
   "diagnostic.virtualTextCurrentLineOnly": false,
   "eslint.autoFixOnSave": true,
