@@ -4,7 +4,6 @@ cp -r $DIR/alacritty/ ~/.config/
 cp $DIR/git/.gitconfig ~/
 cp -r $DIR/fonts/ ~/.local/share/
 cp -r $DIR/kitty/ ~/.config/
-cp -r $DIR/neofetch/ ~/.config/
 cp -r $DIR/nvim/ ~/.config/
 cp -r $DIR/zathura/ ~/.config/
 cp $DIR/zsh/.zshrc ~/
