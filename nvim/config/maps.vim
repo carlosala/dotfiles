@@ -1,16 +1,16 @@
 let mapleader=' '
 
 " basic keymaps
-nmap <Leader>w :w<CR>
-nmap <Leader>W :noa w<CR>
-nmap <Leader>q :q<CR>
+nmap <silent> <Leader>w :w<CR>
+nmap <silent> <Leader>W :noa w<CR>
+nmap <silent> <Leader>q :q<CR>
 nmap <Leader>s <C-w>v
 nmap <Leader>v <C-w>s
-nmap <Leader>t :tabe<Space>.<CR>
+nmap <silent> <Leader>t :tabe<Space>.<CR>
 nmap <M-j> 10<C-e>
 nmap <M-k> 10<C-y>
 nmap <Leader>; A;<Esc>
-nmap <Leader>o :noh<CR>
+nmap <silent> <Leader>o :noh<CR>
 
 " coc.nvim
 nmap gd <Plug>(coc-definition)
@@ -22,12 +22,12 @@ inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 nmap <Leader>rn <Plug>(coc-rename)
-nmap <Leader>rf :CocCommand workspace.renameCurrentFile<CR>
-nmap <Leader>lc :CocCommand latex.Build<CR>
-nmap <Leader>lf :CocCommand latex.ForwardSearch<CR>
+nmap <silent> <Leader>rf :CocCommand workspace.renameCurrentFile<CR>
+nmap <silent> <Leader>lc :CocCommand latex.Build<CR>
+nmap <silent> <Leader>lf :CocCommand latex.ForwardSearch<CR>
 
 " other
-nmap <Leader>n :NvimTreeFindFile<CR>
+nmap <silent> <Leader>n :NvimTreeFindFile<CR>
 nmap <Leader>f :FilesCustom<CR>
 nmap <Leader>g :RgCustom<CR>
 nmap <Leader>h :Helptags<CR>
