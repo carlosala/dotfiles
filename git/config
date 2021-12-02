@@ -5,10 +5,13 @@
   defaultbranch = main
 
 [pull]
-  rebase = false
+  rebase = true
 
 [push]
   followtags = true
+
+[tag]
+  gpgsign = true
 
 [user]
   name = Carlo Sala
