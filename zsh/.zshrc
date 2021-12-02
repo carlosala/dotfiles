@@ -19,6 +19,7 @@ export PATH="$PATH:$ANDROID_HOME/cmdline-tools/latest/bin"
 ### SOME VARIABLES
 export XZ_DEFAULTS="-9 -T0"
 export DEV_PATH="~/Documents/dev"
+export EDITOR="nvim"
 
 ### OMZ
 export ZSH="/home/carlo/.oh-my-zsh"

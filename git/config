@@ -1,9 +1,6 @@
 [commit]
   gpgsign = true
 
-[core]
-  editor = nvim
-
 [init]
   defaultbranch = main
 
