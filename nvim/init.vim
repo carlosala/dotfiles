@@ -4,7 +4,7 @@ set relativenumber
 set numberwidth=1
 set mouse=a
 set clipboard=unnamedplus
-set showmatch
+set shortmess+=A
 set expandtab
 set tabstop=2
 set shiftwidth=2
