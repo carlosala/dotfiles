@@ -18,7 +18,6 @@ export PATH="$PATH:$ANDROID_HOME/cmdline-tools/latest/bin"
 
 ### SOME VARIABLES
 export XZ_DEFAULTS="-9 -T0"
-export DEV_PATH="~/Documents/dev"
 export EDITOR="nvim"
 
 ### OMZ
@@ -93,8 +92,7 @@ alias e="exit"
 alias l="exa -la --group-directories-first --git --icons"
 alias s="sudo"
 alias au="sudo apt update && apt list --upgradable"
-alias cdd="cd $DEV_PATH"
-alias cdot="$DEV_PATH/dotfiles/copyconfig.sh"
+alias cdot="~/Documents/dev/dotfiles/copyconfig.sh"
 alias mosh="mosh --ssh='kitty kitten ssh'"
 alias sage="sage --notebook=jupyter"
 alias ssh="kitty kitten ssh"
