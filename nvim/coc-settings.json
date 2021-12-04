@@ -20,7 +20,6 @@
   "diagnostic.virtualText": true,
   "diagnostic.virtualTextCurrentLineOnly": false,
   "eslint.autoFixOnSave": true,
-  "prettier.semi": false,
   "suggest.completionItemKindLabels": {
     "text": "",
     "method": "",
