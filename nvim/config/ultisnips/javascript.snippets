@@ -2,8 +2,10 @@ snippet cl "console.log()"
 console.log($1)
 endsnippet
 
-snippet fn "() => {}"
-const $1 = ($2) => ${3:\{$4\}}
+snippet fn "function() {}"
+function $1($2) {
+  $3
+}
 endsnippet
 
 snippet afn "() => {}" w
@@ -11,5 +13,13 @@ ${1:($2)} => ${3:\{$4\}}
 endsnippet
 
 snippet imp "import x from y"
-import $2 from '$1'
+import $2 from "$1"
+endsnippet
+
+snippet req "require()"
+const $2 = require("$1")
+endsnippet
+
+snippet us "useState"
+const [${1:state}, set${1/\w/\u$0/}] = useState(${2:initialState})
 endsnippet
