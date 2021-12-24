@@ -17,7 +17,7 @@ export PATH="$PATH:$ANDROID_HOME/cmdline-tools/latest/bin"
 # export JAVA_HOME="/home/carlo/.android-studio/jre"
 
 ### SOME VARIABLES
-export XZ_DEFAULTS="-9 -T0"
+export XZ_DEFAULTS="-T0"
 export EDITOR="nvim"
 
 ### OMZ
