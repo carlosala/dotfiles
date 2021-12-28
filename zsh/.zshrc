@@ -25,7 +25,7 @@ export ZSH="/home/carlo/.oh-my-zsh"
 ZSH_THEME_GIT_PROMPT_CACHE="true"
 ZSH_DISABLE_COMPFIX="true"
 ZSH_THEME="nt-modif"
-plugins=( deno gh git git-prompt rbw yarn z )
+plugins=( deno gh git git-prompt rbw rust yarn z )
 source $ZSH/oh-my-zsh.sh
 
 ### CUSTOM FUNCTIONS
