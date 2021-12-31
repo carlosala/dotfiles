@@ -2,6 +2,7 @@
 DIR=$(dirname "$0")
 
 cp -r $DIR/alacritty ~/.config
+cp -r $DIR/bat ~/.config
 cp -r $DIR/git ~/.config
 cp -r $DIR/fonts/fontconfig ~/.config
 cp -r $DIR/fonts/fonts ~/.local/share
