@@ -1,5 +1,5 @@
 #!/bin/zsh
-DIR=$(dirname "$0")
+DIR=${0:h}
 
 cp -r $DIR/alacritty ~/.config
 cp -r $DIR/bat ~/.config
@@ -10,6 +10,6 @@ cp -r $DIR/kitty ~/.config
 cp -r $DIR/nvim ~/.config
 cp -r $DIR/zathura ~/.config
 cp $DIR/zsh/.zshrc ~
-cp $DIR/zsh/nt-modif.zsh-theme ~/.oh-my-zsh/custom/themes
+cp -r $DIR/zsh/custom $ZSH
 
 echo 'Done!'
