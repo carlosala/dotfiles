@@ -8,7 +8,7 @@
   2. Use zsh as default shell (`chsh -s $(where zsh)`)
   3. Install [ohmyzsh](https://ohmyz.sh)
 - python3 & pip3
-- neovim
+- [neovim](https://neovim.io) (v0.5 minimum, v0.6 recommended)
 - npm
 - cargo
   - To install it, use [rustup](https://rustup.rs)
@@ -17,13 +17,16 @@ _As you could have imagined, this are requirements only for `zsh` and `nvim`_
 
 ### Usage
 
-1. Clone the repo:
+1. Clone the repo and submodules:
 
 ```sh
 git clone git@github.com:carlosala/dotfiles.git
+cd dotfiles
+git submodule init
+git submodule update
 ```
 
-2. Run installer script to check the requirements and install some small useful packages (just if you want, you are going to be asked for):
+2. Run installer script to check the requirements and install some small useful packages (just if you want, you are going to be asked for each one of those):
 
 ```sh
 ./installer.py
@@ -31,7 +34,7 @@ git clone git@github.com:carlosala/dotfiles.git
 
 3. Copy the config you are interested to to your config directory. Config paths:
    - nvim: `~/.config/nvim`
-   - zsh: `~/.zshrc`
+   - zsh: `~/.zshrc` & `~/.oh-my-zsh/custom`
 4. You are ready to go!
 
 ### Other config
