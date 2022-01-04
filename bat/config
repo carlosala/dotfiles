@@ -1,4 +1,4 @@
 --theme="gruvbox (Dark) (Soft)"
 --paging=never
 
-# vim ft=conf
+# vim: ft=conf
