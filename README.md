@@ -32,6 +32,12 @@ git submodule update
 ./installer.py
 ```
 
+If you want to install that packages using `pacman`, run it with an `arch` argument:
+
+```sh
+./installer.py arch
+```
+
 3. Copy the config you are interested to to your config directory. Config paths:
    - nvim: `~/.config/nvim`
    - zsh: `~/.zshrc` & `~/.oh-my-zsh/custom`

@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import os
+import sys
 import subprocess
 
 
@@ -52,7 +53,7 @@ def checkingBasicRequirements():
     notInstalled += checkZshDefault()
     notInstalled += checkPackage("pip3")
     notInstalled += checkPackage("nvim")
-    notInstalled += checkPackage("npm")
+    notInstalled += checkPackage("yarn")
     notInstalled += checkPackage("cargo")
     if notInstalled > 0:
         print("Please, install it/them!")
@@ -64,22 +65,28 @@ def installingPackages():
     installPackage(
         "nvim", "neovim-remote (pip)", ["pip3", "install", "--user", "neovim-remote"]
     )
-    yarnResult = installPackage("nvim", "yarn", ["npm", "install", "-g", "yarn"])
-    if yarnResult:
+    "nvim", "neovim (node integration)", ["yarn", "global", "add", "neovim"]
+    if "arch" in sys.argv:
+        installPackage("nvim", "bat", ["sudo", "pacman", "-S", "--noconfirm", "bat"])
+        installPackage("nvim", "fd", ["sudo", "pacman", "-S", "--noconfirm", "fd"])
         installPackage(
-            "nvim", "neovim (node integration)", ["yarn", "global", "add", "neovim"]
+            "nvim", "ripgrep", ["sudo", "pacman", "-S", "--noconfirm", "ripgrep"]
+        )
+        installPackage(
+            "nvim", "xclip", ["sudo", "pacman", "-S", "--noconfirm", "xclip"]
+        )
+        installPackage("zsh", "exa", ["sudo", "pacman", "-S", "--noconfirm", "exa"])
+        installPackage("", "dust", ["sudo", "pacman", "-S", "--noconfirm", "dust"])
+        installPackage(
+            "", "hyperfine", ["sudo", "pacman", "-S", "--noconfirm", "hyperfine"]
         )
     else:
-        installPackage(
-            "nvim", "neovim (node integration)", ["npm", "install", "-g", "neovim"]
-        )
-
-    installPackage("nvim", "bat", ["cargo", "install", "bat"])
-    installPackage("nvim", "fd", ["cargo", "install", "fd-find"])
-    installPackage("nvim", "ripgrep", ["cargo", "install", "ripgrep"])
-    installPackage("zsh", "exa", ["cargo", "install", "exa"])
-    installPackage("", "dust", ["cargo", "install", "du-dust"])
-    installPackage("", "hyperfine", ["cargo", "install", "hyperfine"])
+        installPackage("nvim", "bat", ["cargo", "install", "bat"])
+        installPackage("nvim", "fd", ["cargo", "install", "fd-find"])
+        installPackage("nvim", "ripgrep", ["cargo", "install", "ripgrep"])
+        installPackage("zsh", "exa", ["cargo", "install", "exa"])
+        installPackage("", "dust", ["cargo", "install", "du-dust"])
+        installPackage("", "hyperfine", ["cargo", "install", "hyperfine"])
 
 
 def main():
