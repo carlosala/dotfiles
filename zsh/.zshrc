@@ -1,10 +1,5 @@
 ### ADDING PATHS
-export PATH="$PATH:/home/carlo/.bin"
 export PATH="$PATH:/home/carlo/.cargo/bin"
-export PATH="$PATH:/home/carlo/.deno/bin"
-export PATH="$PATH:/home/carlo/.local/bin"
-export PATH="$PATH:/home/carlo/.node/bin"
-export PATH="$PATH:/home/carlo/.yarn/bin"
 
 ### ANDROID STUDIO SETUP
 export ANDROID_HOME="/home/carlo/.android/sdk"
@@ -19,6 +14,7 @@ export PATH="$PATH:$ANDROID_HOME/cmdline-tools/latest/bin"
 ### SOME VARIABLES
 export XZ_DEFAULTS="-T0"
 export EDITOR="nvim"
+export GPG_TTY=$(tty)
 
 ### OMZ
 export ZSH="/home/carlo/.oh-my-zsh"
@@ -89,7 +85,6 @@ alias c="clear"
 alias e="exit"
 alias l="exa -la --group-directories-first --git --icons"
 alias s="sudo"
-alias au="sudo apt update && apt list --upgradable"
 alias cat="bat"
 alias cdot="~/Documents/dev/dotfiles/copyconfig.sh"
 alias mosh="mosh --ssh='kitty kitten ssh'"
