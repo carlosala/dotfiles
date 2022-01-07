@@ -80,6 +80,11 @@ def installingPackages():
         installPackage(
             "", "hyperfine", ["sudo", "pacman", "-S", "--noconfirm", "hyperfine"]
         )
+        installPackage(
+            "",
+            "zathura",
+            ["sudo", "pacman", "-S", "--noconfirm", "zathura", "zathura-pdf-mupdf"],
+        )
     else:
         installPackage("nvim", "bat", ["cargo", "install", "bat"])
         installPackage("nvim", "fd", ["cargo", "install", "fd-find"])
