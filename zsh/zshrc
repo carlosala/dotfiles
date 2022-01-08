@@ -46,7 +46,7 @@ function gccom {
 }
 
 function ltc {
-  if [[ $(pwd) = ~ ]]; then
+  if [[ $(pwd) == ~ ]]; then
     echo "Don't use this function in your root folder!"
     return 1
   fi

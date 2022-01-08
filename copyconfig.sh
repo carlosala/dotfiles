@@ -9,7 +9,7 @@ cp -r $DIR/kitty ~/.config
 cp -r $DIR/latexmk ~/.config
 cp -r $DIR/nvim ~/.config
 cp -r $DIR/zathura ~/.config
-cp $DIR/zsh/.zshrc ~
+cp $DIR/zsh/zshrc ~/.zshrc
 cp -r $DIR/zsh/custom $ZSH
 
 echo 'Done!'
