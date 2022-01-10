@@ -80,6 +80,20 @@ function openNvim {
   fi
 }
 
+function rbwg {
+  if ! (( $+commands[kitty] && $+commands[rbw] )); then
+    echo "You don't have kitty and rbw installed!"
+    return 1
+  fi
+  if [[ ! $# -eq 1 ]]; then
+    echo "Just one argument!"
+    return 1
+  fi
+  local rbwpw=$(rbw get $1)
+  if [[ $rbwpw == "" ]]; then; return 1; fi
+  kitty +kitten clipboard <<< $rbwpw
+}
+
 ### ALIASES
 alias c="clear"
 alias e="exit"
@@ -87,7 +101,7 @@ alias l="exa -la --group-directories-first --git --icons"
 alias s="sudo"
 alias cat="bat"
 alias cdot="~/Documents/dev/dotfiles/copyconfig.sh"
-alias mosh="mosh --ssh='kitty kitten ssh'"
+alias mosh="mosh --ssh='kitty +kitten ssh'"
 alias sage="sage --notebook=jupyter"
-alias ssh="kitty kitten ssh"
+alias ssh="kitty +kitten ssh"
 alias v="openNvim"
