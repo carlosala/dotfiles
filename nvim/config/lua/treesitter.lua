@@ -5,3 +5,5 @@ require("nvim-treesitter.configs").setup({
   indent = { enable = true },
   autotag = { enable = true },
 })
+
+require("nvim-treesitter.parsers").get_parser_configs().jsonc.used_by = "json"
