@@ -67,23 +67,45 @@ def installingPackages():
     )
     "nvim", "neovim (node integration)", ["yarn", "global", "add", "neovim"]
     if "arch" in sys.argv:
-        installPackage("nvim", "bat", ["sudo", "pacman", "-S", "--noconfirm", "bat"])
-        installPackage("nvim", "fd", ["sudo", "pacman", "-S", "--noconfirm", "fd"])
         installPackage(
-            "nvim", "ripgrep", ["sudo", "pacman", "-S", "--noconfirm", "ripgrep"]
+            "nvim", "bat", ["sudo", "pacman", "-S", "--needed", "--noconfirm", "bat"]
         )
         installPackage(
-            "nvim", "xclip", ["sudo", "pacman", "-S", "--noconfirm", "xclip"]
+            "nvim", "fd", ["sudo", "pacman", "-S", "--needed", "--noconfirm", "fd"]
         )
-        installPackage("zsh", "exa", ["sudo", "pacman", "-S", "--noconfirm", "exa"])
-        installPackage("", "dust", ["sudo", "pacman", "-S", "--noconfirm", "dust"])
         installPackage(
-            "", "hyperfine", ["sudo", "pacman", "-S", "--noconfirm", "hyperfine"]
+            "nvim",
+            "ripgrep",
+            ["sudo", "pacman", "-S", "--needed", "--noconfirm", "ripgrep"],
+        )
+        installPackage(
+            "nvim",
+            "xclip",
+            ["sudo", "pacman", "-S", "--needed", "--noconfirm", "xclip"],
+        )
+        installPackage(
+            "zsh", "exa", ["sudo", "pacman", "-S", "--needed", "--noconfirm", "exa"]
+        )
+        installPackage(
+            "", "dust", ["sudo", "pacman", "-S", "--needed", "--noconfirm", "dust"]
+        )
+        installPackage(
+            "",
+            "hyperfine",
+            ["sudo", "pacman", "-S", "--needed", "--noconfirm", "hyperfine"],
         )
         installPackage(
             "",
             "zathura",
-            ["sudo", "pacman", "-S", "--noconfirm", "zathura", "zathura-pdf-mupdf"],
+            [
+                "sudo",
+                "pacman",
+                "-S",
+                "--needed",
+                "--noconfirm",
+                "zathura",
+                "zathura-pdf-mupdf",
+            ],
         )
     else:
         installPackage("nvim", "bat", ["cargo", "install", "bat"])
