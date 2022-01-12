@@ -54,5 +54,5 @@ function rbwg {
   [[ ! $# -eq 1 ]] && echo "Just one argument!" && return 1
   local rbwpw=$(rbw get $1)
   [[ -z $rbwpw ]] && return 1
-  kitty +kitten clipboard <<< $rbwpw
+  tr -d "\n" <<< "$rbwpw" | kitty +kitten clipboard
 }
