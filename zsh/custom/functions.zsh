@@ -1,70 +1,58 @@
 function gccom {
   if [[ $# -eq 0 ]]; then
     for i in $(fd -t f -d 2 -e c -HI); do
-      gcc -o ${i/.c} -g -Wall $i -lm
-      if [[ $? -eq 0 ]]; then
-        echo "$i compiled! :)"
-      fi
+      gcc -o ${i/.c} -g -Wall $i -lm && [[ $? -eq 0 ]] && echo "$i compiled!"
     done
   else
     for j in $@; do
-      if [[ ${j: -2} != '.c' ]] || [[ ! -f $j ]]; then
-        echo "$j is not a C file! :("
+      if [[ ${j: -2} == ".c" ]] && [[ -f $j ]]; then
+        gcc -o ${j/.c} -g -Wall $j -lm && [[ $? -eq 0 ]] && echo "$j compiled!"
       else
-        gcc -o ${j/.c} -g -Wall $j -lm
-        if [[ $? -eq 0 ]]; then
-          echo "$j compiled! :)"
-        fi
+        echo "$j is not a C file!"
       fi
     done
   fi
+  unset i j
 }
 
 function ltc {
-  if [[ $(pwd) == ~ ]]; then
+  if [[ $PWD == ~ ]]; then
     echo "Don't use this function in your root folder!"
     return 1
   fi
-  if [[ $1 == 'p' ]]; then; local p=1; fi
+  [[ $1 == "p" ]] && local pdfpurge="true"
   for i in $(fd -t f -d 2 -HI); do
-    if [[ $i == *'latexmk'* ]] || [[ $i == *'synctex'* ]] ||
-      [[ $i == *'.aux' ]] || [[ $i == *'.bbl' ]] ||
-      [[ $i == *'.bcf' ]] || [[ $i == *'.blg' ]] ||
-      [[ $i == *'.fls' ]] || [[ $i == *'.log' ]] ||
-      [[ $i == *'.nav' ]] || [[ $i == *'.out' ]] ||
-      [[ $i == *'.snm' ]] || [[ $i == *'.toc' ]] ||
-      [[ $i == *'.xml' ]]; then
+    if [[ $i =~ "latexmk" ]] || [[ $i =~ "synctex" ]] ||
+      [[ $i =~ ".aux" ]] || [[ $i =~ ".bbl" ]] ||
+      [[ $i =~ ".bcf" ]] || [[ $i =~ ".blg" ]] ||
+      [[ $i =~ ".fls" ]] || [[ $i =~ ".log" ]] ||
+      [[ $i =~ ".nav" ]] || [[ $i =~ ".out" ]] ||
+      [[ $i =~ ".snm" ]] || [[ $i =~ ".toc" ]] ||
+      [[ $i =~ ".xml" ]]; then
       rm -f $i
-      if [[ $? -eq 0 ]]; then
-        echo "$i removed!"
-      fi
-    elif [[ $p -eq 1 ]] && [[ $i == *'.pdf' ]]; then
-      rm -f $i
-      if [[ $? -eq 0 ]]; then
-        echo "$i purged!"
-      fi
+      [[ $? -eq 0 ]] && echo "$i removed!"
+    elif [[ -n $pdfpurge ]] && [[ $i =~ ".pdf" ]]; then
+      rm -f $i && [[ $? -eq 0 ]] && echo "$i purged!"
     fi
   done
+  unset i
 }
 
 function openNvim {
   if [[ $# -eq 0 ]]; then
     nvim .
   else
-    nvim $@
+    nvim -O $@
   fi
 }
 
 function rbwg {
   if ! (( $+commands[kitty] && $+commands[rbw] )); then
-    echo "You don't have kitty and rbw installed!"
+    echo "Install kitty and rbw!"
     return 1
   fi
-  if [[ ! $# -eq 1 ]]; then
-    echo "Just one argument!"
-    return 1
-  fi
+  [[ ! $# -eq 1 ]] && echo "Just one argument!" && return 1
   local rbwpw=$(rbw get $1)
-  if [[ $rbwpw == "" ]]; then; return 1; fi
+  [[ -z $rbwpw ]] && return 1
   kitty +kitten clipboard <<< $rbwpw
 }
