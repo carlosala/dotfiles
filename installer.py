@@ -87,6 +87,9 @@ def installingPackages():
             "zsh", "exa", ["sudo", "pacman", "-S", "--needed", "--noconfirm", "exa"]
         )
         installPackage(
+            "zsh", "nawk", ["sudo", "pacman", "-S", "--needed", "--noconfirm", "nawk"]
+        )
+        installPackage(
             "", "dust", ["sudo", "pacman", "-S", "--needed", "--noconfirm", "dust"]
         )
         installPackage(
