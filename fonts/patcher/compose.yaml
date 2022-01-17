@@ -1,0 +1,9 @@
+services:
+  nerd:
+    image: nerdfonts/patcher
+    volumes:
+      - ./in:/in
+      - ./out:/out
+    command:
+      - "-c"
+      - "--no-progressbars"

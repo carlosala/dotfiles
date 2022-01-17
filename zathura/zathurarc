@@ -2,7 +2,7 @@ set default-bg "#32302f"
 set default-fg "#d4be98"
 set recolor-lightcolor "#32302f"
 set recolor-darkcolor "#d4be98"
-set font "JetBrains Mono 11"
+set font "JetBrainsMono Nerd Font 11"
 set sandbox none
 
 map <A-o> set "highlight-transparency 0"

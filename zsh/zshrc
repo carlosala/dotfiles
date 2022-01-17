@@ -20,6 +20,7 @@ source $ZSH_CUSTOM/functions.zsh
 export EDITOR="nvim"
 export GPG_TTY=$TTY
 export PATH="$PATH:/home/carlo/.cargo/bin"
+export PATH="$PATH:/home/carlo/.local/bin"
 export XZ_DEFAULTS="-T0"
 
 ### ALIASES
