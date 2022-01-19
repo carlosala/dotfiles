@@ -1,4 +1,4 @@
-call plug#begin('~/.config/nvim/plugged')
+call plug#begin()
 
 " completion
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
