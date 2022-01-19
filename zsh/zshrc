@@ -13,9 +13,6 @@ if test -n "$KITTY_INSTALLATION_DIR"; then
   unfunction kitty-integration
 fi
 
-### CUSTOM FUNCTIONS
-source $ZSH_CUSTOM/functions.zsh
-
 ### VARIABLES
 export EDITOR="nvim"
 export GPG_TTY=$TTY
