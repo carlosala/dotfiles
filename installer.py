@@ -61,17 +61,20 @@ def checkingBasicRequirements():
 
 
 def installingPackages():
-    installPackage("nvim", "pynvim (pip)", ["pip3", "install", "--user", "pynvim"])
     installPackage(
-        "nvim", "neovim-remote (pip)", ["pip3", "install", "--user", "neovim-remote"]
+        "nvim", "neovim (node integration)", ["yarn", "global", "add", "neovim"]
     )
-    "nvim", "neovim (node integration)", ["yarn", "global", "add", "neovim"]
     if "arch" in sys.argv:
         installPackage(
             "nvim", "bat", ["sudo", "pacman", "-S", "--needed", "--noconfirm", "bat"]
         )
         installPackage(
             "nvim", "fd", ["sudo", "pacman", "-S", "--needed", "--noconfirm", "fd"]
+        )
+        installPackage(
+            "nvim",
+            "pynvim",
+            ["sudo", "pacman", "-S", "--needed", "--noconfirm", "python-pynvim"],
         )
         installPackage(
             "nvim",
@@ -114,6 +117,7 @@ def installingPackages():
         installPackage("nvim", "bat", ["cargo", "install", "bat"])
         installPackage("nvim", "fd", ["cargo", "install", "fd-find"])
         installPackage("nvim", "ripgrep", ["cargo", "install", "ripgrep"])
+        installPackage("nvim", "pynvim (pip)", ["pip3", "install", "--user", "pynvim"])
         installPackage("zsh", "exa", ["cargo", "install", "exa"])
         installPackage("", "dust", ["cargo", "install", "du-dust"])
         installPackage("", "hyperfine", ["cargo", "install", "hyperfine"])
