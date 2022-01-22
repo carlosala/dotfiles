@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 import os
-import sys
 import subprocess
+import sys
 
 
 def neededPackage(app: str, package: str):
-    if app != "":
+    if len(app):
         return f"{package} is needed for {app}. Do you want to install it now? [Y/n] "
     return (
         f"{package} is not needed, but I use it. Do you want to install it now? [Y/n] "
@@ -15,30 +15,31 @@ def neededPackage(app: str, package: str):
 def checkPackage(package: str):
     print(f"Checking if {package} is installed...")
     try:
-        subprocess.run([package, "--version"], capture_output=True)
+        subprocess.run([package, "--version"], capture_output=True, check=True)
         print("Done!\n")
         return 0
-    except:
+    except subprocess.CalledProcessError:
         print(f"{package} is not installed!")
         return 1
 
 
 def checkZshDefault():
-    if os.environ["SHELL"].endswith("zsh") == False:
+    if not os.environ["SHELL"].endswith("zsh"):
         print(
             "Zsh is not your default shell. This dotfiles are intended to be used with zsh, if you want to use it, please execute $chsh -s /bin/zsh."
         )
+        return 1
     return 0
 
 
 def installPackage(app: str, package: str, command: list[str]):
     i = input(neededPackage(app, package))
-    if i != "n" and i != "N":
+    if i not in ("n", "N"):
         print("\n")
         try:
-            subprocess.run(command)
+            subprocess.run(command, check=True)
             return True
-        except:
+        except subprocess.CalledProcessError:
             print(f"{package} installation failed. Skipping...")
             return False
     else:
@@ -50,14 +51,14 @@ def checkingBasicRequirements():
     notInstalled = 0
     notInstalled += checkPackage("git")
     notInstalled += checkPackage("zsh")
-    notInstalled += checkZshDefault()
     notInstalled += checkPackage("pip3")
     notInstalled += checkPackage("nvim")
     notInstalled += checkPackage("yarn")
     notInstalled += checkPackage("cargo")
-    if notInstalled > 0:
+    notInstalled += checkZshDefault()
+    if notInstalled:
         print("Please, install it/them!")
-        quit(1)
+        sys.exit(1)
 
 
 def installingPackages():
@@ -70,6 +71,11 @@ def installingPackages():
         )
         installPackage(
             "nvim", "fd", ["sudo", "pacman", "-S", "--needed", "--noconfirm", "fd"]
+        )
+        installPackage(
+            "nvim",
+            "pylint",
+            ["sudo", "pacman", "-S", "--needed", "--noconfirm", "python-pylint"],
         )
         installPackage(
             "nvim",
@@ -117,6 +123,7 @@ def installingPackages():
         installPackage("nvim", "bat", ["cargo", "install", "bat"])
         installPackage("nvim", "fd", ["cargo", "install", "fd-find"])
         installPackage("nvim", "ripgrep", ["cargo", "install", "ripgrep"])
+        installPackage("nvim", "pylint (pip)", ["pip3", "install", "--user", "pylint"])
         installPackage("nvim", "pynvim (pip)", ["pip3", "install", "--user", "pynvim"])
         installPackage("zsh", "exa", ["cargo", "install", "exa"])
         installPackage("", "dust", ["cargo", "install", "du-dust"])
