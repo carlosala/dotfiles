@@ -1,11 +1,10 @@
 call plug#begin()
 
 " completion
-Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+Plug 'neoclide/coc.nvim', { 'branch': 'release', 'commit': '3710b54' }
 Plug 'sirver/ultisnips'
 
 " formatting
-Plug 'psf/black', { 'do': ':BlackUpgrade' }
 Plug 'editorconfig/editorconfig-vim'
 Plug 'rhysd/vim-clang-format'
 

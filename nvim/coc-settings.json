@@ -9,6 +9,7 @@
     "jsonc",
     "markdown",
     "rust",
+    "python",
     "typescript",
     "typescriptreact",
     "yaml"
@@ -18,48 +19,9 @@
   "diagnostic.warningSign": "",
   "diagnostic.virtualText": true,
   "diagnostic.virtualTextCurrentLineOnly": false,
-  "diagnostic-languageserver.filetypes": {
-    "python": "pylint"
-  },
-  "diagnostic-languageserver.linters": {
-    "pylint": {
-      "sourceName": "pylint",
-      "command": "pylint",
-      "debounce": 100,
-      "args": [
-        "--output-format",
-        "text",
-        "--score",
-        "no",
-        "--msg-template",
-        "'{line}:{column}:{category}:{msg} ({msg_id}:{symbol})'",
-        "%file"
-      ],
-      "formatPattern": [
-        "^(\\d+?):(\\d+?):([a-z]+?):(.*)$",
-        {
-          "line": 1,
-          "column": 2,
-          "endColumn": 2,
-          "security": 3,
-          "message": 4
-        }
-      ],
-      "rootPatterns": ["pyproject.toml", "setup.py", ".git"],
-      "securities": {
-        "informational": "hint",
-        "refactor": "info",
-        "convention": "info",
-        "warning": "warning",
-        "error": "error",
-        "fatal": "error"
-      },
-      "offsetColumn": 1,
-      "offsetColumnEnd": 1,
-      "formatLines": 1
-    }
-  },
   "eslint.autoFixOnSave": true,
+  "python.formatting.provider": "black",
+  "python.linting.pylintEnabled": true,
   "suggest.completionItemKindLabels": {
     "text": "",
     "method": "",

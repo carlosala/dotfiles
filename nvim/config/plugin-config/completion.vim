@@ -5,9 +5,9 @@ set updatetime=300
 set shortmess+=c
 set signcolumn=number
 let g:coc_global_extensions = ['coc-clangd', 'coc-css', 'coc-deno',
-  \ 'coc-diagnostic', 'coc-eslint', 'coc-html', 'coc-jedi', 'coc-json',
-  \ 'coc-prettier', 'coc-rust-analyzer', 'coc-sh', 'coc-texlab', 'coc-tsserver',
-  \ 'coc-vimlsp', 'coc-yaml']
+  \ 'coc-eslint', 'coc-html', 'coc-json', 'coc-prettier', 'coc-pyright',
+  \ 'coc-rust-analyzer', 'coc-sh', 'coc-texlab', 'coc-tsserver', 'coc-vimlsp',
+  \ 'coc-yaml']
 let g:coc_filetype_map = { 'yaml.docker-compose': 'yaml' }
 
 " ultisnips

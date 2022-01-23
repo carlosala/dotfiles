@@ -72,6 +72,9 @@ def installingPackages():
             "nvim", "bat", ["sudo", "pacman", "-S", "--needed", "--noconfirm", "bat"]
         )
         installPackage(
+            "nvim", "black", ["sudo", "pacman", "-S", "--needed", "--noconfirm", "python-black"]
+        )
+        installPackage(
             "nvim", "fd", ["sudo", "pacman", "-S", "--needed", "--noconfirm", "fd"]
         )
         installPackage(
@@ -123,6 +126,7 @@ def installingPackages():
         )
     else:
         installPackage("nvim", "bat", ["cargo", "install", "bat"])
+        installPackage("nvim", "black (pip)", ["pip3", "install", "--user", "black"])
         installPackage("nvim", "fd", ["cargo", "install", "fd-find"])
         installPackage("nvim", "ripgrep", ["cargo", "install", "ripgrep"])
         installPackage("nvim", "pylint (pip)", ["pip3", "install", "--user", "pylint"])
