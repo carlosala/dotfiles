@@ -33,7 +33,9 @@ def checkZshDefault():
 
 
 def installPackage(app: str, package: str, command: list[str]):
-    i = input(neededPackage(app, package))
+    i = ""
+    if "-y" not in sys.argv and "--yes" not in sys.argv:
+        i = input(neededPackage(app, package))
     if i not in ("n", "N"):
         print("\n")
         try:
@@ -65,7 +67,7 @@ def installingPackages():
     installPackage(
         "nvim", "neovim (node integration)", ["yarn", "global", "add", "neovim"]
     )
-    if "arch" in sys.argv:
+    if "-a" in sys.argv or "--arch" in sys.argv:
         installPackage(
             "nvim", "bat", ["sudo", "pacman", "-S", "--needed", "--noconfirm", "bat"]
         )

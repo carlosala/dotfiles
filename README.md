@@ -32,10 +32,16 @@ git submodule update
 ./installer.py
 ```
 
-If you want to install that packages using `pacman`, run it with an `arch` argument:
+If you want to install that packages using `pacman`, run it with the `-a` or `--arch` argument:
 
 ```sh
-./installer.py arch
+./installer.py -a
+```
+
+If you want to install all packages without being prompted of each one pass the `-y` or `--yes` argument:
+
+```sh
+./installer.py -y
 ```
 
 3. Copy the config you are interested to to your config directory. Config paths:
