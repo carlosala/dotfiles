@@ -2,7 +2,7 @@
 export ZSH="/home/carlo/.oh-my-zsh"
 ZSH_DISABLE_COMPFIX="true"
 ZSH_THEME="nt-modif"
-plugins=( deno gh git git-prompt rbw rust yarn z )
+plugins=( deno git git-prompt yarn z )
 source $ZSH/oh-my-zsh.sh
 
 ### KITTY SHELL INTEGRATION
