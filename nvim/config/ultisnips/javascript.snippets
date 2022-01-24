@@ -2,28 +2,28 @@ snippet cl "console.log()"
 console.log($1)
 endsnippet
 
-snippet fn "function() {}"
+snippet fn "function()"
 function $1($2) {
   $3
 }
 endsnippet
 
-snippet efn "export function() {}"
+snippet efn "export function()"
 export function $1($2) {
   $3
 }
 endsnippet
 
-snippet afn "() => {}" w
+snippet afn "arrow function" w
 ${1:($2)} => ${3:\{$4\}}
 endsnippet
 
-snippet imp "import x from y"
-import $2 from "$1"
+snippet imp "import y from x"
+import ${2:\{$3\}} from "$1"
 endsnippet
 
 snippet req "require()"
-const $2 = require("$1")
+const ${2:\{$3\}} = require("$1")
 endsnippet
 
 snippet us "useState"
