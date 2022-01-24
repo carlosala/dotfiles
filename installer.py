@@ -72,7 +72,9 @@ def installingPackages():
             "nvim", "bat", ["sudo", "pacman", "-S", "--needed", "--noconfirm", "bat"]
         )
         installPackage(
-            "nvim", "black", ["sudo", "pacman", "-S", "--needed", "--noconfirm", "python-black"]
+            "nvim",
+            "black",
+            ["sudo", "pacman", "-S", "--needed", "--noconfirm", "python-black"],
         )
         installPackage(
             "nvim", "fd", ["sudo", "pacman", "-S", "--needed", "--noconfirm", "fd"]
