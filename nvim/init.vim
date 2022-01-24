@@ -12,13 +12,13 @@ set noshowmode
 set ignorecase
 set termguicolors
 
-if empty(glob('$HOME/.local/share/nvim/site/autoload/plug.vim'))
+if empty(glob("$HOME/.local/share/nvim/site/autoload/plug.vim"))
   silent !curl -fLo $HOME/.local/share/nvim/site/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 endif
 
-let g:python3_host_prog = '/usr/bin/python3'
-let g:tex_flavor = 'latex'
+let g:python3_host_prog = "/usr/bin/python3"
+let g:tex_flavor = "latex"
 
 runtime! config/plugin-config/*.vim config/*.vim config/lua/*.lua
 

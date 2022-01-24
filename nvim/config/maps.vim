@@ -1,4 +1,4 @@
-let mapleader=' '
+let mapleader=" "
 
 " basic keymaps
 nmap <silent> <Leader>w :w<CR>
