@@ -1,7 +1,7 @@
 call plug#begin()
 
 " completion
-Plug 'neoclide/coc.nvim', { 'branch': 'release', 'commit': '3710b54' }
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'sirver/ultisnips'
 
 " formatting
