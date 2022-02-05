@@ -8,6 +8,3 @@ command! -bang -nargs=* RgCustom
   \ 'rg -n --color=always -i --hidden -g "!*.git/*"
   \ -g "!yarn.lock" -g "!package-lock.json" -- '.shellescape(<q-args>),
   \ 1, fzf#vim#with_preview({"options": "--info=inline"}), <bang>0)
-
-" nvim-tree
-let g:nvim_tree_quit_on_open = 1
