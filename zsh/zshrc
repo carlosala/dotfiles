@@ -1,8 +1,17 @@
+### VARIABLES
+export EDITOR="nvim"
+export GPG_TTY=$TTY
+export PATH="$PATH:/home/carlo/.cargo/bin"
+export PATH="$PATH:/home/carlo/.local/bin"
+export PATH="$PATH:/home/carlo/.yarn/bin"
+export XZ_DEFAULTS="-T0"
+
 ### OMZ
 export ZSH="/home/carlo/.oh-my-zsh"
+zstyle ':omz:plugins:yarn' global-path off
 ZSH_DISABLE_COMPFIX="true"
 ZSH_THEME="nt-modif"
-plugins=( deno git git-prompt yarn z )
+plugins=(colored-man-pages deno git git-prompt rbw sudo yarn z)
 source $ZSH/oh-my-zsh.sh
 
 ### KITTY SHELL INTEGRATION
@@ -12,13 +21,6 @@ if test -n "$KITTY_INSTALLATION_DIR"; then
   kitty-integration
   unfunction kitty-integration
 fi
-
-### VARIABLES
-export EDITOR="nvim"
-export GPG_TTY=$TTY
-export PATH="$PATH:/home/carlo/.cargo/bin"
-export PATH="$PATH:/home/carlo/.local/bin"
-export XZ_DEFAULTS="-T0"
 
 ### ALIASES
 alias c="clear"
