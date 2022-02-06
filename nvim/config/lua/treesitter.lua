@@ -6,4 +6,4 @@ require("nvim-treesitter.configs").setup({
   autotag = { enable = true },
 })
 
-require("nvim-treesitter.parsers").get_parser_configs().jsonc.used_by = "json"
+require("nvim-treesitter.parsers").filetype_to_parsername.json = "jsonc"
