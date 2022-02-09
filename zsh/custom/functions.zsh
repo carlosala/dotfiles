@@ -1,58 +1,54 @@
 function gccom {
-  if [[ $# -eq 0 ]]; then
-    for i in $(fd -t f -d 2 -e c -HI); do
-      gcc -o ${i/.c} -g -Wall $i -lm && [[ $? -eq 0 ]] && echo "$i compiled!"
-    done
-  else
-    for j in $@; do
-      if [[ ${j: -2} == ".c" ]] && [[ -f $j ]]; then
-        gcc -o ${j/.c} -g -Wall $j -lm && [[ $? -eq 0 ]] && echo "$j compiled!"
+  if (( $# )); then
+    for file in $@; do
+      if [[ ${file:e} == "c" ]] && [[ -f $file ]]; then
+        gcc -o ${file:r} -g -Wall $file -lm
+        (( ! $? )) && echo "$file compiled!"
       else
-        echo "$j is not a C file!"
+        echo "$file is not a C file!"
       fi
     done
+  else
+    for file in $(fd -t f -d 2 -e c -HI); do
+      gcc -o ${file:r} -g -Wall $file -lm
+      (( ! $? )) && echo "$file compiled!"
+    done
   fi
-  unset i j
+  unset file
 }
 
 function ltc {
-  if [[ $PWD == ~ ]]; then
-    echo "Don't use this function in your root folder!"
-    return 1
-  fi
-  [[ $1 == "p" ]] && local pdfpurge="true"
-  for i in $(fd -t f -d 2 -HI); do
-    if [[ $i =~ "latexmk" ]] || [[ $i =~ "synctex" ]] ||
-      [[ $i =~ ".aux" ]] || [[ $i =~ ".bbl" ]] ||
-      [[ $i =~ ".bcf" ]] || [[ $i =~ ".blg" ]] ||
-      [[ $i =~ ".fls" ]] || [[ $i =~ ".log" ]] ||
-      [[ $i =~ ".nav" ]] || [[ $i =~ ".out" ]] ||
-      [[ $i =~ ".snm" ]] || [[ $i =~ ".toc" ]] ||
-      [[ $i =~ ".xml" ]]; then
-      rm -f $i
-      [[ $? -eq 0 ]] && echo "$i removed!"
-    elif [[ -n $pdfpurge ]] && [[ $i =~ ".pdf" ]]; then
-      rm -f $i && [[ $? -eq 0 ]] && echo "$i purged!"
-    fi
+  depth=1
+  while getopts "d:p" opt; do
+    case $opt in
+      d) depth=$OPTARG ;;
+      p) pdfp=1 ;;
+    esac
   done
-  unset i
+  regexes=("latexmk" ".synctex.gz" ".aux" ".bbl" ".bcf" ".bgl" ".fls" ".log"
+    ".nav" ".out" ".snm" ".toc" ".xml")
+  for file in $(fd -t f -d $depth -HI); do
+    if (( $pdfp )) && [[ $file =~ ".pdf" ]] && [[ -f "${file:r}.tex" ]]; then
+      rm -f $file
+      (( ! $? )) && echo "$file purged!"
+      continue
+    fi
+    for rgx in $regexes; do
+      if [[ $file =~ $rgx ]] && {[[ -f "${file:r}.tex" ]] \
+        || [[ -f "${file/$rgx}.tex" ]]}; then
+        rm -f $file
+        (( ! $? )) && echo "$file removed!"
+        break
+      fi
+    done
+  done
+  unset file rgx regexes opt depth pdfp
 }
 
 function openNvim {
-  if [[ $# -eq 0 ]]; then
-    nvim .
-  else
+  if (( $# )); then
     nvim -O $@
+  else
+    nvim .
   fi
-}
-
-function rbwg {
-  if ! (( $+commands[kitty] && $+commands[rbw] )); then
-    echo "Install kitty and rbw!"
-    return 1
-  fi
-  [[ ! $# -eq 1 ]] && echo "Just one argument!" && return 1
-  local rbwpw=$(rbw get $1)
-  [[ -z $rbwpw ]] && return 1
-  echo -n $rbwpw | kitty +kitten clipboard
 }
