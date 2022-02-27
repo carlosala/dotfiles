@@ -1,5 +1,5 @@
-PROMPT='%F{2}%1~ %B%F{4}[%f%b '
-RPROMPT='$(gitprompt) %B%F{4}] %(?:%F{6}:%F{1})%T%f%b'
+PROMPT='%F{2}%1~%f %B%F{4}[%f%b '
+RPROMPT='$(gitprompt) %B%F{4}]%f %(?:%F{6}:%F{1})%T%f%b'
 
 ZSH_THEME_GIT_PROMPT_PREFIX=""
 ZSH_THEME_GIT_PROMPT_SUFFIX=""
