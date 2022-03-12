@@ -32,4 +32,4 @@ nmap <silent> <Leader>n :NvimTreeFindFile<CR>
 nmap <Leader>f :FilesCustom<CR>
 nmap <Leader>g :RgCustom<CR>
 nmap <Leader>h :Helptags<CR>
-inoremap <expr> <M-CR> v:lua.npairs.autopairs_cr()
+inoremap <expr> <M-CR> v:lua.Npairs.autopairs_cr()

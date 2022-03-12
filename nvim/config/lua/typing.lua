@@ -1,6 +1,6 @@
-npairs = require("nvim-autopairs")
+Npairs = require("nvim-autopairs")
 
-npairs.setup({
+Npairs.setup({
   check_ts = true,
   map_cr = false,
 })
