@@ -26,7 +26,7 @@ fi
 ### ALIASES
 alias c="clear"
 alias e="exit"
-alias l="exa -la --group-directories-first --git --icons"
+alias l="exa -la --group-directories-first --icons"
 alias s="sudo"
 alias bc="bc -l"
 alias cdot="~/Documents/dev/dotfiles/copyconfig.sh"
