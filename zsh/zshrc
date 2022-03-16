@@ -1,6 +1,7 @@
 ### VARIABLES
 export EDITOR="nvim"
 export GPG_TTY=$TTY
+export NODE_OPTIONS="--max-old-space-size=4096"
 export PATH="$PATH:/home/carlo/.cargo/bin"
 export PATH="$PATH:/home/carlo/.local/bin"
 export PATH="$PATH:/home/carlo/.yarn/bin"
