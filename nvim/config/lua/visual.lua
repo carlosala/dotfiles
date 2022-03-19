@@ -8,3 +8,8 @@ require("lualine").setup({
     "nvim-tree",
   },
 })
+
+require("indent_blankline").setup({
+  filetype_exclude = { "checkhealth", "help", "NvimTree", "vim-plug" },
+  use_treesitter = true,
+})

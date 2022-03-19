@@ -20,6 +20,7 @@ Plug 'neoclide/jsonc.vim'
 
 " typing
 Plug 'numtostr/comment.nvim'
+Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'windwp/nvim-autopairs'
 Plug 'windwp/nvim-ts-autotag'
 Plug 'tpope/vim-surround'
