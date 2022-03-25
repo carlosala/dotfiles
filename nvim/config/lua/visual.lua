@@ -10,6 +10,12 @@ require("lualine").setup({
 })
 
 require("indent_blankline").setup({
-  filetype_exclude = { "checkhealth", "help", "NvimTree", "vim-plug" },
+  filetype_exclude = {
+    "checkhealth",
+    "gitcommit",
+    "help",
+    "NvimTree",
+    "vim-plug",
+  },
   use_treesitter = true,
 })
