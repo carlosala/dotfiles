@@ -17,6 +17,7 @@ Plug 'christoomey/vim-tmux-navigator'
 " syntax
 Plug 'nvim-treesitter/nvim-treesitter', { 'do':  ':TSUpdate' }
 Plug 'neoclide/jsonc.vim'
+Plug 'fladson/vim-kitty'
 
 " typing
 Plug 'numtostr/comment.nvim'
