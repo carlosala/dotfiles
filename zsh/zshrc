@@ -12,7 +12,7 @@ export ZSH="/home/carlo/.oh-my-zsh"
 zstyle ':omz:plugins:yarn' global-path off
 ZSH_DISABLE_COMPFIX="true"
 ZSH_THEME="nt-modif"
-plugins=(colored-man-pages deno git git-prompt rbw sudo yarn z)
+plugins=(aliases colored-man-pages deno git git-prompt rbw sudo yarn z)
 source $ZSH/oh-my-zsh.sh
 less_termcap[so]="${fg_bold[yellow]}${bg[black]}"
 
