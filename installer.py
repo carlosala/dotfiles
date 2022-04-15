@@ -58,6 +58,8 @@ def checkingBasicRequirements():
     notInstalled += checkPackage("yarn")
     notInstalled += checkPackage("cargo")
     notInstalled += checkZshDefault()
+    if "-a" in sys.argv or "--arch" in sys.argv:
+        notInstalled += checkPackage("paru")
     if notInstalled:
         print("Please, install it/them!")
         sys.exit(1)
@@ -68,60 +70,48 @@ def installingPackages():
         "nvim", "neovim (node integration)", ["yarn", "global", "add", "neovim"]
     )
     if "-a" in sys.argv or "--arch" in sys.argv:
-        installPackage(
-            "nvim", "bat", ["sudo", "pacman", "-S", "--needed", "--noconfirm", "bat"]
-        )
+        installPackage("nvim", "bat", ["paru", "-S", "--needed", "bat"])
         installPackage(
             "nvim",
             "black",
-            ["sudo", "pacman", "-S", "--needed", "--noconfirm", "python-black"],
+            ["paru", "-S", "--needed", "python-black"],
         )
-        installPackage(
-            "nvim", "fd", ["sudo", "pacman", "-S", "--needed", "--noconfirm", "fd"]
-        )
+        installPackage("nvim", "fd", ["paru", "-S", "--needed", "fd"])
         installPackage(
             "nvim",
             "pylint",
-            ["sudo", "pacman", "-S", "--needed", "--noconfirm", "python-pylint"],
+            ["paru", "-S", "--needed", "python-pylint"],
         )
         installPackage(
             "nvim",
             "pynvim",
-            ["sudo", "pacman", "-S", "--needed", "--noconfirm", "python-pynvim"],
+            ["paru", "-S", "--needed", "python-pynvim"],
         )
         installPackage(
             "nvim",
             "ripgrep",
-            ["sudo", "pacman", "-S", "--needed", "--noconfirm", "ripgrep"],
+            ["paru", "-S", "--needed", "ripgrep"],
         )
         installPackage(
             "nvim",
             "xclip",
-            ["sudo", "pacman", "-S", "--needed", "--noconfirm", "xclip"],
+            ["paru", "-S", "--needed", "xclip"],
         )
-        installPackage(
-            "zsh", "exa", ["sudo", "pacman", "-S", "--needed", "--noconfirm", "exa"]
-        )
-        installPackage(
-            "zsh", "nawk", ["sudo", "pacman", "-S", "--needed", "--noconfirm", "nawk"]
-        )
-        installPackage(
-            "", "dust", ["sudo", "pacman", "-S", "--needed", "--noconfirm", "dust"]
-        )
+        installPackage("zsh", "exa", ["paru", "-S", "--needed", "exa"])
+        installPackage("zsh", "nawk", ["paru", "-S", "--needed", "nawk"])
+        installPackage("", "dust", ["paru", "-S", "--needed", "dust"])
         installPackage(
             "",
             "hyperfine",
-            ["sudo", "pacman", "-S", "--needed", "--noconfirm", "hyperfine"],
+            ["paru", "-S", "--needed", "hyperfine"],
         )
         installPackage(
             "",
             "zathura",
             [
-                "sudo",
-                "pacman",
+                "paru",
                 "-S",
                 "--needed",
-                "--noconfirm",
                 "zathura",
                 "zathura-pdf-mupdf",
             ],
