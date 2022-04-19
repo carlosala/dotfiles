@@ -2,23 +2,23 @@
 	shallow = "!f() { printf 'Enter to continue '; read _; git pull --depth 1; git gc --prune=now; }; f"
 
 [commit]
-  gpgsign = true
+  gpgSign = true
 
 [init]
-  defaultbranch = main
+  defaultBranch = main
 
 [pull]
   rebase = true
 
 [push]
-  followtags = true
+  followTags = true
 
 [tag]
-  gpgsign = true
+  gpgSign = true
 
 [user]
   name = Carlo Sala
   email = carlosalag@protonmail.com
-  signingkey = DA6FB450C1A4FE9A
+  signingKey = DA6FB450C1A4FE9A
 
 # vim: ft=gitconfig
