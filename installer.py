@@ -70,6 +70,9 @@ def installingPackages():
         "nvim", "neovim (node integration)", ["yarn", "global", "add", "neovim"]
     )
     if "-a" in sys.argv or "--arch" in sys.argv:
+        installPackage(
+            "git", "diff-so-fancy", ["paru", "-S", "--needed", "diff-so-fancy"]
+        )
         installPackage("nvim", "bat", ["paru", "-S", "--needed", "bat"])
         installPackage(
             "nvim",

@@ -9,3 +9,5 @@ gui:
   showCommandLog: false
 git:
   overrideGpg: true
+  paging:
+    pager: diff-so-fancy

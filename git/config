@@ -4,8 +4,14 @@
 [commit]
   gpgSign = true
 
+[core]
+  pager = diff-so-fancy | less -x2 -SRF
+
 [init]
   defaultBranch = main
+
+[interactive]
+  diffFilter = diff-so-fancy --patch
 
 [pull]
   rebase = true
