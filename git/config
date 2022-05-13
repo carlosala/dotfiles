@@ -1,5 +1,5 @@
 [alias]
-	shallow = "!f() { printf 'Enter to continue '; read _; git pull --depth 1; git gc --prune=now; }; f"
+  shallow = "!f() { printf 'Enter to continue '; read _; git pull --depth 1; git gc --prune=now; }; f"
 
 [commit]
   gpgSign = true
