@@ -108,6 +108,8 @@ def installingPackages():
             "hyperfine",
             ["paru", "-S", "--needed", "hyperfine"],
         )
+        installPackage("", "lazydocker", ["paru", "-S", "--needed", "lazydocker-bin"])
+        installPackage("", "lazygit", ["paru", "-S", "--needed", "lazygit"])
         installPackage(
             "",
             "zathura",
