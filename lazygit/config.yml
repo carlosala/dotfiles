@@ -8,6 +8,7 @@ gui:
       - yellow
   showCommandLog: false
 git:
+  branchLogCmd: git log --graph --format='%C(auto)%h%d %s %C(dim)<%an> %C(green)%cr'
   overrideGpg: true
   paging:
     pager: diff-so-fancy
