@@ -10,6 +10,7 @@ export ZSH="/home/carlo/.oh-my-zsh"
 ZSH_THEME="nt-modif"
 plugins=(aliases colored-man-pages deno git git-prompt rbw sudo yarn z)
 source $ZSH/oh-my-zsh.sh
+autoload zrecompile && zrecompile -q -p "$ZSH_COMPDUMP"
 less_termcap[so]="${fg_bold[yellow]}${bg[black]}"
 
 ### KITTY SHELL INTEGRATION
