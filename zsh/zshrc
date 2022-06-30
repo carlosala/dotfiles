@@ -3,6 +3,7 @@ export EDITOR="nvim"
 export GPG_TTY=$TTY
 export PATH="$PATH:/home/carlo/.cargo/bin"
 export PATH="$PATH:/home/carlo/.local/bin"
+export ZSHZ_CASE=ignore
 export XZ_DEFAULTS="-T0"
 
 ### OMZ
