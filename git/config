@@ -13,9 +13,6 @@
 [interactive]
   diffFilter = diff-so-fancy --patch
 
-[merge]
-  ff = false
-
 [pull]
   rebase = true
 
