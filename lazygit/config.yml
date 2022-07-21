@@ -1,14 +1,17 @@
 gui:
   theme:
+    selectedLineBgColor:
+      - default
     selectedRangeBgColor:
-      - reverse
+      - default
     cherryPickedCommitBgColor:
-      - reverse
+      - default
     cherryPickedCommitFgColor:
-      - yellow
+      - default
   showCommandLog: false
 git:
   branchLogCmd: git log --graph --format='%C(auto)%h%d %s %C(dim)<%an> %C(green)%cr'
   overrideGpg: true
   paging:
+    colorArg: always
     pager: diff-so-fancy
