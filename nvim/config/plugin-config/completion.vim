@@ -11,7 +11,7 @@ let g:coc_global_extensions = ["coc-clangd", "coc-css", "coc-deno",
   \ "coc-tsserver", "coc-vimlsp", "coc-yaml"]
 
 " ultisnips
-let g:UltiSnipsSnippetDirectories = ["config/ultisnips"]
+let g:UltiSnipsSnippetDirectories = [stdpath('config')."/ultisnips"]
 let g:UltiSnipsExpandTrigger = "<M-l>"
 let g:UltiSnipsJumpForwardTrigger = "<M-l>"
 let g:UltiSnipsJumpBackwardTrigger = "<M-h>"
