@@ -8,8 +8,9 @@
   2. Use zsh as default shell (`chsh -s $(where zsh)`)
   3. Install [ohmyzsh](https://ohmyz.sh)
 - python3 & pip3
-- [neovim](https://neovim.io) (v0.5 minimum, v0.7+ recommended)
-- npm
+- [neovim](https://neovim.io) (v0.6 minimum, v0.7+ recommended)
+  - _Some configuration might not work with v0.6_
+- npm / yarn
 - cargo
   - To install it, use [rustup](https://rustup.rs)
 
@@ -22,8 +23,7 @@ _As you could have imagined, this are requirements only for `zsh` and `nvim`_
 ```sh
 git clone git@github.com:carlosala/dotfiles.git
 cd dotfiles
-git submodule init
-git submodule update
+git submodule update --init
 ```
 
 2. Run installer script to check the requirements and install some small useful packages (just if you want, you are going to be asked for each one of those):
