@@ -9,6 +9,10 @@ vim.cmd([[
   Plug 'editorconfig/editorconfig-vim'
   Plug 'rhysd/vim-clang-format'
 
+  " git
+  Plug 'lewis6991/gitsigns.nvim'
+  Plug 'tpope/vim-fugitive'
+
   " navigation
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'

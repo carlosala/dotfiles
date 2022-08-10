@@ -1,3 +1,4 @@
+require("plugins/git")
 require("plugins/navigation")
 require("plugins/syntax")
 require("plugins/typing")
