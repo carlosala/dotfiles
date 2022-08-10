@@ -6,3 +6,5 @@ Npairs.setup({
 })
 
 require("Comment").setup({ ignore = "^$" })
+
+require("nvim-surround").setup()

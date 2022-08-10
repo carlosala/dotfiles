@@ -25,8 +25,8 @@ vim.cmd([[
   Plug 'numtostr/comment.nvim'
   Plug 'lukas-reineke/indent-blankline.nvim'
   Plug 'windwp/nvim-autopairs'
+  Plug 'kylechui/nvim-surround'
   Plug 'windwp/nvim-ts-autotag'
-  Plug 'tpope/vim-surround'
 
   " visual
   Plug 'sainnhe/gruvbox-material'
