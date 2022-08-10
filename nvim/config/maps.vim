@@ -4,6 +4,7 @@ let mapleader=" "
 nmap <silent> <Leader>w :w<CR>
 nmap <silent> <Leader>W :noa w<CR>
 nmap <silent> <Leader>q :q<CR>
+nnoremap <silent> x "_x
 nmap Q <Nop>
 nmap <Leader>s <C-w>v
 nmap <Leader>v <C-w>s
