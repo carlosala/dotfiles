@@ -21,8 +21,31 @@ require("packer").startup(function(use)
   use("tpope/vim-fugitive")
 
   -- navigation
-  use({ "junegunn/fzf", run = "./install --bin" })
-  use("junegunn/fzf.vim")
+  use({
+    "nvim-telescope/telescope.nvim",
+    config = function()
+      require("telescope").setup({
+        pickers = {
+          find_files = { find_command = { "fd", "-t=f", "-i", "-H", "-E", ".git", "-c=never", "--strip-cwd-prefix" } },
+          grep_string = {
+            additional_args = function()
+              return { "-i", "--hidden", "-g", "!.git", "-g", "!lock" }
+            end,
+            disable_coordinates = true,
+          },
+        },
+      })
+    end,
+    requires = "nvim-lua/plenary.nvim",
+  })
+  use({
+    "nvim-telescope/telescope-fzf-native.nvim",
+    after = "telescope.nvim",
+    config = function()
+      require("telescope").load_extension("fzf")
+    end,
+    run = "make",
+  })
   use({
     "kyazdani42/nvim-tree.lua",
     config = function()
