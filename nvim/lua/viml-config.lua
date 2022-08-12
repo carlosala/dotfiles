@@ -20,6 +20,9 @@ vim.g.coc_global_extensions = {
   "coc-yaml",
 }
 
+-- editorconfig-vim
+vim.g.EditorConfig_preserve_formatoptions = 1
+
 -- ultisnips
 vim.g.UltiSnipsSnippetDirectories = { vim.fn.stdpath("config") .. "/ultisnips" }
 vim.g.UltiSnipsExpandTrigger = "<M-l>"
