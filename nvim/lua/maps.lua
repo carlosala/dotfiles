@@ -44,7 +44,7 @@ map("n", "<Leader>lf", ":CocCommand latex.ForwardSearch<CR>", silent)
 -- other
 map("n", "<Leader>n", ":NvimTreeFindFile<CR>", silent)
 map("n", "<Leader>f", ":Telescope find_files<CR>", silent)
-map("n", "<Leader>g", ":Telescope grep_string search=<CR>", silent)
+map("n", "<Leader>g", ':Telescope grep_string search=""<CR>', silent)
 map("n", "<Leader>h", ":Telescope help_tags<CR>", silent)
 map("n", "<Leader>dd", ":Gvdiffsplit!<CR>", silent)
 map({ "n", "v" }, "<Leader>dgg", ":diffget<CR>", silent)
