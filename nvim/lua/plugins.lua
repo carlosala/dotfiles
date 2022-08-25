@@ -129,7 +129,7 @@ require("packer").startup(function(use)
     "nvim-lualine/lualine.nvim",
     config = function()
       require("lualine").setup({
-        extensions = { "fzf", "nvim-tree" },
+        extensions = { "fugitive", "nvim-tree" },
         sections = {
           lualine_x = { { "g:coc_status" }, "progress" },
           lualine_y = { "filetype" },
