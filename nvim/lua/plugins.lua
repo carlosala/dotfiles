@@ -55,7 +55,6 @@ require("packer").startup(function(use)
       })
     end,
   })
-  use("christoomey/vim-tmux-navigator")
 
   -- syntax
   use({

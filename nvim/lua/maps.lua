@@ -9,6 +9,11 @@ map("n", "<Leader>w", ":w<CR>", silent)
 map("n", "<Leader>W", ":noa w<CR>", silent)
 map("n", "<Leader>q", ":q<CR>", silent)
 
+map("n", "<C-h>", "<C-w>h", silent)
+map("n", "<C-j>", "<C-w>j", silent)
+map("n", "<C-k>", "<C-w>k", silent)
+map("n", "<C-l>", "<C-w>l", silent)
+
 map("n", "<Leader>s", "<C-w>v", silent)
 map("n", "<Leader>v", "<C-w>s", silent)
 map("n", "<Leader>t", ":tabedit .<CR>", silent)
