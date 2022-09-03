@@ -81,6 +81,7 @@ require("packer").startup(function(use)
   })
   use({
     "windwp/nvim-autopairs",
+    after = "nvim-treesitter",
     config = function()
       Npairs = require("nvim-autopairs")
       Npairs.setup({ check_ts = true, map_cr = false })
@@ -109,6 +110,7 @@ require("packer").startup(function(use)
   })
   use({
     "lukas-reineke/indent-blankline.nvim",
+    after = "nvim-treesitter",
     config = function()
       require("indent_blankline").setup({
         filetype_exclude = {
