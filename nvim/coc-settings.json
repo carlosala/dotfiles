@@ -51,7 +51,6 @@
     "typeParameter": "",
     "default": ""
   },
-  "suggest.enablePreview": true,
   "sumneko-lua.enableNvimLuaDev": true,
   "texlab.build.forwardSearchAfter": true,
   "texlab.forwardSearch.executable": "zathura",
