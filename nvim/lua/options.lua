@@ -12,7 +12,8 @@ vim.opt.showmode = false
 vim.opt.ignorecase = true
 vim.opt.termguicolors = true
 vim.opt.signcolumn = "yes"
-vim.opt.updatetime = 300
+vim.opt.updatetime = 50
+vim.opt.writebackup = false
 
 vim.g.python3_host_prog = "/usr/bin/python3"
 vim.g.tex_flavor = "latex"

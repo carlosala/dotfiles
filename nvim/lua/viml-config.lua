@@ -1,6 +1,4 @@
 -- coc.nvim
-vim.opt.writebackup = false
-
 vim.g.coc_filetype_map = { ["yaml.docker-compose"] = "yaml" }
 vim.g.coc_global_extensions = {
   "coc-clangd",
