@@ -21,6 +21,7 @@ vim.g.coc_global_extensions = {
 }
 
 -- editorconfig-vim
+vim.g.EditorConfig_exclude_patterns = { "fugitive://.*" }
 vim.g.EditorConfig_preserve_formatoptions = 1
 
 -- ultisnips
