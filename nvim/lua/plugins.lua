@@ -136,6 +136,7 @@ require("packer").startup(function(use)
       })
     end,
   })
+  use({ "nvim-treesitter/nvim-treesitter-context", after = "nvim-treesitter" })
   use("kyazdani42/nvim-web-devicons")
 
   if PackerBootstrap then
