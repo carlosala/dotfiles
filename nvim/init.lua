@@ -1,5 +1,1 @@
-require("install-packer")
-require("options")
-require("viml-config")
-require("plugins")
-require("maps")
+require("carlosala")
