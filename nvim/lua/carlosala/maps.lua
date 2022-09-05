@@ -2,7 +2,7 @@ vim.g.mapleader = " "
 
 local map = vim.keymap.set
 local full_opts = { expr = true, noremap = true, silent = true }
-local silent = { silent = true }
+local silent = { noremap = true, silent = true }
 
 -- basic mappings
 map("n", "<Leader>w", ":w<CR>", silent)
@@ -19,6 +19,8 @@ map("n", "<Leader>v", "<C-w>s", silent)
 map("n", "<Leader>t", ":tabedit .<CR>", silent)
 map("n", "<M-j>", "10<C-e>", silent)
 map("n", "<M-k>", "10<C-y>", silent)
+map("n", "<M-d>", "<C-d>zz", silent)
+map("n", "<M-u>", "<C-u>zz", silent)
 
 map("n", "<Leader>o", ":noh<CR>", silent)
 map("n", "x", '"_x', { noremap = true, silent = true })
