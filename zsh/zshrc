@@ -11,7 +11,6 @@ export ZSH="/home/carlo/.oh-my-zsh"
 ZSH_THEME="nt-modif"
 plugins=(aliases colored-man-pages deno git git-prompt rbw sudo yarn zsh-z)
 source $ZSH/oh-my-zsh.sh
-autoload zrecompile && zrecompile -q -p "$ZSH_COMPDUMP" && rm -f "$ZSH_COMPDUMP.zwc.old"
 less_termcap[so]="${fg_bold[yellow]}${bg[black]}"
 
 ### ALIASES
