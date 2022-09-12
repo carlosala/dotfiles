@@ -8,7 +8,7 @@ export XZ_DEFAULTS="-T0"
 
 ### OMZ
 export ZSH="/home/carlo/.oh-my-zsh"
-ZSH_THEME="nt-modif"
+ZSH_THEME="carlosala"
 plugins=(aliases colored-man-pages deno git git-prompt rbw sudo yarn zsh-z)
 source $ZSH/oh-my-zsh.sh
 less_termcap[so]="${fg_bold[yellow]}${bg[black]}"
