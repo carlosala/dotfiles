@@ -1,6 +1,7 @@
 ### VARIABLES
 export EDITOR="nvim"
 export GPG_TTY=$TTY
+export OPENCV_LOG_LEVEL="ERROR"
 export PATH="$PATH:/home/carlo/.cargo/bin"
 export PATH="$PATH:/home/carlo/.local/bin"
 export ZSHZ_CASE="ignore"
