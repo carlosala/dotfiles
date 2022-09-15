@@ -7,6 +7,12 @@
 [core]
   pager = diff-so-fancy | less -x2 -SRF
 
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+
 [init]
   defaultBranch = main
 
