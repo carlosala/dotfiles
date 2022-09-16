@@ -1,5 +1,4 @@
 -- coc.nvim
--- vim.g.coc_filetype_map = { ["yaml.docker-compose"] = "yaml" }
 vim.g.coc_global_extensions = {
   "coc-clangd",
   "coc-css",
@@ -20,7 +19,6 @@ vim.g.coc_global_extensions = {
 
 -- editorconfig-vim
 vim.g.EditorConfig_exclude_patterns = { "fugitive://.*" }
-vim.g.EditorConfig_preserve_formatoptions = 1
 
 -- ultisnips
 vim.g.UltiSnipsSnippetDirectories = { vim.fn.stdpath("config") .. "/ultisnips" }
