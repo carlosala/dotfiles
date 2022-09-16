@@ -6,14 +6,16 @@ vim.g.coc_global_extensions = {
   "coc-eslint",
   "coc-html",
   "coc-json",
+  "coc-markdown-preview-enhanced",
   "coc-prettier",
   "coc-pyright",
   "coc-rust-analyzer",
-  "coc-sumneko-lua",
   "coc-sh",
+  "coc-sumneko-lua",
   "coc-texlab",
   "coc-tsserver",
   "coc-vimlsp",
+  "coc-webview",
   "coc-yaml",
 }
 
