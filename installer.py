@@ -98,7 +98,7 @@ def installingPackages():
         installPackage(
             "nvim",
             "xclip",
-            ["paru", "-S", "--needed", "xclip"],
+            ["paru", "-S", "--needed", "wl-clipboard"],
         )
         installPackage("zsh", "exa", ["paru", "-S", "--needed", "exa"])
         installPackage("zsh", "nawk", ["paru", "-S", "--needed", "nawk"])
@@ -108,6 +108,7 @@ def installingPackages():
             "hyperfine",
             ["paru", "-S", "--needed", "hyperfine"],
         )
+        installPackage("", "kitty", ["paru", "-S", "--needed", "kitty"])
         installPackage("", "lazydocker", ["paru", "-S", "--needed", "lazydocker-bin"])
         installPackage("", "lazygit", ["paru", "-S", "--needed", "lazygit"])
         installPackage(
