@@ -9,6 +9,7 @@ vim.g.coc_global_extensions = {
   "coc-markdown-preview-enhanced",
   "coc-prettier",
   "coc-pyright",
+  "coc-r-lsp",
   "coc-rust-analyzer",
   "coc-sh",
   "coc-sumneko-lua",
