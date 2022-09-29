@@ -10,6 +10,7 @@ cp -r $DIR/latexmk ~/.config
 cp -r $DIR/lazygit ~/.config
 cp -r $DIR/nvim ~/.config
 cp -r $DIR/zathura ~/.config
+cp $DIR/zsh/zshenv ~/.zshenv
 cp $DIR/zsh/zshrc ~/.zshrc
 cp -r $DIR/zsh/custom $ZSH
 
