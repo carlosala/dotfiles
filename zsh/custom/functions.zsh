@@ -45,6 +45,14 @@ function ltc {
   unset file rgx regexes opt depth pdfp
 }
 
+function nau {
+  if (( $# )); then
+    nautilus $@ >/dev/null 2>&1 &|
+  else
+    nautilus . >/dev/null 2>&1 &|
+  fi
+}
+
 function openNvim {
   if (( $# )); then
     nvim -O $@
