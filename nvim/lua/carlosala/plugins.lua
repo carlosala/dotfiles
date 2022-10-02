@@ -83,8 +83,7 @@ require("packer").startup(function(use)
     "windwp/nvim-autopairs",
     after = "nvim-treesitter",
     config = function()
-      Npairs = require("nvim-autopairs")
-      Npairs.setup({ check_ts = true, map_cr = false })
+      require("nvim-autopairs").setup({ check_ts = true, map_cr = false })
     end,
   })
   use({

@@ -1,8 +1,8 @@
 vim.g.mapleader = " "
 
 local map = vim.keymap.set
-local full_opts = { expr = true, noremap = true, silent = true }
-local silent = { noremap = true, silent = true }
+local full_opts = { expr = true, replace_keycodes = false, silent = true }
+local silent = { silent = true }
 
 -- basic mappings
 map("n", "<Leader>w", ":w<CR>", silent)
@@ -52,4 +52,6 @@ map("n", "<Leader>dd", ":Gvdiffsplit!<CR>", silent)
 map({ "n", "v" }, "<Leader>dgg", ":diffget<CR>", silent)
 map({ "n", "v" }, "<Leader>dg2", ":diffget //2<CR>", silent)
 map({ "n", "v" }, "<Leader>dg3", ":diffget //3<CR>", silent)
-map("i", "<M-CR>", "v:lua.Npairs.autopairs_cr()", full_opts)
+map("i", "<M-CR>", function()
+  return require("nvim-autopairs").autopairs_cr()
+end, full_opts)
