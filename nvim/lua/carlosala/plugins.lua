@@ -49,7 +49,9 @@ require("packer").startup(function(use)
     config = function()
       require("nvim-tree").setup({
         actions = { open_file = { quit_on_open = true } },
+        focus_empty_on_setup = true,
         git = { ignore = false },
+        open_on_setup = true,
       })
     end,
   })
