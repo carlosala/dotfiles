@@ -46,7 +46,7 @@ require("packer").startup(function(use)
     run = "make",
   })
   use({
-    "kyazdani42/nvim-tree.lua",
+    "nvim-tree/nvim-tree.lua",
     config = function()
       require("nvim-tree").setup({
         actions = { open_file = { quit_on_open = true } },
@@ -139,7 +139,7 @@ require("packer").startup(function(use)
     end,
   })
   use({ "nvim-treesitter/nvim-treesitter-context", after = "nvim-treesitter" })
-  use("kyazdani42/nvim-web-devicons")
+  use("nvim-tree/nvim-web-devicons")
 
   if PackerBootstrap then
     require("packer").sync()
