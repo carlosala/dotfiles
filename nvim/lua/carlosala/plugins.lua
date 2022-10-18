@@ -3,6 +3,7 @@ require("packer").startup(function(use)
 
   -- completion
   use({ "neoclide/coc.nvim", branch = "release" })
+  use({ "jalvesaq/nvim-r", branch = "stable" })
   use("sirver/ultisnips")
 
   -- formatting
