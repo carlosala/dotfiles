@@ -12,7 +12,7 @@ export XZ_DEFAULTS="-T0"
 ### OMZ
 export ZSH="/home/carlo/.oh-my-zsh"
 ZSH_THEME="carlosala"
-plugins=(aliases deno git git-prompt nvm rbw sudo yarn zsh-z)
+plugins=(aliases deno git git-prompt nvm rbw sudo yarn z)
 zstyle ':omz:update' mode disabled
 source "$ZSH/oh-my-zsh.sh"
 
