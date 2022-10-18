@@ -73,6 +73,9 @@ def installingPackages():
         installPackage(
             "git", "diff-so-fancy", ["paru", "-S", "--needed", "diff-so-fancy"]
         )
+        installPackage(
+            "kitty", "cascadia code", ["paru", "-S", "--needed", "otf-cascadia-code"]
+        )
         installPackage("nvim", "bat", ["paru", "-S", "--needed", "bat"])
         installPackage(
             "nvim",
