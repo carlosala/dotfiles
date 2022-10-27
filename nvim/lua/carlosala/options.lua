@@ -17,6 +17,7 @@ vim.opt.writebackup = false
 
 vim.g.python3_host_prog = "/usr/bin/python3"
 vim.g.tex_flavor = "latex"
+vim.g["&t_ut"] = "" -- fix for kitty, see https://sw.kovidgoyal.net/kitty/faq
 
 vim.g.gruvbox_material_background = "soft"
 vim.g.gruvbox_material_diagnostic_text_highlight = 1
