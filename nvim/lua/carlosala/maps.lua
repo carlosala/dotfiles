@@ -27,22 +27,6 @@ map("n", "x", '"_x', { noremap = true, silent = true })
 map("n", "<Leader>;", "A;<Esc>", silent)
 map("n", "Q", "<Nop>", silent)
 
--- coc.nvim
-map("n", "gd", "<Plug>(coc-definition)", silent)
-map("n", "gy", "<Plug>(coc-type-definition)", silent)
-map("n", "gi", "<Plug>(coc-implementation)", silent)
-map("n", "gr", "<Plug>(coc-references)", silent)
-
-map("i", "<C-Space>", "coc#pum#visible() ? coc#pum#stop() : coc#refresh()", full_opts)
-map("i", "<Tab>", "coc#pum#visible() ? coc#pum#next(1) : '<Tab>'", full_opts)
-map("i", "<S-Tab>", "coc#pum#visible() ? coc#pum#prev(1) : '<C-h>'", full_opts)
-map("i", "<CR>", "coc#pum#visible() ? coc#pum#confirm() : '<C-g>u<CR>'", full_opts)
-
-map("n", "<Leader>rn", "<Plug>(coc-rename)", silent)
-map("n", "<Leader>rf", ":CocCommand workspace.renameCurrentFile<CR>", silent)
-map("n", "<Leader>lc", ":CocCommand latex.Build<CR>", silent)
-map("n", "<Leader>lf", ":CocCommand latex.ForwardSearch<CR>", silent)
-
 -- other
 map("n", "<Leader>n", ":NvimTreeFindFile<CR>", silent)
 map("n", "<Leader>f", ":Telescope find_files<CR>", silent)
@@ -52,6 +36,3 @@ map("n", "<Leader>dd", ":Gvdiffsplit!<CR>", silent)
 map({ "n", "v" }, "<Leader>dgg", ":diffget<CR>", silent)
 map({ "n", "v" }, "<Leader>dg2", ":diffget //2<CR>", silent)
 map({ "n", "v" }, "<Leader>dg3", ":diffget //3<CR>", silent)
-map("i", "<M-CR>", function()
-  return require("nvim-autopairs").autopairs_cr()
-end, full_opts)

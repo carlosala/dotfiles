@@ -1,8 +1,15 @@
 require("packer").startup(function(use)
   use("wbthomason/packer.nvim")
 
-  -- completion
-  use({ "neoclide/coc.nvim", branch = "release" })
+  -- cmp & lsp
+  use("neovim/nvim-lspconfig")
+  use("hrsh7th/nvim-cmp")
+  use("onsails/lspkind.nvim")
+  use("hrsh7th/cmp-buffer")
+  use("hrsh7th/cmp-nvim-lsp")
+  use("hrsh7th/cmp-nvim-lsp-signature-help")
+  use("hrsh7th/cmp-path")
+  use("jose-elias-alvarez/typescript.nvim")
   use({ "jalvesaq/nvim-r", branch = "stable" })
   use("sirver/ultisnips")
 
