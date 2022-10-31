@@ -29,7 +29,6 @@ require("packer").startup(function(use)
   use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
   use("neoclide/jsonc.vim")
   use("fladson/vim-kitty")
-  use("jxnblk/vim-mdx-js")
 
   -- typing
   use("numtostr/comment.nvim")
