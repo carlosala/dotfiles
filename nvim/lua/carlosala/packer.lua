@@ -17,7 +17,8 @@ require("packer").startup(function(use)
   use("editorconfig/editorconfig-vim")
   use("rhysd/vim-clang-format")
 
-  -- git
+  -- misc
+  use("williamboman/mason.nvim")
   use("tpope/vim-fugitive")
 
   -- navigation
