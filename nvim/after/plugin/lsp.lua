@@ -12,7 +12,7 @@ local function config(_config)
       vim.keymap.set("n", "gy", vim.lsp.buf.type_definition, bufopts)
       vim.keymap.set("n", "gr", vim.lsp.buf.references, bufopts)
       vim.keymap.set("n", "K", vim.lsp.buf.hover, bufopts)
-      vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, bufopts)
+      vim.keymap.set("i", "<C-k>", vim.lsp.buf.signature_help, bufopts)
       vim.keymap.set("n", "<Leader>rn", vim.lsp.buf.rename, bufopts)
       vim.keymap.set("n", "<Leader>ca", vim.lsp.buf.code_action, bufopts)
     end,
