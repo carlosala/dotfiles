@@ -23,7 +23,7 @@ cmp.setup({
     { name = "nvim_lsp" },
     { name = "nvim_lsp_signature_help" },
   }, {
-    { name = "path" },
+    { name = "path", option = { trailing_slash = true } },
   }, {
     { name = "buffer" },
   }),
