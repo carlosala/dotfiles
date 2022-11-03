@@ -10,7 +10,7 @@ require("packer").startup(function(use)
   use("hrsh7th/cmp-nvim-lsp-signature-help")
   use("hrsh7th/cmp-path")
   use("jose-elias-alvarez/typescript.nvim")
-  use({ "jalvesaq/nvim-r", branch = "stable" })
+  use("jalvesaq/nvim-r")
   use("sirver/ultisnips")
 
   -- formatting
