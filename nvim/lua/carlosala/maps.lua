@@ -35,6 +35,8 @@ map("n", "]d", vim.diagnostic.goto_next, silent)
 -- plugins
 map("n", "<Leader>n", ":NvimTreeFindFile<CR>", silent)
 
+map({ "n", "v" }, "<Leader>b", ":Neoformat<CR>")
+
 map("n", "<Leader>f", ":Telescope find_files<CR>", silent)
 map("n", "<Leader>g", ':Telescope grep_string search=""<CR>', silent)
 map("n", "<Leader>h", ":Telescope help_tags<CR>", silent)

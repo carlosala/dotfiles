@@ -15,7 +15,7 @@ require("packer").startup(function(use)
 
   -- formatting
   use("editorconfig/editorconfig-vim")
-  use("rhysd/vim-clang-format")
+  use("sbdchd/neoformat")
 
   -- misc
   use("williamboman/mason.nvim")
