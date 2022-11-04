@@ -60,3 +60,12 @@ function openNvim {
     nvim .
   fi
 }
+
+function zat {
+  if (( ! $# )); then
+    echo "You need to pass, at least, one argument!"
+    return 1
+  else
+    zathura $@ &|
+  fi
+}
