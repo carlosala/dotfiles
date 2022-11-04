@@ -69,3 +69,8 @@ function zat {
     zathura $@ &|
   fi
 }
+
+if (( ${+functions[compdef]} )); then
+  compdef _nautilus nau
+  compdef _zathura zat
+fi
