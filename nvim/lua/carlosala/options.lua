@@ -23,3 +23,4 @@ vim.g["&t_ut"] = "" -- fix for kitty, see https://sw.kovidgoyal.net/kitty/faq
 vim.g.gruvbox_material_background = "soft"
 vim.g.gruvbox_material_diagnostic_text_highlight = 1
 vim.g.gruvbox_material_enable_italic = 1
+vim.g.gruvbox_material_transparent_background = 1
