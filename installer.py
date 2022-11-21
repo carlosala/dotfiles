@@ -76,18 +76,7 @@ def installingPackages():
         installPackage(
             "kitty", "cascadia code", ["paru", "-S", "--needed", "otf-cascadia-code"]
         )
-        installPackage("nvim", "bat", ["paru", "-S", "--needed", "bat"])
-        installPackage(
-            "nvim",
-            "black",
-            ["paru", "-S", "--needed", "python-black"],
-        )
         installPackage("nvim", "fd", ["paru", "-S", "--needed", "fd"])
-        installPackage(
-            "nvim",
-            "pylint",
-            ["paru", "-S", "--needed", "python-pylint"],
-        )
         installPackage(
             "nvim",
             "pynvim",
@@ -100,9 +89,10 @@ def installingPackages():
         )
         installPackage(
             "nvim",
-            "xclip",
+            "wayland clipboard",
             ["paru", "-S", "--needed", "wl-clipboard"],
         )
+        installPackage("zsh", "bat", ["paru", "-S", "--needed", "bat"])
         installPackage("zsh", "exa", ["paru", "-S", "--needed", "exa"])
         installPackage("zsh", "nawk", ["paru", "-S", "--needed", "nawk"])
         installPackage("", "dust", ["paru", "-S", "--needed", "dust"])
@@ -127,10 +117,8 @@ def installingPackages():
         )
     else:
         installPackage("nvim", "bat", ["cargo", "install", "bat"])
-        installPackage("nvim", "black (pip)", ["pip3", "install", "--user", "black"])
         installPackage("nvim", "fd", ["cargo", "install", "fd-find"])
         installPackage("nvim", "ripgrep", ["cargo", "install", "ripgrep"])
-        installPackage("nvim", "pylint (pip)", ["pip3", "install", "--user", "pylint"])
         installPackage("nvim", "pynvim (pip)", ["pip3", "install", "--user", "pynvim"])
         installPackage("zsh", "exa", ["cargo", "install", "exa"])
         installPackage("", "dust", ["cargo", "install", "du-dust"])
