@@ -27,6 +27,7 @@ lsp.clangd.setup(config())
 lsp.vimls.setup(config())
 lsp.pyright.setup(config())
 lsp.r_language_server.setup(config())
+lsp.yamlls.setup(config())
 lsp.texlab.setup(config({
   texlab = {
     chktex = { onEdit = true, onOpenAndSave = true },
