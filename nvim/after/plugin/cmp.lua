@@ -59,3 +59,6 @@ cmp.setup({
     end,
   }),
 })
+
+-- add () after function completion
+cmp.event:on("confirm_done", require("nvim-autopairs.completion.cmp").on_confirm_done())
