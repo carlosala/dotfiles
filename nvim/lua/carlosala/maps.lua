@@ -1,4 +1,5 @@
 vim.g.mapleader = " "
+vim.g.maplocalleader = " l"
 
 local map = vim.keymap.set
 local silent = { silent = true }

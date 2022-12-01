@@ -15,10 +15,10 @@ local function config(_config)
       vim.keymap.set("n", "<Leader>rn", vim.lsp.buf.rename, bufopts)
       vim.keymap.set("n", "<Leader>ca", vim.lsp.buf.code_action, bufopts)
       if client.name == "texlab" then
-        vim.keymap.set("n", "<Leader>l", ":TexlabBuild<CR>", bufopts)
+        vim.keymap.set("n", "<LocalLeader>b", ":TexlabBuild<CR>", bufopts)
       end
       if client.name == "clangd" then
-        vim.keymap.set("n", "<Leader>l", ":ClangdSwitchSourceHeader<CR>", bufopts)
+        vim.keymap.set("n", "<LocalLeader>s", ":ClangdSwitchSourceHeader<CR>", bufopts)
       end
     end,
   }, _config or {})
