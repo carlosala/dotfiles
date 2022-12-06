@@ -66,7 +66,7 @@ function zat {
     echo "You need to pass, at least, one argument!"
     return 1
   else
-    zathura $@ &|
+    zathura $@ >/dev/null 2>&1 &|
   fi
 }
 
