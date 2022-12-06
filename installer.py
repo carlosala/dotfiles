@@ -74,7 +74,14 @@ def installingPackages():
             "git", "diff-so-fancy", ["paru", "-S", "--needed", "diff-so-fancy"]
         )
         installPackage(
-            "kitty", "cascadia code", ["paru", "-S", "--needed", "otf-cascadia-code"]
+            "kitty",
+            "cascadia code",
+            ["paru", "-S", "--needed", "otf-cascadia-code"],
+        )
+        installPackage(
+            "kitty",
+            "nerd fonts symbols",
+            ["paru", "-S", "--needed", "ttf-nerd-fonts-symbols-2048-em"],
         )
         installPackage("nvim", "fd", ["paru", "-S", "--needed", "fd"])
         installPackage(
