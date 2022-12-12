@@ -1,3 +1,8 @@
+require("mason").setup()
+require("mason-lspconfig").setup({
+  automatic_installation = { exclude = { "clangd", "r_language_server" } },
+})
+
 local lsp = require("lspconfig")
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true

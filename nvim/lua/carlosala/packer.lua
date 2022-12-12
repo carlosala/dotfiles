@@ -12,13 +12,14 @@ require("packer").startup(function(use)
   use("jose-elias-alvarez/typescript.nvim")
   use("jalvesaq/nvim-r")
   use("sirver/ultisnips")
+  use("williamboman/mason.nvim")
+  use("williamboman/mason-lspconfig.nvim")
 
   -- formatting
   use("editorconfig/editorconfig-vim")
   use("sbdchd/neoformat")
 
   -- misc
-  use("williamboman/mason.nvim")
   use("tpope/vim-fugitive")
 
   -- navigation
