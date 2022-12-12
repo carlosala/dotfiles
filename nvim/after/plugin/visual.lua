@@ -7,8 +7,10 @@ require("indent_blankline").setup({
     "checkhealth",
     "gitcommit",
     "help",
+    "lspinfo",
+    "man",
     "NvimTree",
-    "vim-plug",
+    "packer",
   },
   use_treesitter = true,
 })
