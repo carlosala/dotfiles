@@ -16,6 +16,7 @@ vim.opt.updatetime = 50
 vim.opt.writebackup = false
 vim.opt.completeopt = "menu,menuone,noselect"
 vim.opt.mousetime = 0
+vim.opt.cursorline = true
 
 vim.g.python3_host_prog = "/usr/bin/python3"
 vim.g.tex_flavor = "latex"
