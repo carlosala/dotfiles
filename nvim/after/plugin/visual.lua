@@ -1,5 +1,9 @@
 -- gitsigns.nvim
-require("gitsigns").setup()
+require("gitsigns").setup({
+  current_line_blame = true,
+  current_line_blame_formatter = "<author>, <author_time:%R> - <summary> (<abbrev_sha>)",
+  current_line_blame_opts = { delay = 500 },
+})
 
 -- gruvbox-material
 vim.g.gruvbox_material_background = "soft"
