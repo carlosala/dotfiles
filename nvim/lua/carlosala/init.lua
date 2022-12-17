@@ -1,4 +1,3 @@
-require("carlosala.install_packer")
 require("carlosala.options")
 require("carlosala.viml_config")
 require("carlosala.packer")
