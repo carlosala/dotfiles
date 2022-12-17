@@ -11,19 +11,23 @@ local function config(_config)
   return vim.tbl_deep_extend("force", {
     on_attach = function(client, bufnr)
       local bufopts = { noremap = true, silent = true, buffer = bufnr }
-      vim.keymap.set("n", "gd", vim.lsp.buf.definition, bufopts)
-      vim.keymap.set("n", "gi", vim.lsp.buf.implementation, bufopts)
-      vim.keymap.set("n", "gy", vim.lsp.buf.type_definition, bufopts)
-      vim.keymap.set("n", "gr", vim.lsp.buf.references, bufopts)
-      vim.keymap.set("n", "K", vim.lsp.buf.hover, bufopts)
-      vim.keymap.set("i", "<C-k>", vim.lsp.buf.signature_help, bufopts)
-      vim.keymap.set("n", "<Leader>rn", vim.lsp.buf.rename, bufopts)
-      vim.keymap.set("n", "<Leader>ca", vim.lsp.buf.code_action, bufopts)
+      local map = vim.keymap.set
+      local tb = require("telescope.builtin")
+      map("n", "gd", vim.lsp.buf.definition, bufopts)
+      map("n", "gi", vim.lsp.buf.implementation, bufopts)
+      map("n", "gy", vim.lsp.buf.type_definition, bufopts)
+      map("n", "gr", tb.lsp_references, bufopts)
+      map("n", "K", vim.lsp.buf.hover, bufopts)
+      map("i", "<C-k>", vim.lsp.buf.signature_help, bufopts)
+      map("n", "<Leader>rn", vim.lsp.buf.rename, bufopts)
+      map("n", "<Leader>ca", vim.lsp.buf.code_action, bufopts)
+      map("n", "<Leader>sd", tb.lsp_document_symbols, bufopts)
+      map("n", "<Leader>sw", tb.lsp_workspace_symbols, bufopts)
       if client.name == "texlab" then
-        vim.keymap.set("n", "<LocalLeader>b", ":TexlabBuild<CR>", bufopts)
+        vim.keymap.set("n", "<Leader>lb", ":TexlabBuild<CR>", bufopts)
       end
       if client.name == "clangd" then
-        vim.keymap.set("n", "<LocalLeader>s", ":ClangdSwitchSourceHeader<CR>", bufopts)
+        vim.keymap.set("n", "<Leader>ls", ":ClangdSwitchSourceHeader<CR>", bufopts)
       end
     end,
   }, _config or {})
