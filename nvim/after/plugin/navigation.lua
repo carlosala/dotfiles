@@ -6,9 +6,7 @@ telescope.setup({
       find_command = { "fd", "-t=f", "-i", "-H", "-E", ".git", "-c=never", "--strip-cwd-prefix" },
     },
     grep_string = {
-      additional_args = function()
-        return { "-i", "--hidden", "-g", "!.git", "-g", "!.yarn", "-g", "!*lock" }
-      end,
+      additional_args = { "-i", "--hidden", "-g", "!.git", "-g", "!.yarn", "-g", "!*lock" },
       disable_coordinates = true,
     },
   },

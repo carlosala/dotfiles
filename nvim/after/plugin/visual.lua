@@ -1,6 +1,14 @@
 -- gitsigns.nvim
 require("gitsigns").setup()
 
+-- gruvbox-material
+vim.g.gruvbox_material_background = "soft"
+vim.g.gruvbox_material_diagnostic_text_highlight = 1
+vim.g.gruvbox_material_enable_italic = 1
+vim.g.gruvbox_material_transparent_background = 1
+
+vim.cmd("colorscheme gruvbox-material")
+
 -- indent-blankline
 require("indent_blankline").setup({
   filetype_exclude = {
@@ -23,6 +31,3 @@ require("lualine").setup({
     lualine_y = { "filetype" },
   },
 })
-
--- gruvbox-material
-vim.cmd("colorscheme gruvbox-material")
