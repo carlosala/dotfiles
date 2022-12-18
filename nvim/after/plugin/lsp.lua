@@ -4,11 +4,11 @@ require("mason-lspconfig").setup({
 })
 
 local lsp = require("lspconfig")
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities.textDocument.completion.completionItem.snippetSupport = true
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 local function config(_config)
   return vim.tbl_deep_extend("force", {
+    capabilities = capabilities,
     on_attach = function(client, bufnr)
       local bufopts = { noremap = true, silent = true, buffer = bufnr }
       local map = vim.keymap.set
@@ -35,12 +35,12 @@ end
 
 require("typescript").setup({ server = config() })
 
-lsp.jsonls.setup(config({ capabilities = capabilities })) -- uses snippets
-lsp.eslint.setup(config())
 lsp.clangd.setup(config())
-lsp.vimls.setup(config())
+lsp.eslint.setup(config())
+lsp.jsonls.setup(config())
 lsp.pyright.setup(config())
 lsp.r_language_server.setup(config())
+lsp.vimls.setup(config())
 lsp.yamlls.setup(config())
 lsp.texlab.setup(config({
   settings = {
