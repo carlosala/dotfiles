@@ -1,3 +1,7 @@
+function $ {
+  "$@" # useful when c&p commands
+}
+
 function gccom {
   if (( $# )); then
     for file in $@; do
