@@ -1,0 +1,26 @@
+snippet cl "console.log"
+	console.log($1)
+
+snippet fn "function"
+	function $1($2) {
+	  $3
+	}
+
+snippet efn "export function"
+	export function $1($2) {
+	  $3
+	}
+
+snippet eafn "export async function"
+	export async function $1($2) {
+	  $3
+	}
+
+snippet afn "arrow function"
+	${1:($2)} => ${3:\{$4\}}
+
+snippet imp "import y from x"
+	import ${2:\{$3\}} from "$1"
+
+snippet exp "export y from x"
+	export ${2:\{$3\}} from "$1"

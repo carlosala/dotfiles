@@ -9,7 +9,7 @@ cmp.setup({
   snippet = {
     -- REQUIRED - you must specify a snippet engine
     expand = function(args)
-      vim.fn["UltiSnips#Anon"](args.body)
+      require("luasnip").lsp_expand(args.body)
     end,
   },
   formatting = {
@@ -22,6 +22,7 @@ cmp.setup({
   sources = cmp.config.sources({
     { name = "nvim_lsp" },
     { name = "nvim_lsp_signature_help" },
+    { name = "luasnip" },
   }, {
     { name = "path", option = { trailing_slash = true } },
   }, {
@@ -56,11 +57,7 @@ cmp.setup({
 
     ["<S-Tab>"] = function(fallback)
       if not cmp.select_prev_item() then
-        if vim.bo.buftype ~= "prompt" and has_words_before() then
-          cmp.complete()
-        else
-          fallback()
-        end
+        fallback()
       end
     end,
   }),
