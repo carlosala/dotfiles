@@ -30,6 +30,7 @@ require("packer").startup(function(use)
   use("sbdchd/neoformat")
 
   -- misc
+  use("lewis6991/impatient.nvim")
   use("tpope/vim-fugitive")
 
   -- navigation
