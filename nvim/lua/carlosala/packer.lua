@@ -18,6 +18,7 @@ require("packer").startup(function(use)
   use("hrsh7th/cmp-nvim-lsp")
   use("hrsh7th/cmp-nvim-lsp-signature-help")
   use("hrsh7th/cmp-path")
+  use({ "petertriho/cmp-git", requires = "nvim-lua/plenary.nvim" })
   use("jose-elias-alvarez/typescript.nvim")
   use("jalvesaq/nvim-r")
   use("l3mon4d3/luasnip")
@@ -33,6 +34,7 @@ require("packer").startup(function(use)
   -- misc
   use("lewis6991/impatient.nvim")
   use("tpope/vim-fugitive")
+  use("tpope/vim-rhubarb")
 
   -- navigation
   use({ "nvim-telescope/telescope.nvim", requires = "nvim-lua/plenary.nvim" })

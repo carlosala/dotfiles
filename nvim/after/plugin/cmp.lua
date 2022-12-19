@@ -23,7 +23,7 @@ cmp.setup({
     { name = "nvim_lsp" },
     { name = "nvim_lsp_signature_help" },
     { name = "luasnip" },
-  }, {
+    { name = "git" },
     { name = "path", option = { trailing_slash = true } },
   }, {
     { name = "buffer" },
@@ -62,6 +62,9 @@ cmp.setup({
     end,
   }),
 })
+
+-- start required for cmp_git
+require("cmp_git").setup()
 
 -- add () after function completion
 cmp.event:on("confirm_done", require("nvim-autopairs.completion.cmp").on_confirm_done())
