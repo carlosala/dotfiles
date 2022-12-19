@@ -37,20 +37,15 @@ require("typescript").setup({ server = config() })
 
 lsp.clangd.setup(config())
 lsp.eslint.setup(config())
-lsp.jsonls.setup(config())
 lsp.pyright.setup(config())
 lsp.r_language_server.setup(config())
 lsp.vimls.setup(config())
 lsp.yamlls.setup(config())
-lsp.texlab.setup(config({
+lsp.jsonls.setup(config({
   settings = {
-    texlab = {
-      build = { forwardSearchAfter = true },
-      chktex = { onEdit = true, onOpenAndSave = true },
-      forwardSearch = {
-        args = { "--synctex-forward", "%l:1:%f", "%p" },
-        executable = "zathura",
-      },
+    json = {
+      schemas = require("schemastore").json.schemas(),
+      validate = { enable = true },
     },
   },
 }))
@@ -61,6 +56,18 @@ lsp.sumneko_lua.setup(config({
       diagnostics = { globals = { "vim" } },
       workspace = { library = vim.api.nvim_get_runtime_file("", true) },
       telemetry = { enable = false },
+    },
+  },
+}))
+lsp.texlab.setup(config({
+  settings = {
+    texlab = {
+      build = { forwardSearchAfter = true },
+      chktex = { onEdit = true, onOpenAndSave = true },
+      forwardSearch = {
+        args = { "--synctex-forward", "%l:1:%f", "%p" },
+        executable = "zathura",
+      },
     },
   },
 }))
