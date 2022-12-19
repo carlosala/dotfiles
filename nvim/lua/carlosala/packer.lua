@@ -50,10 +50,10 @@ require("packer").startup(function(use)
   use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" })
 
   -- visual
+  use("j-hui/fidget.nvim")
   use("lewis6991/gitsigns.nvim")
   use("sainnhe/gruvbox-material")
   use("lukas-reineke/indent-blankline.nvim")
-  use("arkav/lualine-lsp-progress")
   use("nvim-lualine/lualine.nvim")
   use({ "nvim-treesitter/nvim-treesitter-context", after = "nvim-treesitter" })
   use("nvim-tree/nvim-web-devicons")

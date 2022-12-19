@@ -1,3 +1,6 @@
+-- fidget.nvim
+require("fidget").setup({ window = { blend = 0 } })
+
 -- gitsigns.nvim
 require("gitsigns").setup({
   current_line_blame = true,
@@ -31,7 +34,7 @@ require("indent_blankline").setup({
 require("lualine").setup({
   extensions = { "fugitive", "nvim-tree" },
   sections = {
-    lualine_x = { "lsp_progress", "progress" },
+    lualine_x = { "progress" },
     lualine_y = { "filetype" },
   },
 })
