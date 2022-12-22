@@ -3,6 +3,7 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.numberwidth = 1
 vim.opt.mouse = "a"
+vim.opt.clipboard = "unnamed"
 vim.opt.shortmess:append("A")
 vim.opt.expandtab = true
 vim.opt.tabstop = 2
