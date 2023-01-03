@@ -33,6 +33,7 @@ local function config(_config)
   }, _config or {})
 end
 
+require("rust-tools").setup({ server = config() })
 require("typescript").setup({ server = config() })
 
 lsp.clangd.setup(config())
