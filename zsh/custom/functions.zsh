@@ -21,6 +21,10 @@ function gccom {
   unset file
 }
 
+function icat {
+  kitty +kitten icat $@
+}
+
 function ltc {
   depth=1
   while getopts "d:p" opt; do
