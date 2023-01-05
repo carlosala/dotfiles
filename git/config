@@ -5,7 +5,15 @@
   gpgSign = true
 
 [core]
-  pager = diff-so-fancy | less -x2 -SRF
+  pager = delta
+
+[delta]
+  light = false
+  navigate = true
+  features = side-by-side
+
+[diff]
+  colorMoved = default
 
 [filter "lfs"]
   clean = git-lfs clean -- %f
@@ -17,7 +25,10 @@
   defaultBranch = main
 
 [interactive]
-  diffFilter = diff-so-fancy --patch
+  diffFilter = delta --color-only --features=interactive
+
+[merge]
+  conflictStyle = diff3
 
 [pull]
   rebase = true

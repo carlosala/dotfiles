@@ -73,6 +73,7 @@ def installingPackages():
         installPackage(
             "git", "diff-so-fancy", ["paru", "-S", "--needed", "diff-so-fancy"]
         )
+        installPackage("git", "delta", ["paru", "-S", "--needed", "git-delta"])
         installPackage(
             "kitty",
             "cascadia code",
