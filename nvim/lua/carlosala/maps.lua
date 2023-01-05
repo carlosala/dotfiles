@@ -44,9 +44,3 @@ map("n", "<Leader>ff", tb.find_files, silent)
 map("n", "<Leader>fg", tb.git_files, silent)
 map("n", "<Leader>g", ':Telescope grep_string search=""<CR>', silent)
 map("n", "<Leader>h", tb.help_tags, silent)
-
--- git
-map("n", "<Leader>vd", ":Gvdiffsplit!<CR>", silent)
-map({ "n", "v" }, "<Leader>vgg", ":diffget<CR>", silent)
-map({ "n", "v" }, "<Leader>vg2", ":diffget //2<CR>", silent)
-map({ "n", "v" }, "<Leader>vg3", ":diffget //3<CR>", silent)
