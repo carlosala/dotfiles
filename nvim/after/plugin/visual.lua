@@ -30,9 +30,21 @@ require("indent_blankline").setup({
 })
 
 -- lualine.nvim
+local function _diff_source()
+  local gitsigns = vim.b.gitsigns_status_dict
+  if gitsigns then
+    return {
+      added = gitsigns.added,
+      modified = gitsigns.changed,
+      removed = gitsigns.removed,
+    }
+  end
+end
+
 require("lualine").setup({
   extensions = { "fugitive", "man", "nvim-tree" },
   sections = {
+    lualine_b = { "branch", { "diff", source = _diff_source }, "diagnostics" },
     lualine_x = { "progress" },
     lualine_y = { "filetype" },
   },
