@@ -26,3 +26,6 @@ vim.g.mapleader = " "
 vim.g.python3_host_prog = "/usr/bin/python3"
 vim.g.tex_flavor = "latex"
 vim.g["&t_ut"] = "" -- fix for kitty, see https://sw.kovidgoyal.net/kitty/faq
+
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
