@@ -37,6 +37,7 @@ map("n", "]d", vim.diagnostic.goto_next, silent)
 -- plugins
 map("n", "<Leader>n", vim.cmd.NvimTreeFindFile, silent)
 map({ "n", "v" }, "<Leader>b", ":Neoformat<CR>")
+map("n", "<Leader>vd", ":Gvdiffsplit!<CR>", silent)
 
 -- telescope
 local tb = require("telescope.builtin")
