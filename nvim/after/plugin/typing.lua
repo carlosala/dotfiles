@@ -2,7 +2,7 @@
 require("Comment").setup({ ignore = "^$" })
 
 -- nvim-autopairs
-require("nvim-autopairs").setup({ check_ts = true })
+require("nvim-autopairs").setup()
 
 -- nvim-surround
 require("nvim-surround").setup()
