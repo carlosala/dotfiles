@@ -8,6 +8,10 @@ export PATH="$PATH:/home/carlo/.local/bin"
 export ZSHZ_CASE="ignore"
 export XZ_DEFAULTS="-T0"
 
+### OPTIONS
+setopt hist_find_no_dups
+setopt hist_reduce_blanks
+
 ### OMZ
 export ZSH="/home/carlo/.oh-my-zsh"
 ZSH_THEME="carlosala"
