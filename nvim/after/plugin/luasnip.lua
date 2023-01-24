@@ -6,6 +6,18 @@ ls.filetype_extend("typescript", { "javascript" })
 ls.filetype_extend("javascriptreact", { "javascript" })
 ls.filetype_extend("typescriptreact", { "javascript" })
 
+map({ "i", "v" }, "<M-k>", function()
+  if ls.expand_or_jumpable() then
+    ls.expand_or_jump()
+  end
+end, { silent = true })
+
+map({ "i", "v" }, "<M-j>", function()
+  if ls.jumpable(-1) then
+    ls.jump(-1)
+  end
+end, { silent = true })
+
 ls.setup({
   enable_autosnippets = true,
   history = true,
@@ -59,15 +71,3 @@ ls.setup({
   end,
 })
 require("luasnip.loaders.from_snipmate").lazy_load()
-
-map({ "i", "v" }, "<M-k>", function()
-  if ls.expand_or_jumpable() then
-    ls.expand_or_jump()
-  end
-end, { silent = true })
-
-map({ "i", "v" }, "<M-j>", function()
-  if ls.jumpable(-1) then
-    ls.jump(-1)
-  end
-end, { silent = true })

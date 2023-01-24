@@ -2,17 +2,12 @@ snippet cl "console.log"
 	console.log($1)
 
 snippet fn "function"
-	function $1($2)$3 {
-	  $4
-	}
-
-snippet efn "export function"
-	export ${1: }function $2($3)$4 {
+	$1function $2($3)$4 {
 	  $5
 	}
 
 snippet afn "arrow function"
-	${1:($2)} => ${3:{$4\}}
+	$1($2)$3 => ${4:{$5\}}
 
 snippet imp "import y from x"
 	import ${2:{$3\}} from "$1"
