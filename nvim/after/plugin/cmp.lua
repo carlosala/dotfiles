@@ -24,7 +24,7 @@ cmp.setup({
     { name = "nvim_lsp_signature_help" },
     { name = "luasnip" },
     { name = "git" },
-    { name = "path", option = { trailing_slash = true } },
+    { name = "path" },
   }, {
     { name = "buffer" },
   }),
