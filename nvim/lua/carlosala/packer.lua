@@ -11,22 +11,21 @@ require("packer").startup(function(use)
   use("wbthomason/packer.nvim")
 
   -- cmp & lsp
-  use("neovim/nvim-lspconfig")
-  use("hrsh7th/nvim-cmp")
   use("onsails/lspkind.nvim")
+  use("williamboman/mason.nvim")
+  use("williamboman/mason-lspconfig.nvim")
+  use("neovim/nvim-lspconfig")
+  use("simrat39/rust-tools.nvim")
+  use("b0o/schemastore.nvim")
+  use("jose-elias-alvarez/typescript.nvim")
+
+  use("hrsh7th/nvim-cmp")
   use("hrsh7th/cmp-buffer")
+  use({ "petertriho/cmp-git", requires = "nvim-lua/plenary.nvim" })
+  use("saadparwaiz1/cmp_luasnip")
   use("hrsh7th/cmp-nvim-lsp")
   use("hrsh7th/cmp-nvim-lsp-signature-help")
   use("hrsh7th/cmp-path")
-  use({ "petertriho/cmp-git", requires = "nvim-lua/plenary.nvim" })
-  use("jose-elias-alvarez/typescript.nvim")
-  use("simrat39/rust-tools.nvim")
-  use("jalvesaq/nvim-r")
-  use({ "l3mon4d3/luasnip", run = "make install_jsregexp" })
-  use("saadparwaiz1/cmp_luasnip")
-  use("williamboman/mason.nvim")
-  use("williamboman/mason-lspconfig.nvim")
-  use("b0o/schemastore.nvim")
 
   -- formatting
   use("editorconfig/editorconfig-vim")
@@ -34,6 +33,8 @@ require("packer").startup(function(use)
 
   -- misc
   use("lewis6991/impatient.nvim")
+  use({ "l3mon4d3/luasnip", run = "make install_jsregexp" })
+  use("jalvesaq/nvim-r")
   use("tpope/vim-fugitive")
   use("tpope/vim-rhubarb")
 
