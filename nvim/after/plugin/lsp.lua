@@ -65,7 +65,11 @@ lsp.sumneko_lua.setup(config({
 lsp.texlab.setup(config({
   settings = {
     texlab = {
-      build = { forwardSearchAfter = true },
+      build = {
+        args = { "%f", "--synctex", "--keep-logs", "--keep-intermediates" },
+        executable = "tectonic",
+        forwardSearchAfter = true,
+      },
       chktex = { onEdit = true, onOpenAndSave = true },
       forwardSearch = {
         args = {
