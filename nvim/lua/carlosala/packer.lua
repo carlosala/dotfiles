@@ -35,6 +35,7 @@ require("packer").startup(function(use)
   use("lewis6991/impatient.nvim")
   use({ "l3mon4d3/luasnip", run = "make install_jsregexp" })
   use("jalvesaq/nvim-r")
+  use({ "f3fora/nvim-texlabconfig", run = "go build -o ~/.local/bin/nvim-texlabconfig" })
   use("tpope/vim-fugitive")
   use("tpope/vim-rhubarb")
 

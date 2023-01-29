@@ -68,7 +68,13 @@ lsp.texlab.setup(config({
       build = { forwardSearchAfter = true },
       chktex = { onEdit = true, onOpenAndSave = true },
       forwardSearch = {
-        args = { "--synctex-forward", "%l:1:%f", "%p" },
+        args = {
+          "--synctex-editor-command",
+          "nvim-texlabconfig -file '%{input}' -line %{line}",
+          "--synctex-forward",
+          "%l:1:%f",
+          "%p",
+        },
         executable = "zathura",
       },
     },
