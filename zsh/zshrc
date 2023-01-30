@@ -17,7 +17,8 @@ export ZSH="/home/carlo/.oh-my-zsh"
 ZSH_THEME="carlosala"
 plugins=(aliases git git-prompt nvm rbw sudo yarn z)
 zstyle ':omz:plugins:nvm' lazy yes
-zstyle ':omz:update' mode disabled
+zstyle ':omz:update' mode auto
+zstyle ':omz:update' frequency 1
 source "$ZSH/oh-my-zsh.sh"
 
 ### KITTY STUFF
