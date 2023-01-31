@@ -37,7 +37,6 @@ require("packer").startup(function(use)
   use("jalvesaq/nvim-r")
   use({ "f3fora/nvim-texlabconfig", run = "go build -o ~/.local/bin/nvim-texlabconfig" })
   use("tpope/vim-fugitive")
-  use("tpope/vim-rhubarb")
 
   -- navigation
   use({ "nvim-telescope/telescope.nvim", requires = "nvim-lua/plenary.nvim" })
