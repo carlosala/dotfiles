@@ -22,7 +22,7 @@ function gccom {
 }
 
 function icat {
-  kitty +kitten icat $@
+  kitten icat $@
 }
 
 function ltc {
