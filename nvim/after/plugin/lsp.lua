@@ -52,7 +52,7 @@ lsp.jsonls.setup(config({
     },
   },
 }))
-lsp.sumneko_lua.setup(config({
+lsp.lua_ls.setup(config({
   settings = {
     Lua = {
       runtime = { version = "LuaJIT" },
