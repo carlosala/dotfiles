@@ -15,7 +15,7 @@ setopt hist_reduce_blanks
 ### OMZ
 export ZSH="/home/carlo/.oh-my-zsh"
 ZSH_THEME="carlosala"
-plugins=(aliases git git-prompt nvm rbw sudo yarn z)
+plugins=(aliases fzf git git-prompt nvm rbw sudo yarn z)
 zstyle ':omz:plugins:nvm' lazy yes
 zstyle ':omz:update' mode auto
 zstyle ':omz:update' frequency 1
