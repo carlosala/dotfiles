@@ -1,0 +1,6 @@
+defaultIndent: "  "
+dos2unixlinebreaks: 1
+modifyLineBreaks:
+  textWrapOptions:
+    columns: 120
+onlyOneBackUp: 1

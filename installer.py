@@ -87,6 +87,11 @@ def installingPackages():
         installPackage("nvim", "fd", ["paru", "-S", "--needed", "fd"])
         installPackage(
             "nvim",
+            "latexindent",
+            ["paru", "-S", "--needed", "texlive-latexindent-meta"],
+        )
+        installPackage(
+            "nvim",
             "pynvim",
             ["paru", "-S", "--needed", "python-pynvim"],
         )
