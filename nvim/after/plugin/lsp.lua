@@ -26,7 +26,8 @@ local function config(_config)
       map("n", "<Leader>sd", tb.lsp_document_symbols, bufopts)
       map("n", "<Leader>sw", tb.lsp_workspace_symbols, bufopts)
       if client.name == "texlab" then
-        vim.keymap.set("n", "<Leader>lb", ":TexlabBuild<CR>", bufopts)
+        vim.keymap.set("n", "<Leader>lb", ":w<CR>:TexlabBuild<CR>", bufopts)
+        vim.keymap.set("n", "<Leader>lc", ":w<CR>:TexWordCount<CR>", bufopts)
       end
       if client.name == "clangd" then
         vim.keymap.set("n", "<Leader>ls", ":ClangdSwitchSourceHeader<CR>", bufopts)
