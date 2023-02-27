@@ -26,15 +26,15 @@ function icat {
 }
 
 function ltc {
-  depth=1
+  depth=2
   while getopts "d:p" opt; do
     case $opt in
       d) depth=$OPTARG ;;
       p) pdfp=1 ;;
     esac
   done
-  regexes=("latexmk" ".synctex.gz" ".aux" ".bbl" ".bcf" ".bgl" ".fls" ".log"
-    ".nav" ".out" ".snm" ".toc" ".xml")
+  regexes=("latexmk" ".synctex.gz" ".aux" ".bbl" ".bcf" ".blg" "-blx.bib" ".fls"
+    ".log" ".nav" ".out" ".run.xml" ".snm" ".toc" ".xml")
   for file in $(fd -t f -d $depth -HI); do
     if (( $pdfp )) && [[ $file =~ ".pdf" ]] && [[ -f "${file:r}.tex" ]]; then
       rm -f $file
