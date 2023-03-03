@@ -3,4 +3,11 @@ dos2unixlinebreaks: 1
 modifyLineBreaks:
   textWrapOptions:
     columns: 120
+    blocksFollow:
+      other: \\\]|\\item(?:\h|\[)|\\\\|\\newline
 onlyOneBackUp: 1
+replacements:
+  - amalgamate: 0
+  - when: before
+    substitution: |-
+      s/(\\\\|\\newline)\s*/$1\n/sg
