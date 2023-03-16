@@ -44,7 +44,6 @@ lsp.eslint.setup(config())
 lsp.pyright.setup(config())
 lsp.r_language_server.setup(config())
 lsp.vimls.setup(config())
-lsp.yamlls.setup(config())
 lsp.jsonls.setup(config({
   settings = {
     json = {
@@ -82,5 +81,10 @@ lsp.texlab.setup(config({
         executable = "zathura",
       },
     },
+  },
+}))
+lsp.yamlls.setup(config({
+  settings = {
+    yaml = { keyOrdering = false },
   },
 }))
