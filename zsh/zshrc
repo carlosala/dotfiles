@@ -1,12 +1,13 @@
 ### VARIABLES
+export CARGO_BUILD_JOBS="$(nproc --ignore=2)"
 export EDITOR="nvim"
 export GPG_TTY=$TTY
-export OPENCV_LOG_LEVEL="ERROR"
 export MANPAGER="nvim +Man!"
+export OPENCV_LOG_LEVEL="ERROR"
 export PATH="$PATH:/home/carlo/.cargo/bin"
 export PATH="$PATH:/home/carlo/.local/bin"
-export ZSHZ_CASE="ignore"
 export XZ_DEFAULTS="-T0"
+export ZSHZ_CASE="ignore"
 
 ### OPTIONS
 setopt hist_find_no_dups
