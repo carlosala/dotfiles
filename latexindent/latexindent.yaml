@@ -3,6 +3,8 @@ dos2unixlinebreaks: 1
 modifyLineBreaks:
   textWrapOptions:
     columns: 120
+    blocksBeginWith:
+      other: \\footnote
     blocksFollow:
       other: \\\]|\\item(?:\h|\[)|\\\\|\\newline
 onlyOneBackUp: 1
