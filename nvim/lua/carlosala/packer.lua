@@ -36,6 +36,7 @@ require("packer").startup(function(use)
   use({ "l3mon4d3/luasnip", run = "make install_jsregexp" })
   use("jalvesaq/nvim-r")
   use({ "f3fora/nvim-texlabconfig", run = "go build -o ~/.local/bin/nvim-texlabconfig" })
+  use({ "toppair/peek.nvim", run = "deno task --quiet build:fast" })
   use("tpope/vim-fugitive")
 
   -- navigation
