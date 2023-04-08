@@ -4,4 +4,4 @@ require("nvim-treesitter.configs").setup({
   incremental_selection = { enable = true },
   indent = { enable = true },
 })
-require("nvim-treesitter.parsers").filetype_to_parsername.json = "jsonc"
+vim.treesitter.language.register("jsonc", "json")
