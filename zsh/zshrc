@@ -1,5 +1,5 @@
 ### VARIABLES
-export CARGO_BUILD_JOBS="$(nproc --ignore=2)"
+export CARGO_BUILD_JOBS="$(nproc --ignore=4)"
 export EDITOR="nvim"
 export GPG_TTY=$TTY
 export MANPAGER="nvim +Man!"
