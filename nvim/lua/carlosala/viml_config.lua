@@ -1,6 +1,3 @@
--- editorconfig-vim
-vim.g.EditorConfig_exclude_patterns = { "fugitive://.*" }
-
 -- neoformat
 vim.g.latexindent_opt = "-m -rv"
 

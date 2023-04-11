@@ -28,7 +28,6 @@ require("packer").startup(function(use)
   use("hrsh7th/cmp-path")
 
   -- formatting
-  use("editorconfig/editorconfig-vim")
   use("sbdchd/neoformat")
 
   -- misc
