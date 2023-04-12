@@ -85,6 +85,9 @@ lsp.texlab.setup(config({
 }))
 lsp.yamlls.setup(config({
   settings = {
-    yaml = { keyOrdering = false },
+    yaml = {
+      keyOrdering = false,
+      schemas = require("schemastore").yaml.schemas(),
+    },
   },
 }))
