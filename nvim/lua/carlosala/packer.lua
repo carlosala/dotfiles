@@ -27,12 +27,10 @@ require("packer").startup(function(use)
   use("hrsh7th/cmp-nvim-lsp-signature-help")
   use("hrsh7th/cmp-path")
 
-  -- formatting
-  use("sbdchd/neoformat")
-
   -- misc
   use("lewis6991/impatient.nvim")
   use({ "l3mon4d3/luasnip", run = "make install_jsregexp" })
+  use("sbdchd/neoformat")
   use("jalvesaq/nvim-r")
   use({ "f3fora/nvim-texlabconfig", run = "go build -o ~/.local/bin/nvim-texlabconfig" })
   use({ "toppair/peek.nvim", run = "deno task --quiet build:fast" })
