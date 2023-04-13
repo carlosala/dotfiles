@@ -36,9 +36,6 @@
 [pull]
   rebase = true
 
-[push]
-  followTags = true
-
 [tag]
   gpgSign = true
 
