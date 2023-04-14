@@ -51,6 +51,7 @@ require("packer").startup(function(use)
   use("windwp/nvim-autopairs")
   use("kylechui/nvim-surround")
   use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" })
+  use("mbbill/undotree")
 
   -- visual
   use("j-hui/fidget.nvim")

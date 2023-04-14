@@ -41,6 +41,7 @@ map("n", "]d", vim.diagnostic.goto_next, silent)
 
 -- plugins
 map("n", "<Leader>n", vim.cmd.NvimTreeFindFile, silent)
+map("n", "<Leader>u", vim.cmd.UndotreeToggle, silent)
 map({ "n", "v" }, "<Leader>b", ":Neoformat<CR>")
 map("n", "<Leader>vd", ":Gvdiffsplit!<CR>", silent)
 
