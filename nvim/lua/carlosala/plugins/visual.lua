@@ -5,6 +5,7 @@ return {
   },
   {
     "sainnhe/gruvbox-material",
+    priority = 100,
     config = function()
       vim.g.gruvbox_material_background = "soft"
       vim.g.gruvbox_material_diagnostic_text_highlight = 1
@@ -22,6 +23,7 @@ return {
   },
   {
     "nvim-lualine/lualine.nvim",
+    priority = 99,
     config = function()
       local function _diff_source()
         local gitsigns = vim.b.gitsigns_status_dict
