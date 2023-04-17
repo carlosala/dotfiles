@@ -12,11 +12,6 @@ return {
     config = function()
       local cmp = require("cmp")
 
-      local has_words_before = function()
-        local line, col = unpack(vim.api.nvim_win_get_cursor(0))
-        return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
-      end
-
       cmp.setup({
         snippet = {
           -- REQUIRED - you must specify a snippet engine
@@ -41,9 +36,6 @@ return {
           { name = "buffer" },
         }),
         mapping = cmp.mapping.preset.insert({
-          ["<C-b>"] = cmp.mapping.scroll_docs(-4),
-          ["<C-f>"] = cmp.mapping.scroll_docs(4),
-          ["<CR>"] = cmp.mapping.confirm(),
           ["<C-Space>"] = cmp.mapping(function()
             if cmp.visible() then
               cmp.abort()
@@ -51,15 +43,8 @@ return {
               cmp.complete()
             end
           end),
-          ["<Tab>"] = function(fallback)
-            if not cmp.select_next_item() then
-              if vim.bo.buftype ~= "prompt" and has_words_before() then
-                cmp.complete()
-              else
-                fallback()
-              end
-            end
-          end,
+          ["<CR>"] = cmp.mapping.confirm(),
+          ["<Tab>"] = cmp.mapping.select_next_item(),
           ["<S-Tab>"] = cmp.mapping.select_prev_item(),
         }),
       })
