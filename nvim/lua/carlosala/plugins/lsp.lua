@@ -5,6 +5,7 @@ return {
       "onsails/lspkind.nvim",
       "williamboman/mason.nvim",
       "williamboman/mason-lspconfig.nvim",
+      "folke/neodev.nvim",
       "simrat39/rust-tools.nvim",
       "b0o/schemastore.nvim",
       "jose-elias-alvarez/typescript.nvim",
@@ -13,6 +14,13 @@ return {
       require("mason").setup()
       require("mason-lspconfig").setup({
         automatic_installation = { exclude = { "clangd", "r_language_server" } },
+      })
+
+      require("neodev").setup({
+        override = function(_, library)
+          library.enabled = true
+          library.plugins = true
+        end,
       })
 
       local lsp = require("lspconfig")
@@ -53,6 +61,7 @@ return {
 
       lsp.clangd.setup(config())
       lsp.eslint.setup(config())
+      lsp.lua_ls.setup(config())
       lsp.pyright.setup(config())
       lsp.r_language_server.setup(config())
       lsp.vimls.setup(config())
@@ -61,15 +70,6 @@ return {
           json = {
             schemas = require("schemastore").json.schemas(),
             validate = { enable = true },
-          },
-        },
-      }))
-      lsp.lua_ls.setup(config({
-        settings = {
-          Lua = {
-            runtime = { version = "LuaJIT" },
-            diagnostics = { globals = { "vim" } },
-            workspace = { library = vim.api.nvim_get_runtime_file("", true) },
           },
         },
       }))
