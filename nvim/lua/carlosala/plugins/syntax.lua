@@ -1,4 +1,10 @@
 return {
-  "neoclide/jsonc.vim",
-  "fladson/vim-kitty",
+  {
+    "neoclide/jsonc.vim",
+    event = "VeryLazy",
+  },
+  {
+    "fladson/vim-kitty",
+    event = "VeryLazy",
+  },
 }

@@ -2,6 +2,7 @@ return {
   {
     "l3mon4d3/luasnip",
     build = "make install_jsregexp",
+    event = "InsertEnter",
     config = function()
       local ls = require("luasnip")
       local node_util = require("luasnip.nodes.util")

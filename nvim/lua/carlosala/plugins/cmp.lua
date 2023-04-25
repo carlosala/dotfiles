@@ -1,6 +1,7 @@
 return {
   {
     "hrsh7th/nvim-cmp",
+    event = "InsertEnter",
     dependencies = {
       "hrsh7th/cmp-buffer",
       { "petertriho/cmp-git", dependencies = "nvim-lua/plenary.nvim" },
