@@ -3,12 +3,12 @@ local silent = { silent = true }
 
 -- basic
 map("n", "<Leader>w", ":w<CR>", silent)
-map("n", "<Leader>q", ":q<CR>", silent)
+map("n", "<Leader>q", vim.cmd.q, silent)
 map("n", "Q", "<Nop>", silent)
 map("n", "<Space>", "<Nop>", silent)
 
-map("v", "J", ":m '>+1<CR>gv=gv")
-map("v", "K", ":m '<-2<CR>gv=gv")
+map("v", "J", ":m '>+1<CR>gv=gv", silent)
+map("v", "K", ":m '<-2<CR>gv=gv", silent)
 
 map("n", "<C-h>", "<C-w>h", silent)
 map("n", "<C-j>", "<C-w>j", silent)
@@ -22,8 +22,8 @@ map("n", "gk", "k", silent)
 
 map("n", "<Leader>ss", "<C-w>v", silent)
 map("n", "<Leader>sv", "<C-w>s", silent)
-map({ "n", "v" }, "<M-d>", "<C-d>zz", silent)
-map({ "n", "v" }, "<M-u>", "<C-u>zz", silent)
+map({ "n", "v" }, "<M-j>", "<C-d>zz", silent)
+map({ "n", "v" }, "<M-k>", "<C-u>zz", silent)
 map("n", "n", "nzz")
 map("n", "N", "Nzz")
 
@@ -42,13 +42,12 @@ map("n", "]d", vim.diagnostic.goto_next, silent)
 -- plugins
 map("n", "<Leader>n", vim.cmd.NvimTreeFindFile, silent)
 map("n", "<Leader>u", vim.cmd.UndotreeToggle, silent)
-map({ "n", "v" }, "<Leader>b", ":Neoformat<CR>")
-map("n", "<Leader>vd", ":Gvdiffsplit!<CR>", silent)
+map({ "n", "v" }, "<Leader>b", ":Neoformat<CR>", silent)
+map("n", "<Leader>vd", vim.cmd.Gvdiffsplit, silent)
 
 -- telescope
-local tb = require("telescope.builtin")
-map("n", "<Leader>ff", tb.find_files, silent)
-map("n", "<Leader>fg", tb.git_files, silent)
-map("n", "<Leader>g", ':Telescope grep_string search=""<CR>', silent)
-map("n", "<Leader>h", tb.help_tags, silent)
-map("n", "<Leader>m", tb.man_pages, silent)
+map("n", "<Leader>ff", "<Cmd>Telescope find_files<CR>", silent)
+map("n", "<Leader>fg", "<Cmd>Telescope git_files<CR>", silent)
+map("n", "<Leader>fs", '<Cmd>Telescope grep_string search=""<CR>', silent)
+map("n", "<Leader>fh", "<Cmd>Telescope help_tags<CR>", silent)
+map("n", "<Leader>fm", "<Cmd>Telescope man_pages<CR>", silent)

@@ -32,25 +32,24 @@ return {
           on_attach = function(client, bufnr)
             local bufopts = { noremap = true, silent = true, buffer = bufnr }
             local map = vim.keymap.set
-            local tb = require("telescope.builtin")
             map("n", "gd", vim.lsp.buf.definition, bufopts)
             map("n", "gi", vim.lsp.buf.implementation, bufopts)
             map("n", "gy", vim.lsp.buf.type_definition, bufopts)
-            map("n", "gr", tb.lsp_references, bufopts)
+            map("n", "gr", "<Cmd>Telescope lsp_references<CR>", bufopts)
             map("n", "K", vim.lsp.buf.hover, bufopts)
             map("i", "<C-k>", vim.lsp.buf.signature_help, bufopts)
             map("n", "<Leader>rn", vim.lsp.buf.rename, bufopts)
             map("n", "<Leader>ca", function()
               vim.lsp.buf.code_action({ apply = true })
             end, bufopts)
-            map("n", "<Leader>sd", tb.lsp_document_symbols, bufopts)
-            map("n", "<Leader>sw", tb.lsp_workspace_symbols, bufopts)
+            map("n", "<Leader>sd", "<Cmd>Telescope lsp_document_symbols<CR>", bufopts)
+            map("n", "<Leader>sw", "<Cmd>Telescope lsp_workspace_symbols<CR>", bufopts)
             if client.name == "texlab" then
-              vim.keymap.set("n", "<Leader>lb", ":w<CR>:TexlabBuild<CR>", bufopts)
-              vim.keymap.set("n", "<Leader>lc", ":w<CR>:TexWordCount<CR>", bufopts)
+              vim.keymap.set("n", "<Leader>lb", ":w<CR><Cmd>TexlabBuild<CR>", bufopts)
+              vim.keymap.set("n", "<Leader>lc", ":w<CR><Cmd>TexWordCount<CR>", bufopts)
             end
             if client.name == "clangd" then
-              vim.keymap.set("n", "<Leader>ls", ":ClangdSwitchSourceHeader<CR>", bufopts)
+              vim.keymap.set("n", "<Leader>ls", vim.cmd.ClangdSwitchSourceHeader, bufopts)
             end
           end,
         }, _config or {})

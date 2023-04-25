@@ -11,13 +11,13 @@ return {
       ls.filetype_extend("javascriptreact", { "javascript" })
       ls.filetype_extend("typescriptreact", { "javascript" })
 
-      map({ "i", "v" }, "<M-k>", function()
+      map({ "i", "v" }, "<M-l>", function()
         if ls.expand_or_jumpable() then
           ls.expand_or_jump()
         end
       end, { silent = true })
 
-      map({ "i", "v" }, "<M-j>", function()
+      map({ "i", "v" }, "<M-h>", function()
         if ls.jumpable(-1) then
           ls.jump(-1)
         end
