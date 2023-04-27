@@ -4,6 +4,7 @@ return {
     event = "InsertEnter",
     dependencies = {
       "hrsh7th/cmp-buffer",
+      "hrsh7th/cmp-emoji",
       { "petertriho/cmp-git", dependencies = "nvim-lua/plenary.nvim" },
       "saadparwaiz1/cmp_luasnip",
       "hrsh7th/cmp-nvim-lsp",
@@ -33,8 +34,8 @@ return {
           { name = "luasnip" },
           { name = "git" },
           { name = "path" },
-        }, {
           { name = "buffer" },
+          { name = "emoji" },
         }),
         mapping = cmp.mapping.preset.insert({
           ["<C-Space>"] = cmp.mapping(function()
