@@ -82,7 +82,7 @@ def installingPackages():
         installPackage(
             "kitty",
             "nerd fonts symbols",
-            ["paru", "-S", "--needed", "ttf-nerd-fonts-symbols-2048-em"],
+            ["paru", "-S", "--needed", "ttf-nerd-fonts-symbols"],
         )
         installPackage("nvim", "fd", ["paru", "-S", "--needed", "fd"])
         installPackage(
