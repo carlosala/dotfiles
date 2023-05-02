@@ -10,11 +10,6 @@ map("n", "<Space>", "<Nop>", silent)
 map("v", "J", ":m '>+1<CR>gv=gv", silent)
 map("v", "K", ":m '<-2<CR>gv=gv", silent)
 
-map("n", "<C-h>", "<C-w>h", silent)
-map("n", "<C-j>", "<C-w>j", silent)
-map("n", "<C-k>", "<C-w>k", silent)
-map("n", "<C-l>", "<C-w>l", silent)
-
 map("n", "j", "gj", silent)
 map("n", "gj", "j", silent)
 map("n", "k", "gk", silent)
