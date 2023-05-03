@@ -8,9 +8,13 @@
   pager = delta
 
 [delta]
+  features = side-by-side
+  hunk-header-style = omit
   light = false
   navigate = true
-  features = side-by-side
+
+[delta "lazygit"]
+  side-by-side = false
 
 [diff]
   colorMoved = default
