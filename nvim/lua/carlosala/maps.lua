@@ -38,11 +38,11 @@ map("n", "]d", vim.diagnostic.goto_next, silent)
 map("n", "<Leader>n", vim.cmd.NvimTreeFindFile, silent)
 map("n", "<Leader>u", vim.cmd.UndotreeToggle, silent)
 map({ "n", "v" }, "<Leader>b", ":Neoformat<CR>", silent)
-map("n", "<Leader>vd", vim.cmd.Gvdiffsplit, silent)
+map("n", "<Leader>vd", ":Gvdiffsplit!<CR>", silent)
 
 -- telescope
 map("n", "<Leader>ff", "<Cmd>Telescope find_files<CR>", silent)
 map("n", "<Leader>fg", "<Cmd>Telescope git_files<CR>", silent)
 map("n", "<Leader>fs", '<Cmd>Telescope grep_string search=""<CR>', silent)
 map("n", "<Leader>fh", "<Cmd>Telescope help_tags<CR>", silent)
-map("n", "<Leader>fm", "<Cmd>Telescope man_pages<CR>", silent)
+map("n", "<Leader>fo", "<Cmd>Telescope buffers<CR>", silent)
