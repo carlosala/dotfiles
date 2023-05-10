@@ -17,6 +17,7 @@ return {
         indent = { enable = true },
       })
       vim.treesitter.language.register("jsonc", "json")
+      require("treesitter-context").setup()
     end,
   },
 }
