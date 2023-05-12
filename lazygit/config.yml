@@ -17,3 +17,7 @@ git:
     colorArg: always
     pager: DELTA_FEATURES=+lazygit delta --dark --paging=never
 promptToReturnFromSubprocess: false
+keybinding:
+  commits:
+    moveDownCommit: <c-d>
+    moveUpCommit: <c-u>
