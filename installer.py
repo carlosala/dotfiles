@@ -102,11 +102,6 @@ def installingPackages():
         )
         installPackage(
             "nvim",
-            "tectonic",
-            ["paru", "-S", "--needed", "tectonic"],
-        )
-        installPackage(
-            "nvim",
             "wayland clipboard",
             ["paru", "-S", "--needed", "wl-clipboard"],
         )
