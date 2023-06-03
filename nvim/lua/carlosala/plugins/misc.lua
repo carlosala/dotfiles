@@ -15,7 +15,7 @@ return {
   },
   {
     "f3fora/nvim-texlabconfig",
-    build = "go build -o ~/.local/bin/nvim-texlabconfig",
+    build = "go build",
     ft = "tex",
     config = true,
   },
