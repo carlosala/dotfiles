@@ -11,6 +11,7 @@ vim.opt.shiftwidth = 2
 vim.opt.breakindent = true
 vim.opt.showmode = false
 vim.opt.ignorecase = true
+vim.opt.smartcase = true
 vim.opt.termguicolors = true
 vim.opt.signcolumn = "yes"
 vim.opt.updatetime = 50
