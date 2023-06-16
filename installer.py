@@ -102,8 +102,8 @@ def installingPackages():
         )
         installPackage(
             "nvim",
-            "wayland clipboard",
-            ["paru", "-S", "--needed", "wl-clipboard"],
+            "clipboard",
+            ["paru", "-S", "--needed", "xclip"],
         )
         installPackage("zsh", "bat", ["paru", "-S", "--needed", "bat"])
         installPackage("zsh", "exa", ["paru", "-S", "--needed", "exa"])
