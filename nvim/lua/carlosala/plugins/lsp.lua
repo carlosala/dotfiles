@@ -4,6 +4,7 @@ return {
     cmd = "Mason",
     event = { "BufReadPre", "BufNewFile", "VeryLazy" },
     dependencies = {
+      "p00f/clangd_extensions.nvim",
       "onsails/lspkind.nvim",
       "williamboman/mason.nvim",
       "williamboman/mason-lspconfig.nvim",
@@ -57,10 +58,10 @@ return {
         }, _config or {})
       end
 
+      require("clangd_extensions").setup({ server = config() })
       require("rust-tools").setup({ server = config() })
       require("typescript").setup({ server = config() })
 
-      lsp.clangd.setup(config())
       lsp.eslint.setup(config())
       lsp.lua_ls.setup(config())
       lsp.pyright.setup(config())
