@@ -1,5 +1,4 @@
 require("carlosala.options")
-require("carlosala.kitty")
 require("carlosala.lazy")
 require("carlosala.commands")
 require("carlosala.maps")
