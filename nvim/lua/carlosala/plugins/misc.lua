@@ -19,10 +19,4 @@ return {
     ft = "tex",
     config = true,
   },
-  {
-    "toppair/peek.nvim",
-    build = "deno task --quiet build:fast",
-    cmd = { "PeekOpen", "PeekClose" },
-    opts = { app = "chromium" },
-  },
 }
