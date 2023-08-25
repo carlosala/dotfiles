@@ -10,7 +10,7 @@ return {
       "folke/neodev.nvim",
       "simrat39/rust-tools.nvim",
       "b0o/schemastore.nvim",
-      "jose-elias-alvarez/typescript.nvim",
+      "pmizio/typescript-tools.nvim",
     },
     config = function()
       require("mason").setup()
@@ -47,18 +47,21 @@ return {
             map("n", "<Leader>sd", "<Cmd>Telescope lsp_document_symbols<CR>", bufopts)
             map("n", "<Leader>sw", "<Cmd>Telescope lsp_workspace_symbols<CR>", bufopts)
             if client.name == "texlab" then
-              vim.keymap.set("n", "<Leader>lb", ":w<CR><Cmd>TexlabBuild<CR>", bufopts)
-              vim.keymap.set("n", "<Leader>lc", ":w<CR><Cmd>TexWordCount<CR>", bufopts)
+              map("n", "<Leader>lb", ":w<CR><Cmd>TexlabBuild<CR>", bufopts)
+              map("n", "<Leader>lc", ":w<CR><Cmd>TexWordCount<CR>", bufopts)
             end
             if client.name == "clangd" then
-              vim.keymap.set("n", "<Leader>ls", vim.cmd.ClangdSwitchSourceHeader, bufopts)
+              map("n", "<Leader>ls", vim.cmd.ClangdSwitchSourceHeader, bufopts)
             end
           end,
         }, _config or {})
       end
 
       require("rust-tools").setup({ server = config() })
-      require("typescript").setup({ server = config() })
+      local tsserver_path = require("mason-registry").get_package("typescript-language-server"):get_install_path()
+      require("typescript-tools").setup(config({
+        settings = { tsserver_path = tsserver_path .. "/node_modules/typescript/lib/tsserver.js" },
+      }))
 
       lsp.clangd.setup(config())
       lsp.eslint.setup(config())
