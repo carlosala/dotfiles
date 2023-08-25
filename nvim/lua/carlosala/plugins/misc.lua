@@ -14,6 +14,7 @@ return {
           lua = { require("formatter.filetypes.lua").stylua },
           markdown = { require("formatter.filetypes.markdown").prettier },
           python = { require("formatter.filetypes.python").black },
+          rust = { require("formatter.filetypes.rust").rustfmt },
           typescript = { require("formatter.filetypes.typescript").prettier },
           yaml = { require("formatter.filetypes.yaml").prettier },
           bib = {
