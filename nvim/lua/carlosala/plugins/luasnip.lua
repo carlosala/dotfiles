@@ -30,12 +30,10 @@ return {
         update_events = "TextChanged,TextChangedI",
         parser_nested_assembler = function(_, snippet)
           local select = function(snip, no_move)
-            snip.parent:enter_node(snip.indx)
+            snip:focus()
             -- upon deletion, extmarks of inner nodes should shift to end of
             -- placeholder-text.
-            for _, node in ipairs(snip.nodes) do
-              node:set_mark_rgrav(true, true)
-            end
+            snip:subtree_set_rgrav(true)
 
             -- SELECT all text inside the snippet.
             if not no_move then
