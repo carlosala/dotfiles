@@ -87,7 +87,7 @@ return {
               args = {
                 "--synctex-editor-command",
                 require("texlabconfig").project_dir()
-                  .. "/nvim-texlabconfig -file '%%{input}' -line %%{line} -server "
+                  .. "/nvim-texlabconfig -file '%%%{input}' -line %%%{line} -server "
                   .. vim.v.servername,
                 "--synctex-forward",
                 "%l:1:%f",
