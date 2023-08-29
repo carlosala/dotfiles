@@ -16,6 +16,7 @@ return {
       require("mason").setup()
       require("mason-lspconfig").setup({
         automatic_installation = { exclude = { "clangd", "r_language_server" } },
+        ensure_installed = { "tsserver" },
       })
 
       require("neodev").setup({
