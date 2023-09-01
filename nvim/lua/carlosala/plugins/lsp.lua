@@ -7,6 +7,7 @@ return {
       "onsails/lspkind.nvim",
       "williamboman/mason.nvim",
       "williamboman/mason-lspconfig.nvim",
+      "whoissethdaniel/mason-tool-installer.nvim",
       "folke/neodev.nvim",
       "simrat39/rust-tools.nvim",
       "b0o/schemastore.nvim",
@@ -18,6 +19,10 @@ return {
         automatic_installation = { exclude = { "clangd", "r_language_server" } },
         ensure_installed = { "tsserver" },
       })
+      require("mason-tool-installer").setup({
+        ensure_installed = { "black", "luacheck", "pylint", "stylua", "vale" },
+      })
+      require("mason-tool-installer").check_install(false) -- false stands for not updating, only installing
 
       require("neodev").setup({
         override = function(_, library)
