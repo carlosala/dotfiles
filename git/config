@@ -40,6 +40,10 @@
 [pull]
   rebase = true
 
+[submodule]
+  fetchJobs = 0
+  recurse = true
+
 [tag]
   gpgSign = true
 
