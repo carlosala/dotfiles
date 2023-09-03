@@ -1,4 +1,5 @@
 gui:
+  nerdFontsVersion: "3"
   theme:
     selectedLineBgColor:
       - default
@@ -8,7 +9,7 @@ gui:
       - default
       - underline
     cherryPickedCommitFgColor:
-      - green
+      - yellow
 git:
   branchLogCmd: git log --graph --format='%C(auto)%h%d %s %C(dim)<%an> %C(green)%cr' {{branchName}}
   allBranchesLogCmd: git log --all --graph --format='%C(auto)%h%d %s %C(dim)<%an> %C(green)%cr'
@@ -16,6 +17,7 @@ git:
   paging:
     colorArg: always
     pager: DELTA_FEATURES=+lazygit delta --dark --paging=never
+notARepository: quit
 promptToReturnFromSubprocess: false
 keybinding:
   commits:
