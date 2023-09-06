@@ -10,6 +10,7 @@ cp $DIR/latexindent/latexindent.yaml ~/.latexindent.yaml
 cp -r $DIR/latexmk ~/.config
 cp -r $DIR/lazygit ~/.config
 cp -r $DIR/nvim ~/.config
+cp -r $DIR/vale/vale.ini ~/.vale.ini
 cp -r $DIR/zathura ~/.config
 cp $DIR/zsh/zshenv ~/.zshenv
 cp $DIR/zsh/zshrc ~/.zshrc
