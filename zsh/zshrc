@@ -1,3 +1,11 @@
+### KITTY STUFF
+if test -n "$KITTY_INSTALLATION_DIR"; then
+  export KITTY_SHELL_INTEGRATION="enabled"
+  autoload -Uz -- "$KITTY_INSTALLATION_DIR"/shell-integration/zsh/kitty-integration
+  kitty-integration
+  unfunction kitty-integration
+fi
+
 ### VARIABLES
 export CARGO_BUILD_JOBS="$(nproc --ignore=4)"
 export EDITOR="nvim"
@@ -21,14 +29,6 @@ zstyle ':omz:plugins:nvm' lazy yes
 zstyle ':omz:update' mode auto
 zstyle ':omz:update' frequency 1
 source "$ZSH/oh-my-zsh.sh"
-
-### KITTY STUFF
-if test -n "$KITTY_INSTALLATION_DIR"; then
-  export KITTY_SHELL_INTEGRATION="enabled"
-  autoload -Uz -- "$KITTY_INSTALLATION_DIR"/shell-integration/zsh/kitty-integration
-  kitty-integration
-  unfunction kitty-integration
-fi
 
 ### ALIASES
 alias c="clear"
