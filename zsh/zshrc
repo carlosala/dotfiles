@@ -33,7 +33,7 @@ source "$ZSH/oh-my-zsh.sh"
 ### ALIASES
 alias c="clear"
 alias e="exit"
-alias l="exa -la --group-directories-first --icons"
+alias l="eza -la --group-directories-first --icons"
 alias v="openNvim"
 alias bc="bc -l"
 alias cdot="~/Documents/dev/dotfiles/copyconfig.sh"

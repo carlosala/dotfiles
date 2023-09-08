@@ -106,7 +106,7 @@ def installingPackages():
             ["paru", "-S", "--needed", "xclip"],
         )
         installPackage("zsh", "bat", ["paru", "-S", "--needed", "bat"])
-        installPackage("zsh", "exa", ["paru", "-S", "--needed", "exa"])
+        installPackage("zsh", "eza", ["paru", "-S", "--needed", "eza"])
         installPackage("zsh", "nawk", ["paru", "-S", "--needed", "nawk"])
         installPackage("", "dust", ["paru", "-S", "--needed", "dust"])
         installPackage(
@@ -133,7 +133,7 @@ def installingPackages():
         installPackage("nvim", "fd", ["cargo", "install", "fd-find"])
         installPackage("nvim", "ripgrep", ["cargo", "install", "ripgrep"])
         installPackage("nvim", "pynvim (pip)", ["pip3", "install", "--user", "pynvim"])
-        installPackage("zsh", "exa", ["cargo", "install", "exa"])
+        installPackage("zsh", "eza", ["cargo", "install", "eza"])
         installPackage("", "dust", ["cargo", "install", "du-dust"])
         installPackage("", "hyperfine", ["cargo", "install", "hyperfine"])
 
