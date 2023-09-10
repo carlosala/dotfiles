@@ -8,8 +8,8 @@
   2. Use zsh as default shell (`chsh -s $(where zsh)`)
   3. Install [ohmyzsh](https://ohmyz.sh)
 - python3 & pip3
-- [neovim](https://neovim.io) (v0.7 minimum, v0.8+ recommended)
-  - _Some configuration might not work with v0.7_
+- [neovim](https://neovim.io) (v0.8 minimum, v0.9+ recommended)
+  - _Some configuration might not work with v0.8_
 - npm / yarn
 - cargo
   - To install it, use [rustup](https://rustup.rs)
@@ -26,31 +26,23 @@ cd dotfiles
 git submodule update --init
 ```
 
-2. Run installer script to check the requirements and install some small useful packages (just if you want, you are going to be asked for each one of those):
+2. The `installer.sh` is useful to install needed packages for Arch Linux. To run it:
 
 ```sh
-./installer.py
+./installer.sh
 ```
 
-If you want to install that packages using `pacman`, run it with the `-a` or `--arch` argument:
+In the most likely case you don't use Arch Linux, install the packages declared in the installer in your system to make
+everything work seamlessly.
 
-```sh
-./installer.py -a
-```
-
-If you want to install all packages without being prompted of each one pass the `-y` or `--yes` argument:
-
-```sh
-./installer.py -y
-```
-
-3. Copy the config you are interested to to your config directory. Config paths:
+3. Copy the config you want to your config directory. These are the standard paths:
    - nvim: `~/.config/nvim`
    - zsh: `~/.zshrc` & `~/.oh-my-zsh/custom`
 4. You are ready to go!
 
-### Other config
+### Other tools
 
-As you can see, there are many different tools that I use. I have not adapted the README and installer to them, I may do it (or not). Anyway, you can try them too.
+As you can see, there are many other configuration files. I don't plan to document the requirements for them any time
+soon. Even though, feel free to try them!
 
 Thanks for giving my dotfiles a try!
