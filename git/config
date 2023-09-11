@@ -16,6 +16,9 @@
 [diff]
   colorMoved = default
 
+[fetch]
+  prune = true
+
 [filter "lfs"]
   clean = git-lfs clean -- %f
   smudge = git-lfs smudge -- %f
@@ -36,6 +39,9 @@
 
 [pull]
   rebase = true
+
+[push]
+  autoSetupRemote = true
 
 [submodule]
   fetchJobs = 0
