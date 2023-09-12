@@ -1,4 +1,4 @@
-PROMPT='%F{2}%1~%f %B%F{4}[%f%b '
+PROMPT='%F{2}$(_pwd_short)%f %B%F{4}[%f%b '
 RPROMPT='$(gitprompt) %B%F{4}]%f %(?:%F{6}:%F{1})%T%f%b'
 
 ZSH_THEME_GIT_PROMPT_PREFIX=""
@@ -14,5 +14,13 @@ ZSH_THEME_GIT_PROMPT_AHEAD="%F{3}|↑"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%F{4}…"
 ZSH_THEME_GIT_PROMPT_STASHED="%F{4}⚑"
 ZSH_THEME_GIT_PROMPT_CLEAN="%F{2}✓"
+
+function _pwd_short {
+  if [[ $PWD == "$HOME" ]]; then
+    echo "~"
+  else
+    echo ${${${:-/${(j:/:)${(M)${(s:/:)${(D)PWD:h}}#(|.)[^.]}}/${PWD:t}}//\/~/\~}/\/\//\/}
+  fi
+}
 
 # vim: ft=zsh
