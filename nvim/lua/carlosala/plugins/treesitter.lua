@@ -17,7 +17,7 @@ return {
         indent = { enable = true },
       })
       vim.treesitter.language.register("jsonc", "json")
-      require("treesitter-context").setup()
+      require("treesitter-context").setup({ max_lines = 10, multiline_threshold = 4 })
 
       vim.opt.foldmethod = "expr"
       vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
