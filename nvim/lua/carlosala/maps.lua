@@ -3,7 +3,7 @@ local silent = { silent = true }
 
 -- basic
 map("n", "<Leader>w", ":w<CR>", silent)
-map("n", "<Leader>q", vim.cmd.q, silent)
+map("n", "<Leader>q", ":q<CR>", silent)
 map("n", "Q", "<Nop>", silent)
 map("n", "<Space>", "<Nop>", silent)
 
