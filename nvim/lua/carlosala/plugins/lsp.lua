@@ -64,10 +64,7 @@ return {
       end
 
       require("rust-tools").setup({ server = config() })
-      local tsserver_path = require("mason-registry").get_package("typescript-language-server"):get_install_path()
-      require("typescript-tools").setup(config({
-        settings = { tsserver_path = tsserver_path .. "/node_modules/typescript/lib/tsserver.js" },
-      }))
+      require("typescript-tools").setup(config())
 
       lsp.clangd.setup(config())
       lsp.eslint.setup(config())
