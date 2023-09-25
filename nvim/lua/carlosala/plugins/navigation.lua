@@ -46,6 +46,12 @@ return {
     end,
   },
   {
+    "folke/todo-comments.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    event = "VeryLazy",
+    config = true,
+  },
+  {
     "knubie/vim-kitty-navigator",
     build = "cp *.py ~/.config/kitty",
     event = "VeryLazy",
