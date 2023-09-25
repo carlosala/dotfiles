@@ -34,7 +34,7 @@ return {
       local lsp = require("lspconfig")
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-      local function config(_config)
+      local function config(custom_config)
         return vim.tbl_deep_extend("force", {
           capabilities = capabilities,
           on_attach = function(client, bufnr)
@@ -60,7 +60,7 @@ return {
               map("n", "<Leader>ls", vim.cmd.ClangdSwitchSourceHeader, bufopts)
             end
           end,
-        }, _config or {})
+        }, custom_config or {})
       end
 
       require("rust-tools").setup({ server = config() })
