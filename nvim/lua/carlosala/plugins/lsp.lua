@@ -53,11 +53,11 @@ return {
             map("n", "<Leader>sd", "<Cmd>Telescope lsp_document_symbols<CR>", bufopts)
             map("n", "<Leader>sw", "<Cmd>Telescope lsp_workspace_symbols<CR>", bufopts)
             if client.name == "texlab" then
-              map("n", "<Leader>lb", ":w<CR><Cmd>TexlabBuild<CR>", bufopts)
-              map("n", "<Leader>lc", ":w<CR><Cmd>TexWordCount<CR>", bufopts)
+              map("n", "<Leader>lb", "<Cmd>w<CR><Cmd>TexlabBuild<CR>", bufopts)
+              map("n", "<Leader>lc", "<Cmd>w<CR><Cmd>TexWordCount<CR>", bufopts)
             end
             if client.name == "clangd" then
-              map("n", "<Leader>ls", vim.cmd.ClangdSwitchSourceHeader, bufopts)
+              map("n", "<Leader>ls", "<Cmd>ClangdSwitchSourceHeader<CR>", bufopts)
             end
           end,
         }, custom_config or {})

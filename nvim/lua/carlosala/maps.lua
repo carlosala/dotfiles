@@ -2,13 +2,13 @@ local map = vim.keymap.set
 local silent = { silent = true }
 
 -- basic
-map("n", "<Leader>w", ":w<CR>", silent)
-map("n", "<Leader>q", ":q<CR>", silent)
+map("n", "<Leader>w", "<Cmd>w<CR>", silent)
+map("n", "<Leader>q", "<Cmd>q<CR>", silent)
 map("n", "Q", "<Nop>", silent)
 map("n", "<Space>", "<Nop>", silent)
 
-map("v", "J", ":m '>+1<CR>gv=gv", silent)
-map("v", "K", ":m '<-2<CR>gv=gv", silent)
+map("v", "J", "<Cmd>m '>+1<CR>gv=gv", silent)
+map("v", "K", "<Cmd>m '<-2<CR>gv=gv", silent)
 
 map({ "n", "v" }, "j", "gj", silent)
 map({ "n", "v" }, "gj", "j", silent)
@@ -35,10 +35,10 @@ map("n", "[d", vim.diagnostic.goto_prev, silent)
 map("n", "]d", vim.diagnostic.goto_next, silent)
 
 -- plugins
-map("n", "<Leader>n", vim.cmd.NvimTreeFindFile, silent)
-map("n", "<Leader>u", vim.cmd.UndotreeToggle, silent)
-map({ "n", "v" }, "<Leader>b", ":Format<CR>", silent)
-map("n", "<Leader>vd", ":Gvdiffsplit!<CR>", silent)
+map("n", "<Leader>n", "<Cmd>NvimTreeFindFile<CR>", silent)
+map("n", "<Leader>u", "<Cmd>UndotreeToggle<CR>", silent)
+map({ "n", "v" }, "<Leader>b", "<Cmd>Format<CR>", silent)
+map("n", "<Leader>vd", "<Cmd>Gvdiffsplit!<CR>", silent)
 
 -- telescope
 map("n", "<Leader>ff", "<Cmd>Telescope find_files<CR>", silent)
