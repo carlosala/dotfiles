@@ -4,6 +4,7 @@ return {
     event = "InsertEnter",
     dependencies = {
       "hrsh7th/cmp-buffer",
+      "hrsh7th/cmp-calc",
       "hrsh7th/cmp-emoji",
       { "petertriho/cmp-git", dependencies = "nvim-lua/plenary.nvim" },
       "saadparwaiz1/cmp_luasnip",
@@ -34,6 +35,7 @@ return {
           { name = "luasnip" },
           { name = "git" },
           { name = "path" },
+          { name = "calc" },
           { name = "buffer" },
           { name = "emoji" },
         }),
