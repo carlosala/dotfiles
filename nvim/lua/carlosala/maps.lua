@@ -7,8 +7,8 @@ map("n", "<Leader>q", "<Cmd>q<CR>", silent)
 map("n", "Q", "<Nop>", silent)
 map("n", "<Space>", "<Nop>", silent)
 
-map("v", "J", "<Cmd>m '>+1<CR>gv=gv", silent)
-map("v", "K", "<Cmd>m '<-2<CR>gv=gv", silent)
+map("v", "J", ":m '>+1<CR>gv=gv", silent)
+map("v", "K", ":m '<-2<CR>gv=gv", silent)
 
 map({ "n", "v" }, "j", "gj", silent)
 map({ "n", "v" }, "gj", "j", silent)
