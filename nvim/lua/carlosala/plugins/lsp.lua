@@ -40,9 +40,9 @@ return {
           on_attach = function(client, bufnr)
             local bufopts = { noremap = true, silent = true, buffer = bufnr }
             local map = vim.keymap.set
-            map("n", "gd", vim.lsp.buf.definition, bufopts)
-            map("n", "gi", vim.lsp.buf.implementation, bufopts)
-            map("n", "gy", vim.lsp.buf.type_definition, bufopts)
+            map("n", "gd", "<Cmd>Telescope lsp_definitions<CR>", bufopts)
+            map("n", "gi", "<Cmd>Telescope lsp_implementations<CR>", bufopts)
+            map("n", "gy", "<Cmd>Telescope lsp_type_definitions<CR>", bufopts)
             map("n", "gr", "<Cmd>Telescope lsp_references<CR>", bufopts)
             map("n", "K", vim.lsp.buf.hover, bufopts)
             map("i", "<C-k>", vim.lsp.buf.signature_help, bufopts)
