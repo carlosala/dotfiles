@@ -15,6 +15,7 @@ return {
           markdown = { require("formatter.filetypes.markdown").prettier },
           python = { require("formatter.filetypes.python").black },
           rust = { require("formatter.filetypes.rust").rustfmt },
+          toml = { require("formatter.filetypes.toml").taplo },
           typescript = { require("formatter.filetypes.typescript").prettier },
           vue = { require("formatter.filetypes.vue").prettier },
           yaml = { require("formatter.filetypes.yaml").prettier },

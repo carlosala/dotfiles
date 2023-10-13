@@ -19,7 +19,7 @@ return {
         ensure_installed = { "tsserver" },
       })
       require("mason-tool-installer").setup({
-        ensure_installed = { "black", "luacheck", "pylint", "stylua", "vale" },
+        ensure_installed = { "black", "luacheck", "pylint", "stylua", "taplo", "vale" },
       })
       require("mason-tool-installer").check_install(false) -- false stands for not updating, only installing
 
