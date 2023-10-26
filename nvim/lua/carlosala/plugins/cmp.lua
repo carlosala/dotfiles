@@ -16,6 +16,7 @@ return {
       local cmp = require("cmp")
 
       cmp.setup({
+        preselect = "None",
         snippet = {
           -- REQUIRED - you must specify a snippet engine
           expand = function(args)
@@ -30,14 +31,14 @@ return {
           }),
         },
         sources = cmp.config.sources({
-          { name = "nvim_lsp" },
-          { name = "nvim_lsp_signature_help" },
           { name = "luasnip" },
+          { name = "nvim_lsp" },
           { name = "git" },
           { name = "path" },
           { name = "calc" },
           { name = "buffer" },
           { name = "emoji" },
+          { name = "nvim_lsp_signature_help" },
         }),
         mapping = cmp.mapping.preset.insert({
           ["<C-Space>"] = cmp.mapping(function()
