@@ -27,6 +27,20 @@ return {
               }
             end,
           },
+          r = {
+            function()
+              return {
+                exe = "R",
+                args = {
+                  "--slave",
+                  "--no-restore",
+                  "--no-save",
+                  "-e 'styler::style_text(readr::read_file(file(\"stdin\")))'",
+                },
+                stdin = true,
+              }
+            end,
+          },
           tex = {
             function()
               return {
