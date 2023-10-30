@@ -3,7 +3,7 @@ return {
     "jalvesaq/nvim-r",
     ft = "r",
     init = function()
-      vim.g.R_auto_start = 2
+      vim.g.R_assign = 2
     end,
   },
   {
