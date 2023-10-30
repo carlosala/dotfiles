@@ -25,6 +25,7 @@ vim.opt.undofile = true
 vim.opt.undodir = vim.fn.stdpath("data") .. "/undo"
 
 vim.g.mapleader = " "
+vim.g.maplocalleader = " l"
 
 vim.g.python3_host_prog = "/usr/bin/python3"
 vim.g.tex_flavor = "latex"
