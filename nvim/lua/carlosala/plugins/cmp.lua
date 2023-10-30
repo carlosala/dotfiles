@@ -11,6 +11,7 @@ return {
       "hrsh7th/cmp-nvim-lsp",
       "hrsh7th/cmp-nvim-lsp-signature-help",
       "hrsh7th/cmp-path",
+      "windwp/nvim-autopairs",
     },
     config = function()
       local cmp = require("cmp")
