@@ -32,13 +32,13 @@ return {
           }),
         },
         sources = cmp.config.sources({
-          { name = "luasnip" },
           { name = "nvim_lsp" },
+          { name = "luasnip" },
           { name = "git" },
           { name = "path" },
           { name = "calc" },
-          { name = "buffer" },
           { name = "emoji" },
+          { name = "buffer" },
           { name = "nvim_lsp_signature_help" },
         }),
         mapping = cmp.mapping.preset.insert({
