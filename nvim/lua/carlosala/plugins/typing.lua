@@ -14,8 +14,4 @@ return {
     event = "VeryLazy",
     config = true,
   },
-  {
-    "mbbill/undotree",
-    cmd = "UndotreeToggle",
-  },
 }
