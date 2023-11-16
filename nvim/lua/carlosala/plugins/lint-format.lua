@@ -62,7 +62,6 @@ return {
         c = { "clangtidy" },
         cpp = { "clangtidy" },
         lua = { "luacheck" },
-        markdown = { "vale" },
         python = { "pylint" },
       }
       vim.api.nvim_create_autocmd({ "BufWritePost" }, {
