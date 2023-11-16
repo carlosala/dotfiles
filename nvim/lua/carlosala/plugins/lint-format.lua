@@ -2,6 +2,7 @@ return {
   {
     "mhartington/formatter.nvim",
     cmd = { "Format", "FormatWrite", "FormatLock", "FormatWriteLock" },
+    event = "VeryLazy",
     config = function()
       require("formatter").setup({
         log_level = vim.log.levels.INFO,
