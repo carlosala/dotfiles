@@ -21,6 +21,7 @@ vim.opt.mousetime = 0
 vim.opt.cursorline = true
 vim.opt.hlsearch = false
 vim.opt.scrolloff = 6
+vim.opt.cmdheight = 0
 vim.opt.undofile = true
 vim.opt.undodir = vim.fn.stdpath("data") .. "/undo"
 

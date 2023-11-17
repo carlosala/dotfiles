@@ -9,7 +9,6 @@ return {
       { "petertriho/cmp-git", dependencies = "nvim-lua/plenary.nvim" },
       "saadparwaiz1/cmp_luasnip",
       "hrsh7th/cmp-nvim-lsp",
-      "hrsh7th/cmp-nvim-lsp-signature-help",
       "hrsh7th/cmp-path",
       "windwp/nvim-autopairs",
     },
@@ -39,7 +38,6 @@ return {
           { name = "calc" },
           { name = "emoji" },
           { name = "buffer" },
-          { name = "nvim_lsp_signature_help" },
         }),
         mapping = cmp.mapping.preset.insert({
           ["<C-Space>"] = cmp.mapping(function()
