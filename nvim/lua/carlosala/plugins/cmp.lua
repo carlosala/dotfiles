@@ -3,13 +3,13 @@ return {
     "hrsh7th/nvim-cmp",
     event = { "InsertEnter", "VeryLazy" },
     dependencies = {
+      "felipelema/cmp-async-path",
       "hrsh7th/cmp-buffer",
       "hrsh7th/cmp-calc",
       "hrsh7th/cmp-emoji",
       { "petertriho/cmp-git", dependencies = "nvim-lua/plenary.nvim" },
       "saadparwaiz1/cmp_luasnip",
       "hrsh7th/cmp-nvim-lsp",
-      "hrsh7th/cmp-path",
       "windwp/nvim-autopairs",
     },
     config = function()
@@ -34,7 +34,7 @@ return {
           { name = "nvim_lsp" },
           { name = "luasnip" },
           { name = "git" },
-          { name = "path" },
+          { name = "async_path" },
           { name = "calc" },
           { name = "emoji" },
           { name = "buffer" },
