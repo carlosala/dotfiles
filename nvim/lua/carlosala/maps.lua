@@ -38,6 +38,7 @@ map("n", "]d", vim.diagnostic.goto_next, silent)
 map("n", "<Leader>n", "<Cmd>NvimTreeFindFile<CR>", silent)
 map({ "n", "v" }, "<Leader>b", ":Format<CR>", silent)
 map("n", "<Leader>vd", "<Cmd>Gvdiffsplit!<CR>", silent)
+map("n", "<Leader>o", "<Cmd>NoiceDismiss<CR>", silent)
 
 -- telescope
 map("n", "<Leader>ff", "<Cmd>Telescope find_files<CR>", silent)
