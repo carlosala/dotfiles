@@ -1,6 +1,7 @@
 PROMPT='%F{2}$(_pwd_short)%f %B%F{4}[%f%b '
 RPROMPT='$(gitprompt) %B%F{4}]%f %(?:%F{6}:%F{1})%T%f%b'
 
+ZSH_GIT_PROMPT_SHOW_STASH=1
 ZSH_THEME_GIT_PROMPT_PREFIX=""
 ZSH_THEME_GIT_PROMPT_SUFFIX=""
 ZSH_THEME_GIT_PROMPT_SEPARATOR=" "
