@@ -18,6 +18,7 @@ return {
           rust = { require("formatter.filetypes.rust").rustfmt },
           toml = { require("formatter.filetypes.toml").taplo },
           typescript = { require("formatter.filetypes.typescript").prettier },
+          typescriptreact = { require("formatter.filetypes.typescriptreact").prettier },
           vue = { require("formatter.filetypes.vue").prettier },
           yaml = { require("formatter.filetypes.yaml").prettier },
           bib = {
