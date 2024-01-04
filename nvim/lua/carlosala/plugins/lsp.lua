@@ -19,7 +19,7 @@ return {
         ensure_installed = { "tsserver" },
       })
       require("mason-tool-installer").setup({
-        ensure_installed = { "black", "luacheck", "pylint", "stylua", "taplo" },
+        ensure_installed = { "black", "luacheck", "stylua", "taplo" },
       })
       require("mason-tool-installer").check_install(false) -- false stands for not updating, only installing
 
@@ -63,13 +63,30 @@ return {
         }, custom_config or {})
       end
 
+      local function get_python_path(root_dir)
+        -- use active venv
+        if vim.env.VIRTUAL_ENV then
+          return lsp.util.path.join(vim.env.VIRTUAL_ENV, "bin", "python")
+        end
+
+        -- find venv in current dir
+        for _, pattern in ipairs({ "*", ".*" }) do
+          local match = vim.fn.glob(lsp.util.path.join(root_dir, pattern, "pyvenv.cfg"))
+          if match ~= "" then
+            return lsp.util.path.join(lsp.util.path.dirname(match), "bin", "python")
+          end
+        end
+
+        -- fallback to system installation
+        return nil
+      end
+
       require("rust-tools").setup({ server = config() })
       require("typescript-tools").setup(config())
 
       lsp.clangd.setup(config())
       lsp.eslint.setup(config())
       lsp.lua_ls.setup(config())
-      lsp.pyright.setup(config())
       lsp.r_language_server.setup(config())
       lsp.vimls.setup(config())
       lsp.jsonls.setup(config({
@@ -79,6 +96,11 @@ return {
             validate = { enable = true },
           },
         },
+      }))
+      lsp.pyright.setup(config({
+        before_init = function(_, conf)
+          conf.settings.python.pythonPath = get_python_path(conf.root_dir)
+        end,
       }))
       lsp.texlab.setup(config({
         settings = {
