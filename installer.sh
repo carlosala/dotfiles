@@ -40,8 +40,6 @@ typeset -a nvim_req=(
   fd
   luarocks
   neovim
-  python-pylint
-  python-pylint-venv
   python-pynvim
   ripgrep
   tree-sitter-cli

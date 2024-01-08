@@ -14,7 +14,7 @@ return {
           jsonc = { require("formatter.filetypes.json").prettier },
           lua = { require("formatter.filetypes.lua").stylua },
           markdown = { require("formatter.filetypes.markdown").prettier },
-          python = { require("formatter.filetypes.python").black },
+          python = { require("formatter.filetypes.python").ruff },
           rust = { require("formatter.filetypes.rust").rustfmt },
           toml = { require("formatter.filetypes.toml").taplo },
           typescript = { require("formatter.filetypes.typescript").prettier },
@@ -64,7 +64,7 @@ return {
         c = { "clangtidy" },
         cpp = { "clangtidy" },
         lua = { "luacheck" },
-        python = { "pylint" },
+        python = { "ruff" },
       }
       vim.api.nvim_create_autocmd({ "BufWritePost" }, {
         callback = function()
