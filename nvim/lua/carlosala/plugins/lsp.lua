@@ -125,7 +125,7 @@ return {
       lsp.yamlls.setup(config({
         settings = {
           yaml = {
-            keyOrdering = false,
+            schemaStore = { enable = false, url = "" },
             schemas = require("schemastore").yaml.schemas(),
           },
         },
