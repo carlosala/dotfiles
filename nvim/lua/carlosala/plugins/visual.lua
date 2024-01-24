@@ -34,10 +34,18 @@ return {
           }
         end
       end
+      local diagSymbols = {}
+      for i, v in pairs(require("carlosala.icons").diagnostics) do
+        diagSymbols[string.lower(i)] = v
+      end
       require("lualine").setup({
         extensions = { "fugitive", "man", "nvim-tree" },
         sections = {
-          lualine_b = { "branch", { "diff", source = _diff_source }, "diagnostics" },
+          lualine_b = {
+            "branch",
+            { "diff", source = _diff_source, symbols = require("carlosala.icons").git },
+            { "diagnostics", symbols = diagSymbols },
+          },
           lualine_x = { "progress" },
           lualine_y = { "filetype" },
         },

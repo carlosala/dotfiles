@@ -24,11 +24,13 @@ return {
           end,
         },
         formatting = {
-          format = require("lspkind").cmp_format({
-            mode = "symbol",
-            maxwidth = 50,
-            ellipsis_char = "...",
-          }),
+          format = function(_, item)
+            local icons = require("carlosala.icons").kinds
+            if icons[item.kind] then
+              item.kind = icons[item.kind] .. item.kind
+            end
+            return item
+          end,
         },
         sources = cmp.config.sources({
           { name = "nvim_lsp" },

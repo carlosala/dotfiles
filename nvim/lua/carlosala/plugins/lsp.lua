@@ -3,7 +3,6 @@ return {
     "neovim/nvim-lspconfig",
     event = { "BufReadPre", "BufNewFile", "VeryLazy" },
     dependencies = {
-      "onsails/lspkind.nvim",
       "williamboman/mason.nvim",
       "williamboman/mason-lspconfig.nvim",
       "whoissethdaniel/mason-tool-installer.nvim",
@@ -29,6 +28,15 @@ return {
           library.plugins = true
         end,
       })
+
+      vim.diagnostic.config({
+        severity_sort = true,
+        update_in_insert = false,
+      })
+      for name, icon in pairs(require("carlosala.icons").diagnostics) do
+        name = "DiagnosticSign" .. name
+        vim.fn.sign_define(name, { text = icon, texthl = name, numhl = "" })
+      end
 
       local lsp = require("lspconfig")
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
