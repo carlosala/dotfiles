@@ -15,6 +15,7 @@ export MANPAGER="nvim +Man!"
 export OPENCV_LOG_LEVEL="ERROR"
 export PATH="$PATH:$HOME/.cargo/bin"
 export PATH="$PATH:$HOME/.local/bin"
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/gcr/ssh"
 export XZ_DEFAULTS="-T0"
 export ZSHZ_CASE="ignore"
 
