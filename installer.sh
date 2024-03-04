@@ -38,10 +38,12 @@ typeset -a shell_req=(
 typeset -a nvim_req=(
   bat
   fd
+  fswatch
   luarocks
   neovim
   python-pynvim
   ripgrep
+  tree-sitter
   tree-sitter-cli
   xclip
 )
