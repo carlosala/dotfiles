@@ -3,7 +3,7 @@ return {
     "hrsh7th/nvim-cmp",
     event = { "InsertEnter", "VeryLazy" },
     dependencies = {
-      "felipelema/cmp-async-path",
+      "https://codeberg.org/felipelema/cmp-async-path.git",
       "hrsh7th/cmp-buffer",
       "hrsh7th/cmp-calc",
       "hrsh7th/cmp-emoji",
