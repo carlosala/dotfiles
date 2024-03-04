@@ -14,4 +14,8 @@ return {
     event = "VeryLazy",
     config = true,
   },
+  {
+    "tpope/vim-sleuth",
+    event = { "BufReadPre", "BufNewFile", "VeryLazy" },
+  },
 }
