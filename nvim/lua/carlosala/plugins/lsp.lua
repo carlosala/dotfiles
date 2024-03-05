@@ -39,11 +39,18 @@ return {
       end
 
       local lsp = require("lspconfig")
-      local capabilities = require("cmp_nvim_lsp").default_capabilities()
+      local default_capabilities = vim.tbl_deep_extend(
+        "force",
+        vim.lsp.protocol.make_client_capabilities(),
+        require("cmp_nvim_lsp").default_capabilities()
+      )
 
+      --- @param custom_config? lspconfig.Config
+      --- @return lspconfig.Config
       local function config(custom_config)
         return vim.tbl_deep_extend("force", {
-          capabilities = capabilities,
+          capabilities = vim.deepcopy(default_capabilities),
+          --- @type vim.lsp.client.on_attach_cb
           on_attach = function(client, bufnr)
             local bufopts = { noremap = true, silent = true, buffer = bufnr }
             local map = vim.keymap.set
@@ -59,7 +66,7 @@ return {
               vim.lsp.buf.code_action({ apply = true })
             end, bufopts)
             map("n", "<Leader>sd", "<Cmd>Telescope lsp_document_symbols<CR>", bufopts)
-            map("n", "<Leader>sw", "<Cmd>Telescope lsp_workspace_symbols<CR>", bufopts)
+            map("n", "<Leader>sw", "<Cmd>Telescope lsp_dynamic_workspace_symbols<CR>", bufopts)
             if client.name == "texlab" then
               map("n", "<LocalLeader>b", "<Cmd>w<CR><Cmd>TexlabBuild<CR>", bufopts)
               map("n", "<LocalLeader>c", "<Cmd>w<CR><Cmd>TexWordCount<CR>", bufopts)
