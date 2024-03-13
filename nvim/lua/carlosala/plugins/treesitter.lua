@@ -9,9 +9,22 @@ return {
       "windwp/nvim-ts-autotag",
     },
     config = function()
+      local ensure_installed = {
+        "bash",
+        "c",
+        "lua",
+        "markdown",
+        "markdown_inline",
+        "python",
+        "query",
+        "regex",
+        "vim",
+        "vimdoc",
+      }
       require("nvim-treesitter.configs").setup({
+        auto_install = true,
         autotag = { enable = true },
-        ensure_installed = "all",
+        ensure_installed = ensure_installed,
         highlight = { enable = true },
         incremental_selection = { enable = true },
         indent = { enable = true },
