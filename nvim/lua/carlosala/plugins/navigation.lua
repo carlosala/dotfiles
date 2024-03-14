@@ -46,6 +46,7 @@ return {
           vim.cmd.cd(data.file) -- cd to the directory
           require("nvim-tree.api").tree.open({ current_window = true }) -- open the tree in the current buffer
         end,
+        group = vim.api.nvim_create_augroup("carlosala-nvimtree", { clear = true }),
       })
     end,
   },

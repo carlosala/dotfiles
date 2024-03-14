@@ -70,6 +70,7 @@ return {
         callback = function()
           require("lint").try_lint()
         end,
+        group = vim.api.nvim_create_augroup("carlosala-nvimlint", { clear = true }),
       })
     end,
   },
