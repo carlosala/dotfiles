@@ -1,3 +1,4 @@
+---@type LazySpec
 return {
   {
     "l3mon4d3/luasnip",
