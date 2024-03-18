@@ -13,13 +13,8 @@ return {
       local telescope = require("telescope")
       telescope.setup({
         pickers = {
-          find_files = {
-            find_command = { "fd", "-t=f", "-i", "-H", "-E", ".git", "-c=never", "--strip-cwd-prefix" },
-          },
-          grep_string = {
-            additional_args = { "-i", "--hidden", "-g", "!.git", "-g", "!.yarn", "-g", "!*lock" },
-            disable_coordinates = true,
-          },
+          find_files = { hidden = true },
+          grep_string = { disable_coordinates = true },
         },
         extensions = { ["ui-select"] = { require("telescope.themes").get_dropdown() } },
       })
