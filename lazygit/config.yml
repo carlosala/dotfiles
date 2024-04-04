@@ -3,8 +3,6 @@ gui:
   theme:
     selectedLineBgColor:
       - default
-    selectedRangeBgColor:
-      - reverse
     cherryPickedCommitBgColor:
       - default
       - underline
