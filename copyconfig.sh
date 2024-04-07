@@ -8,6 +8,7 @@ cp -r $DIR/kitty ~/.config
 cp $DIR/latexindent/indentconfig.yaml ~/.indentconfig.yaml
 cp $DIR/latexindent/latexindent.yaml ~/.latexindent.yaml
 cp -r $DIR/latexmk ~/.config
+cp -r $DIR/lazydocker ~/.config
 cp -r $DIR/lazygit ~/.config
 cp -r $DIR/nvim ~/.config
 cp -r $DIR/vale/vale.ini ~/.vale.ini
