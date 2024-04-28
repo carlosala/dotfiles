@@ -46,6 +46,7 @@ typeset -a nvim_req=(
   tree-sitter
   tree-sitter-cli
   xclip
+  xdotool
 )
 
 # needed stuff

@@ -69,11 +69,12 @@ return {
             map("n", "<Leader>sd", "<Cmd>Telescope lsp_document_symbols<CR>", bufopts)
             map("n", "<Leader>sw", "<Cmd>Telescope lsp_dynamic_workspace_symbols<CR>", bufopts)
             if client.name == "texlab" then
-              map("n", "<LocalLeader>b", "<Cmd>w<CR><Cmd>TexlabBuild<CR>", bufopts)
-              map("n", "<LocalLeader>c", "<Cmd>w<CR><Cmd>TexWordCount<CR>", bufopts)
+              ---@diagnostic disable-next-line: assign-type-mismatch
+              client.server_capabilities.completionProvider = false -- we use `vimtex` completion!
+              map("n", "<LocalLeader>lw", "<Cmd>w<CR><Cmd>TexWordCount<CR>", bufopts)
             end
             if client.name == "clangd" then
-              map("n", "<LocalLeader>s", "<Cmd>ClangdSwitchSourceHeader<CR>", bufopts)
+              map("n", "<LocalLeader>ls", "<Cmd>ClangdSwitchSourceHeader<CR>", bufopts)
             end
           end,
         }, custom_config or {})
@@ -119,24 +120,7 @@ return {
         end,
       }))
       lsp.texlab.setup(config({
-        settings = {
-          texlab = {
-            build = { forwardSearchAfter = true },
-            chktex = { onEdit = true, onOpenAndSave = true },
-            forwardSearch = {
-              args = {
-                "--synctex-editor-command",
-                require("texlabconfig").project_dir()
-                  .. "/nvim-texlabconfig -file '%%%{input}' -line %%%{line} -server "
-                  .. vim.v.servername,
-                "--synctex-forward",
-                "%l:1:%f",
-                "%p",
-              },
-              executable = "zathura",
-            },
-          },
-        },
+        settings = { texlab = { chktex = { onEdit = true, onOpenAndSave = true } } },
       }))
       lsp.yamlls.setup(config({
         settings = {

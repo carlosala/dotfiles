@@ -40,6 +40,9 @@ M.kinds = {
   Unit = " ",
   Value = " ",
   Variable = "󰀫 ",
+
+  -- custom
+  Vimtex = " ",
 }
 
 M.diagnostics = {

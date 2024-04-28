@@ -11,6 +11,7 @@ return {
       { "petertriho/cmp-git", dependencies = "nvim-lua/plenary.nvim" },
       "saadparwaiz1/cmp_luasnip",
       "hrsh7th/cmp-nvim-lsp",
+      "micangl/cmp-vimtex",
       "windwp/nvim-autopairs",
     },
     config = function()
@@ -25,9 +26,11 @@ return {
           end,
         },
         formatting = {
-          format = function(_, item)
+          format = function(entry, item)
             local icons = require("carlosala.icons").kinds
-            if icons[item.kind] then
+            if entry.source.name == "vimtex" then
+              item.kind = icons.Vimtex
+            elseif icons[item.kind] then
               item.kind = icons[item.kind] .. item.kind
             end
             return item
@@ -35,6 +38,7 @@ return {
         },
         sources = cmp.config.sources({
           { name = "nvim_lsp" },
+          { name = "vimtex" },
           { name = "luasnip" },
           { name = "git" },
           { name = "async_path" },

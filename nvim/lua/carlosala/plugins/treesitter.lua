@@ -26,7 +26,8 @@ return {
         auto_install = true,
         autotag = { enable = true },
         ensure_installed = ensure_installed,
-        highlight = { enable = true },
+        highlight = { enable = true, disable = { "latex" } },
+        ignore_install = { "latex" },
         incremental_selection = { enable = true },
         indent = { enable = true },
       })
