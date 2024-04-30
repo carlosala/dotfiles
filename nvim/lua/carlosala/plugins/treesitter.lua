@@ -13,6 +13,7 @@ return {
       local ensure_installed = {
         "bash",
         "c",
+        "jsdoc", -- it's not installed automatically when starting a js/ts file
         "lua",
         "markdown",
         "markdown_inline",
