@@ -1,1 +1,29 @@
 setopt no_global_rcs
+
+### ARCHLINUX PROFILE
+append_path () {
+    case ":$PATH:" in
+        *:"$1":*)
+            ;;
+        *)
+            PATH="${PATH:+$PATH:}$1"
+    esac
+}
+
+# Append our default paths
+append_path '/usr/local/sbin'
+append_path '/usr/local/bin'
+append_path '/usr/bin'
+
+# Force PATH to be environment
+export PATH
+
+# Termcap is outdated, old, and crusty, kill it.
+unset TERMCAP
+
+# Man is much better than us at figuring this out
+unset MANPATH
+
+### CUSTOM PROFILES
+[[ -f /etc/profile.d/perlbin.sh ]] && source /etc/profile.d/perlbin.sh
+[[ -f /etc/profile.d/rustup.sh ]] && source /etc/profile.d/rustup.sh
