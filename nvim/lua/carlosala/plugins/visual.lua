@@ -9,7 +9,6 @@ return {
       vim.g.gruvbox_material_diagnostic_virtual_text = "highlighted"
       vim.g.gruvbox_material_enable_italic = 1
       vim.cmd.colorscheme("gruvbox-material")
-      vim.cmd("highlight! link DiagnosticDeprecated HintText")
       vim.cmd("highlight clear NvimTreeNormal")
       vim.cmd("highlight clear NvimTreeEndOfBuffer")
       vim.cmd("highlight clear NvimTreeVertSplit")
