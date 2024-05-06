@@ -8,7 +8,7 @@ return {
       "williamboman/mason-lspconfig.nvim",
       "whoissethdaniel/mason-tool-installer.nvim",
       "folke/neodev.nvim",
-      "simrat39/rust-tools.nvim",
+      "mrcjkb/rustaceanvim",
       "b0o/schemastore.nvim",
       "pmizio/typescript-tools.nvim",
     },
@@ -97,7 +97,8 @@ return {
         return nil
       end
 
-      require("rust-tools").setup({ server = config() })
+      ---@type RustaceanOpts
+      vim.g.rustaceanvim = { server = { on_attach = config().on_attach } } -- rustaceanvim autostarts!
       require("typescript-tools").setup(config())
 
       lsp.clangd.setup(config())
