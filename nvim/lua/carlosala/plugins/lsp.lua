@@ -19,7 +19,7 @@ return {
         automatic_installation = { exclude = { "clangd", "r_language_server" } },
       })
       require("mason-tool-installer").setup({
-        ensure_installed = { "luacheck", "ruff", "prettier", "stylua", "taplo" },
+        ensure_installed = { "luacheck", "prettier", "stylua", "taplo" },
       })
       require("mason-tool-installer").check_install(false) -- false stands for not updating, only installing
 
@@ -106,6 +106,7 @@ return {
       lsp.eslint.setup(config())
       lsp.lua_ls.setup(config())
       lsp.r_language_server.setup(config())
+      lsp.ruff.setup(config())
       lsp.vimls.setup(config())
       lsp.jsonls.setup(config({
         settings = {

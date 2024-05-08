@@ -67,7 +67,6 @@ return {
         c = { "clangtidy" },
         cpp = { "clangtidy" },
         lua = { "luacheck" },
-        python = { "ruff" },
       }
       vim.api.nvim_create_autocmd({ "BufWritePost" }, {
         callback = function()
