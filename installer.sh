@@ -9,6 +9,9 @@ function check_req {
 typeset -a needed_req=(
   curl
   git
+  go
+  nodejs-lts-iron
+  npm
   python-pip
   rustup
   yarn
