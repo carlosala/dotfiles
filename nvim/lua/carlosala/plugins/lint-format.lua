@@ -10,6 +10,8 @@ return {
         filetype = {
           c = { require("formatter.filetypes.c").clangformat },
           cpp = { require("formatter.filetypes.cpp").clangformat },
+          css = { require("formatter.filetypes.css").prettier },
+          html = { require("formatter.filetypes.html").prettier },
           javascript = { require("formatter.filetypes.javascript").prettier },
           json = { require("formatter.filetypes.json").prettier },
           jsonc = { require("formatter.filetypes.json").prettier },
