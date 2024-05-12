@@ -40,6 +40,7 @@ typeset -a shell_req=(
 
 typeset -a nvim_req=(
   bat
+  bibclean
   fd
   fswatch
   luarocks
