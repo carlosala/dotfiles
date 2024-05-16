@@ -48,8 +48,9 @@ return {
       )
 
       --- @param custom_config? lspconfig.Config
+      --- @param custom_on_attach? vim.lsp.client.on_attach_cb
       --- @return lspconfig.Config
-      local function config(custom_config)
+      local function config(custom_config, custom_on_attach)
         return vim.tbl_deep_extend("force", {
           capabilities = vim.deepcopy(default_capabilities),
           --- @type vim.lsp.client.on_attach_cb
@@ -68,13 +69,9 @@ return {
             end, bufopts)
             map("n", "<Leader>sd", "<Cmd>Telescope lsp_document_symbols<CR>", bufopts)
             map("n", "<Leader>sw", "<Cmd>Telescope lsp_dynamic_workspace_symbols<CR>", bufopts)
-            if client.name == "texlab" then
-              ---@diagnostic disable-next-line: assign-type-mismatch
-              client.server_capabilities.completionProvider = false -- we use `vimtex` completion!
-              map("n", "<LocalLeader>lw", "<Cmd>w<CR><Cmd>TexWordCount<CR>", bufopts)
-            end
-            if client.name == "clangd" then
-              map("n", "<LocalLeader>ls", "<Cmd>ClangdSwitchSourceHeader<CR>", bufopts)
+
+            if custom_on_attach then
+              custom_on_attach(client, bufnr)
             end
           end,
         }, custom_config or {})
@@ -102,11 +99,19 @@ return {
       vim.g.rustaceanvim = { server = { on_attach = config().on_attach } } -- rustaceanvim autostarts!
       require("typescript-tools").setup(config())
 
-      lsp.clangd.setup(config())
       lsp.eslint.setup(config())
       lsp.lua_ls.setup(config())
       lsp.r_language_server.setup(config())
       lsp.ruff.setup(config())
+
+      lsp.clangd.setup(config({}, function(_, bufnr)
+        vim.keymap.set(
+          "n",
+          "<LocalLeader>ls",
+          "<Cmd>ClangdSwitchSourceHeader<CR>",
+          { noremap = true, silent = true, buffer = bufnr }
+        )
+      end))
       lsp.jsonls.setup(config({
         settings = {
           json = {
@@ -122,7 +127,16 @@ return {
       }))
       lsp.texlab.setup(config({
         settings = { texlab = { chktex = { onEdit = true, onOpenAndSave = true } } },
-      }))
+      }, function(client, bufnr)
+        ---@diagnostic disable-next-line: assign-type-mismatch
+        client.server_capabilities.completionProvider = false -- we use `vimtex` completion!
+        vim.keymap.set(
+          "n",
+          "<LocalLeader>lw",
+          "<Cmd>w<CR><Cmd>TexWordCount<CR>",
+          { noremap = true, silent = true, buffer = bufnr }
+        )
+      end))
       lsp.yamlls.setup(config({
         settings = {
           yaml = {
