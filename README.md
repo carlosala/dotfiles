@@ -8,7 +8,7 @@
   2. Use zsh as default shell (`chsh -s $(where zsh)`)
   3. Install [ohmyzsh](https://ohmyz.sh)
 - python3 & pip3
-- [neovim](https://neovim.io) (`>0.9`)
+- [neovim](https://neovim.io) (`>0.10`)
 - npm / yarn
 - cargo
   - To install it, use [rustup](https://rustup.rs)
