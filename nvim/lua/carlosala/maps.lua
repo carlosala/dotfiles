@@ -31,8 +31,6 @@ map("v", "<Leader>p", '"_dP', silent)
 
 -- diagnostic
 map("n", "<Leader>e", vim.diagnostic.open_float, silent)
-map("n", "[d", vim.diagnostic.goto_prev, silent)
-map("n", "]d", vim.diagnostic.goto_next, silent)
 
 -- plugins
 map("n", "<Leader>n", "<Cmd>NvimTreeFindFile<CR>", silent)

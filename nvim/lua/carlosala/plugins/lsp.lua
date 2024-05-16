@@ -61,7 +61,6 @@ return {
             map("n", "gi", "<Cmd>Telescope lsp_implementations<CR>", bufopts)
             map("n", "gy", "<Cmd>Telescope lsp_type_definitions<CR>", bufopts)
             map("n", "gr", "<Cmd>Telescope lsp_references<CR>", bufopts)
-            map("n", "K", vim.lsp.buf.hover, bufopts)
             map("i", "<C-k>", vim.lsp.buf.signature_help, bufopts)
             map("n", "<Leader>rn", vim.lsp.buf.rename, bufopts)
             map("n", "<Leader>ca", function()

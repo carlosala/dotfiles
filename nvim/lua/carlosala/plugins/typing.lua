@@ -1,11 +1,6 @@
 ---@type LazySpec
 return {
   {
-    "numtostr/comment.nvim",
-    event = "VeryLazy",
-    opts = { ignore = "^$" },
-  },
-  {
     "windwp/nvim-autopairs",
     event = "VeryLazy",
     config = true,
