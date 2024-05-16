@@ -107,7 +107,6 @@ return {
       lsp.lua_ls.setup(config())
       lsp.r_language_server.setup(config())
       lsp.ruff.setup(config())
-      lsp.vimls.setup(config())
       lsp.jsonls.setup(config({
         settings = {
           json = {
