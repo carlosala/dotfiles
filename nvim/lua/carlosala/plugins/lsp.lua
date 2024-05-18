@@ -126,7 +126,7 @@ return {
         end,
       }))
       lsp.texlab.setup(config({
-        settings = { texlab = { chktex = { onEdit = true, onOpenAndSave = true } } },
+        settings = { texlab = { chktex = { onOpenAndSave = true } } },
       }, function(client, bufnr)
         ---@diagnostic disable-next-line: assign-type-mismatch
         client.server_capabilities.completionProvider = false -- we use `vimtex` completion!
