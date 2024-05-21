@@ -7,7 +7,6 @@ return {
     event = { "BufReadPre", "BufNewFile", "VeryLazy" },
     dependencies = {
       "nvim-treesitter/nvim-treesitter-context",
-      "windwp/nvim-ts-autotag",
     },
     config = function()
       local ensure_installed = {
@@ -25,7 +24,6 @@ return {
       }
       require("nvim-treesitter.configs").setup({
         auto_install = true,
-        autotag = { enable = true },
         ensure_installed = ensure_installed,
         highlight = { enable = true, disable = { "latex" } },
         ignore_install = { "latex" },

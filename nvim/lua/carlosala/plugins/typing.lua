@@ -11,6 +11,11 @@ return {
     config = true,
   },
   {
+    "windwp/nvim-ts-autotag",
+    event = "VeryLazy",
+    config = true,
+  },
+  {
     "tpope/vim-sleuth",
   },
 }
