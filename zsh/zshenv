@@ -25,5 +25,10 @@ unset TERMCAP
 unset MANPATH
 
 ### CUSTOM PROFILES
-[[ -f /etc/profile.d/perlbin.sh ]] && source /etc/profile.d/perlbin.sh
-[[ -f /etc/profile.d/rustup.sh ]] && source /etc/profile.d/rustup.sh
+local -a skip
+skip=(debuginfod.sh flatpak.sh gpm.sh)
+local profile
+for _profile in /etc/profile.d/*.sh; do
+    (( ${skip[(Ie)${_profile:t}]} )) && continue
+    source "$_profile"
+done
