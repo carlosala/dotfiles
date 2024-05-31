@@ -97,7 +97,9 @@ return {
 
       ---@type RustaceanOpts
       vim.g.rustaceanvim = { server = { on_attach = config().on_attach } } -- rustaceanvim autostarts!
-      require("typescript-tools").setup(config())
+      require("typescript-tools").setup(config({
+        settings = { expose_as_code_action = { "fix_all", "organize_imports" } },
+      }))
 
       lsp.eslint.setup(config())
       lsp.lua_ls.setup(config())
