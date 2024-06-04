@@ -8,7 +8,6 @@ return {
       "williamboman/mason.nvim",
       "williamboman/mason-lspconfig.nvim",
       "whoissethdaniel/mason-tool-installer.nvim",
-      "folke/neodev.nvim",
       "mrcjkb/rustaceanvim",
       "b0o/schemastore.nvim",
       "pmizio/typescript-tools.nvim",
@@ -23,13 +22,6 @@ return {
         ensure_installed = { "luacheck", "prettier", "stylua", "taplo" },
       })
       require("mason-tool-installer").check_install(false) -- false stands for not updating, only installing
-
-      require("neodev").setup({
-        override = function(_, library)
-          library.enabled = true
-          library.plugins = true
-        end,
-      })
 
       vim.diagnostic.config({
         severity_sort = true,

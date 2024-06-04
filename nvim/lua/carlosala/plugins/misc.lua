@@ -2,6 +2,19 @@
 return {
   "lunarvim/bigfile.nvim",
   {
+    "folke/lazydev.nvim",
+    ft = "lua",
+    dependencies = {
+      "bilal2453/luvit-meta",
+    },
+    opts = {
+      library = {
+        "lazy.nvim",
+        { path = "luvit-meta/library", words = { "vim%.uv" } },
+      },
+    },
+  },
+  {
     "iamcco/markdown-preview.nvim",
     build = "cd app && yarn install",
     ft = "markdown",
