@@ -30,12 +30,16 @@ return {
         incremental_selection = { enable = true },
         indent = { enable = true },
       })
-      vim.treesitter.language.register("jsonc", "json")
       require("treesitter-context").setup({ max_lines = 10, multiline_threshold = 4 })
 
       vim.opt.foldmethod = "expr"
       vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
       vim.opt.foldenable = false
+
+      -- register jsonc and mdx
+      vim.filetype.add({ extension = { mdx = "mdx" } })
+      vim.treesitter.language.register("markdown", "mdx")
+      vim.treesitter.language.register("jsonc", "json")
     end,
   },
 }
