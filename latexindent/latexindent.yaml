@@ -6,10 +6,10 @@ modifyLineBreaks:
     blocksBeginWith:
       other: \\footnote
     blocksFollow:
-      other: \\\]|\\item(?:\h|\[)|\\\\|\\newline
+      other: \\\]|\\item(?:\h|\[)|\\newline
 onlyOneBackUp: 1
 replacements:
   - amalgamate: 0
   - when: before
     substitution: |-
-      s/(\\\\|\\newline)\s*/$1\n/sg
+      s/(\\newline)\s*/$1\n/sg
