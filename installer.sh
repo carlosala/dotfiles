@@ -43,6 +43,7 @@ typeset -a nvim_req=(
   bibclean
   fd
   fswatch
+  lua51
   luarocks
   neovim
   python-pynvim
