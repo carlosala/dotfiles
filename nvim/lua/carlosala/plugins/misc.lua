@@ -1,6 +1,9 @@
 ---@type LazySpec
 return {
-  "lunarvim/bigfile.nvim",
+  {
+    "lunarvim/bigfile.nvim",
+    opts = { filesize = 1 },
+  },
   {
     "folke/lazydev.nvim",
     ft = "lua",
