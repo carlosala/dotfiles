@@ -50,11 +50,10 @@ return {
             local bufopts = { noremap = true, silent = true, buffer = bufnr }
             local map = vim.keymap.set
             map("n", "gd", "<Cmd>Telescope lsp_definitions<CR>", bufopts)
-            map("n", "gD", vim.lsp.buf.declaration, bufopts)
             map("n", "gi", "<Cmd>Telescope lsp_implementations<CR>", bufopts)
             map("n", "gy", "<Cmd>Telescope lsp_type_definitions<CR>", bufopts)
             map("n", "gr", "<Cmd>Telescope lsp_references<CR>", bufopts)
-            map("i", "<C-k>", vim.lsp.buf.signature_help, bufopts)
+            map("i", "<C-s>", vim.lsp.buf.signature_help, bufopts)
             map("n", "<Leader>rn", vim.lsp.buf.rename, bufopts)
             map("n", "<Leader>ca", function()
               vim.lsp.buf.code_action({ apply = true })

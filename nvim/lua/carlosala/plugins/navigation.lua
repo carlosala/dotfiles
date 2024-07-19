@@ -29,6 +29,10 @@ return {
       require("nvim-tree").setup({
         actions = { open_file = { quit_on_open = true } },
         git = { ignore = false },
+        on_attach = function(bufnr)
+          require("nvim-tree.api").config.mappings.default_on_attach(bufnr)
+          vim.keymap.del("n", "<C-k>", { buffer = bufnr })
+        end,
       })
 
       vim.api.nvim_create_autocmd({ "VimEnter" }, {
@@ -56,5 +60,13 @@ return {
     "knubie/vim-kitty-navigator",
     build = "cp *.py ~/.config/kitty",
     event = "VeryLazy",
+    init = function()
+      vim.g.kitty_navigator_no_mappings = 1
+      vim.g.kitty_navigator_enable_stack_layout = 1
+      vim.keymap.set({ "n", "i", "v", "c" }, "<C-h>", "<Cmd>KittyNavigateLeft<CR>", { silent = true })
+      vim.keymap.set({ "n", "i", "v", "c" }, "<C-j>", "<Cmd>KittyNavigateDown<CR>", { silent = true })
+      vim.keymap.set({ "n", "i", "v", "c" }, "<C-k>", "<Cmd>KittyNavigateUp<CR>", { silent = true })
+      vim.keymap.set({ "n", "i", "v", "c" }, "<C-l>", "<Cmd>KittyNavigateRight<CR>", { silent = true })
+    end,
   },
 }
