@@ -29,6 +29,7 @@ return {
       require("nvim-tree").setup({
         actions = { open_file = { quit_on_open = true } },
         git = { ignore = false },
+        view = { width = 40 },
         on_attach = function(bufnr)
           require("nvim-tree.api").config.mappings.default_on_attach(bufnr)
           vim.keymap.del("n", "<C-k>", { buffer = bufnr })
