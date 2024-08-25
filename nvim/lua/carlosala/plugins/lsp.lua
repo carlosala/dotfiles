@@ -86,8 +86,17 @@ return {
         return nil
       end
 
-      ---@type RustaceanOpts
-      vim.g.rustaceanvim = { server = { on_attach = config().on_attach } } -- rustaceanvim autostarts!
+      ---@type rustaceanvim.Opts
+      vim.g.rustaceanvim = {
+        server = {
+          on_attach = config().on_attach,
+          settings = {
+            ["rust-analyzer"] = {
+              cargo = { extraEnv = { CARGO_BUILD_JOBS = vim.env.CARGO_BUILD_JOBS } },
+            },
+          },
+        },
+      }
       require("typescript-tools").setup(config({
         settings = { expose_as_code_action = { "fix_all", "organize_imports" } },
       }))
