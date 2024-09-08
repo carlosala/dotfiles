@@ -16,7 +16,7 @@ return {
       require("mason").setup()
       require("mason-lspconfig").setup({
         automatic_installation = { exclude = { "clangd", "r_language_server" } },
-        ensure_installed = { "tsserver" },
+        ensure_installed = { "ts_ls" },
       })
       require("mason-tool-installer").setup({
         ensure_installed = { "luacheck", "prettier", "stylua", "taplo" },
