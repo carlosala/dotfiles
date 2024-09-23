@@ -25,6 +25,7 @@ typeset -a shell_req=(
   fd
   git-delta
   hyperfine
+  jq
   kitty
   lazydocker-bin
   lazygit
