@@ -12,16 +12,23 @@ function _carlorc_hook {
 
   local _entry=$(command jq -r ".\"$PWD\"" "$_file")
   local _sum=$(command sha1sum "$_script" | awk '{ print $1 }')
+  local _exec=0
+  typeset -ga _carlorc_sourced
+
   if [[ $_sum != $_entry ]]; then
-    if ! builtin read -q "?Do you want to execute .carlorc and whitelist its content? [y/N] "; then
-      builtin echo
-      builtin return 0
-    else
-      builtin echo
+    if builtin read -q "?Do you want to execute .carlorc and whitelist its content? [y/N] "; then
+      _exec=1
     fi
+    builtin echo
+  else
+    (( ${_carlorc_sourced[(Ie)$PWD]} )) || _exec=1
   fi
-  builtin echo $(command jq ". += { \"$PWD\": \"$_sum\" }" "$_file") > "$_file"
-  builtin source $_script
+
+  if (( ${_exec} )); then
+    (( ${_carlorc_sourced[(Ie)$PWD]} )) || _carlorc_sourced+=($PWD)
+    builtin echo $(command jq ". += { \"$PWD\": \"$_sum\" }" "$_file") > "$_file"
+    builtin source $_script
+  fi
 }
 
 autoload -U add-zsh-hook
