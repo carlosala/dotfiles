@@ -22,7 +22,7 @@ function _carlorc_hook {
   local _sum=$(command sha1sum "$_script" | awk '{ print $1 }')
 
   if [[ $_sum != $_entry ]]; then
-    if builtin read -q "?Do you want to execute .carlorc and whitelist its content? [y/N] "; then
+    if ! builtin read -q "?Do you want to execute .carlorc and whitelist its content? [y/N] "; then
       builtin echo
       return 1
     fi
