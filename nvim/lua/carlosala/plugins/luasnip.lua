@@ -43,7 +43,7 @@ return {
 
             -- SELECT all text inside the snippet.
             if not no_move then
-              vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Esc>", true, false, true), "n", true)
+              require("luasnip.util.feedkeys").feedkeys_insert("<Esc>")
               node_util.select_node(snip)
             end
           end
