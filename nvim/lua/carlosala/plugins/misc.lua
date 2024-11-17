@@ -30,6 +30,22 @@ return {
     end,
   },
   {
+    "joosepalviste/nvim-ts-context-commentstring",
+    event = "VeryLazy",
+    config = function()
+      require("ts_context_commentstring").setup({ enable_autocmd = false })
+
+      local original_get_option = vim.filetype.get_option
+      --- @diagnostic disable-next-line: duplicate-set-field
+      vim.filetype.get_option = function(filetype, option)
+        if option == "commentstring" then
+          return require("ts_context_commentstring.internal").calculate_commentstring()
+        end
+        return original_get_option(filetype, option)
+      end
+    end,
+  },
+  {
     "lervag/vimtex",
     init = function()
       vim.g.vimtex_view_method = "zathura"
