@@ -90,9 +90,15 @@ return {
       vim.g.rustaceanvim = {
         server = {
           on_attach = config().on_attach,
-          settings = {
+          default_settings = {
             ["rust-analyzer"] = {
-              cargo = { extraEnv = { CARGO_BUILD_JOBS = vim.env.CARGO_BUILD_JOBS } },
+              cachePriming = { numThreads = tonumber(vim.env.CARGO_BUILD_JOBS) },
+              cargo = {
+                buildScripts = { enable = false },
+                extraEnv = { CARGO_BUILD_JOBS = vim.env.CARGO_BUILD_JOBS },
+              },
+              numThreads = tonumber(vim.env.CARGO_BUILD_JOBS),
+              procMacro = { enable = false },
             },
           },
         },
