@@ -78,7 +78,7 @@ return {
         for _, pattern in ipairs({ "*", ".*" }) do
           local match = vim.fn.glob(lsp.util.path.join(root_dir, pattern, "pyvenv.cfg"))
           if match ~= "" then
-            return lsp.util.path.join(lsp.util.path.dirname(match), "bin", "python")
+            return lsp.util.path.join(vim.fs.dirname(match), "bin", "python")
           end
         end
 
