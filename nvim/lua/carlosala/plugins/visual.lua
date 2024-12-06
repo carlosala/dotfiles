@@ -46,7 +46,7 @@ return {
             { "diff", source = _diff_source, symbols = require("carlosala.icons").git },
             { "diagnostics", symbols = diagSymbols },
           },
-          lualine_x = { "progress" },
+          lualine_x = { "selectioncount", "progress" },
           lualine_y = { "filetype" },
         },
       })
