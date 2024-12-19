@@ -93,12 +93,24 @@ return {
           default_settings = {
             ["rust-analyzer"] = {
               cachePriming = { numThreads = tonumber(vim.env.CARGO_BUILD_JOBS) },
+              rust = { analyzerTargetDir = "target/nvim-rust-analyzer" },
+              server = {
+                extraEnv = {
+                  CHALK_OVERFLOW_DEPTH = "100000000",
+                  CHALK_SOLVER_MAX_SIZE = "100000000",
+                },
+              },
               cargo = {
                 buildScripts = { enable = false },
-                extraEnv = { CARGO_BUILD_JOBS = vim.env.CARGO_BUILD_JOBS },
+                extraEnv = {
+                  CARGO_BUILD_JOBS = vim.env.CARGO_BUILD_JOBS,
+                  SKIP_WASM_BUILD = "1",
+                },
+                features = "all",
               },
               numThreads = tonumber(vim.env.CARGO_BUILD_JOBS),
               procMacro = { enable = false },
+              rustfmt = { extraArgs = { "+nightly-2024-04-10" } },
             },
           },
         },
