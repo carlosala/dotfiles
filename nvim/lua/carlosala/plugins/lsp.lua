@@ -116,7 +116,7 @@ return {
         },
       }
       require("typescript-tools").setup(config({
-        settings = { expose_as_code_action = { "fix_all", "organize_imports" } },
+        settings = { expose_as_code_action = { "organize_imports" } },
       }))
 
       lsp.eslint.setup(config())
