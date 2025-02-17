@@ -1,6 +1,12 @@
 ---@type LazySpec
 return {
-  "pteroctopus/faster.nvim",
+  {
+
+    "pteroctopus/faster.nvim",
+    opts = {
+      behaviours = { bigfile = { filesize = 1.5 } },
+    },
+  },
   {
     "folke/lazydev.nvim",
     ft = "lua",
