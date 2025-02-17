@@ -110,7 +110,6 @@ return {
               },
               numThreads = tonumber(vim.env.CARGO_BUILD_JOBS),
               procMacro = { enable = false },
-              rustfmt = { extraArgs = { "+nightly-2024-04-10" } },
             },
           },
         },
