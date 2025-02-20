@@ -72,14 +72,14 @@ return {
       local function get_python_path(root_dir)
         -- use active venv
         if vim.env.VIRTUAL_ENV then
-          return lsp.util.path.join(vim.env.VIRTUAL_ENV, "bin", "python")
+          return table.concat({ vim.env.VIRTUAL_ENV, "bin", "python" }, "/")
         end
 
         -- find venv in current dir
         for _, pattern in ipairs({ "*", ".*" }) do
-          local match = vim.fn.glob(lsp.util.path.join(root_dir, pattern, "pyvenv.cfg"))
+          local match = vim.fn.glob(table.concat({ root_dir, pattern, "pyvenv.cfg" }, "/"))
           if match ~= "" then
-            return lsp.util.path.join(vim.fs.dirname(match), "bin", "python")
+            return table.concat({ vim.fs.dirname(match), "bin", "python" }, "/")
           end
         end
 
