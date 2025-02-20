@@ -87,6 +87,7 @@ return {
         return nil
       end
 
+      --- require("rustaceanvim")
       ---@type rustaceanvim.Opts
       vim.g.rustaceanvim = {
         server = {
