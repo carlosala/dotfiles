@@ -39,7 +39,8 @@ return {
         require("cmp_nvim_lsp").default_capabilities()
       )
 
-      --- @param custom_config? lspconfig.Config
+      --- @class (partial) Config.P: lspconfig.Config
+      --- @param  custom_config? Config.P
       --- @param custom_on_attach? vim.lsp.client.on_attach_cb
       --- @return lspconfig.Config
       local function config(custom_config, custom_on_attach)
