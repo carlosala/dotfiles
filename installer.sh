@@ -23,6 +23,7 @@ typeset -a shell_req=(
   dust
   eza
   fd
+  fzf
   git-delta
   hyperfine
   jq
