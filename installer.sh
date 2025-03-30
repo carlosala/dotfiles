@@ -10,7 +10,7 @@ typeset -a needed_req=(
   curl
   git
   go
-  nodejs-lts-iron
+  nodejs-lts-jod
   npm
   python-pip
   rustup
