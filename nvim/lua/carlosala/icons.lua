@@ -47,10 +47,10 @@ M.kinds = {
 }
 
 M.diagnostics = {
-  Error = " ",
-  Warn = " ",
-  Info = " ",
-  Hint = " ",
+  [vim.diagnostic.severity.ERROR] = " ",
+  [vim.diagnostic.severity.WARN] = " ",
+  [vim.diagnostic.severity.INFO] = " ",
+  [vim.diagnostic.severity.HINT] = " ",
 }
 
 M.git = {

@@ -34,9 +34,10 @@ return {
           }
         end
       end
+      local names = { "error", "warn", "info", "hint" }
       local diagSymbols = {}
-      for i, v in pairs(require("carlosala.icons").diagnostics) do
-        diagSymbols[string.lower(i)] = v
+      for i, v in ipairs(require("carlosala.icons").diagnostics) do
+        diagSymbols[names[i]] = v
       end
       require("lualine").setup({
         extensions = { "fugitive", "man", "nvim-tree" },

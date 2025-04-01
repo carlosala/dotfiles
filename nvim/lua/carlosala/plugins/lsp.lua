@@ -26,11 +26,8 @@ return {
       vim.diagnostic.config({
         severity_sort = true,
         update_in_insert = false,
+        signs = { text = require("carlosala.icons").diagnostics },
       })
-      for name, icon in pairs(require("carlosala.icons").diagnostics) do
-        name = "DiagnosticSign" .. name
-        vim.fn.sign_define(name, { text = icon, texthl = name, numhl = "" })
-      end
 
       local lsp = require("lspconfig")
       local default_capabilities = vim.tbl_deep_extend(
