@@ -10,13 +10,11 @@ return {
       "whoissethdaniel/mason-tool-installer.nvim",
       "mrcjkb/rustaceanvim",
       "b0o/schemastore.nvim",
-      "pmizio/typescript-tools.nvim",
     },
     config = function()
       require("mason").setup()
       require("mason-lspconfig").setup({
         automatic_installation = { exclude = { "clangd", "r_language_server" } },
-        ensure_installed = { "ts_ls" },
       })
       require("mason-tool-installer").setup({
         ensure_installed = { "luacheck", "prettier", "stylua", "taplo" },
@@ -29,17 +27,16 @@ return {
         signs = { text = require("carlosala.icons").diagnostics },
       })
 
-      local lsp = require("lspconfig")
       local default_capabilities = vim.tbl_deep_extend(
         "force",
         vim.lsp.protocol.make_client_capabilities(),
         require("cmp_nvim_lsp").default_capabilities()
       )
 
-      --- @class (partial) Config.P: lspconfig.Config
+      --- @class (partial) Config.P: vim.lsp.Config
       --- @param  custom_config? Config.P
       --- @param custom_on_attach? vim.lsp.client.on_attach_cb
-      --- @return lspconfig.Config
+      --- @return vim.lsp.Config
       local function config(custom_config, custom_on_attach)
         return vim.tbl_deep_extend("force", {
           capabilities = vim.deepcopy(default_capabilities),
@@ -51,7 +48,6 @@ return {
             map("n", "gi", "<Cmd>Telescope lsp_implementations<CR>", bufopts)
             map("n", "gy", "<Cmd>Telescope lsp_type_definitions<CR>", bufopts)
             map("n", "gr", "<Cmd>Telescope lsp_references<CR>", bufopts)
-            map("i", "<C-s>", vim.lsp.buf.signature_help, bufopts)
             map("n", "<Leader>rn", vim.lsp.buf.rename, bufopts)
             map("n", "<Leader>ca", function()
               vim.lsp.buf.code_action({ apply = true })
@@ -113,56 +109,76 @@ return {
           },
         },
       }
-      require("typescript-tools").setup(config({
-        settings = { expose_as_code_action = { "organize_imports" } },
-      }))
 
-      lsp.eslint.setup(config())
-      lsp.lua_ls.setup(config())
-      lsp.r_language_server.setup(config())
-      lsp.ruff.setup(config())
+      local function lsp_enable(server, conf)
+        vim.lsp.config(server, conf)
+        vim.lsp.enable(server)
+      end
 
-      lsp.clangd.setup(config({}, function(_, bufnr)
-        vim.keymap.set(
-          "n",
-          "<LocalLeader>ls",
-          "<Cmd>ClangdSwitchSourceHeader<CR>",
-          { noremap = true, silent = true, buffer = bufnr }
-        )
-      end))
-      lsp.jsonls.setup(config({
-        settings = {
-          json = {
-            schemas = require("schemastore").json.schemas(),
-            validate = { enable = true },
+      -- TODO: track eslint config migration
+      require("lspconfig").eslint.setup(config())
+
+      lsp_enable("lua_ls", config())
+      lsp_enable("r_language_server", config())
+      lsp_enable("ruff", config())
+      lsp_enable("ts_ls", config())
+
+      lsp_enable(
+        "clangd",
+        config(nil, function(_, bufnr)
+          vim.keymap.set(
+            "n",
+            "<LocalLeader>ls",
+            "<Cmd>ClangdSwitchSourceHeader<CR>",
+            { noremap = true, silent = true, buffer = bufnr }
+          )
+        end)
+      )
+      lsp_enable(
+        "jsonls",
+        config({
+          settings = {
+            json = {
+              schemas = require("schemastore").json.schemas(),
+              validate = { enable = true },
+            },
           },
-        },
-      }))
-      lsp.pyright.setup(config({
-        before_init = function(_, conf)
-          conf.settings.python.pythonPath = get_python_path(conf.root_dir)
-        end,
-      }))
-      lsp.texlab.setup(config({
-        settings = { texlab = { chktex = { onOpenAndSave = true } } },
-      }, function(client, bufnr)
-        ---@diagnostic disable-next-line: assign-type-mismatch
-        client.server_capabilities.completionProvider = false -- we use `vimtex` completion!
-        vim.keymap.set(
-          "n",
-          "<LocalLeader>lw",
-          "<Cmd>w<CR><Cmd>TexWordCount<CR>",
-          { noremap = true, silent = true, buffer = bufnr }
-        )
-      end))
-      lsp.yamlls.setup(config({
-        settings = {
-          yaml = {
-            schemaStore = { enable = false, url = "" },
-            schemas = require("schemastore").yaml.schemas(),
+        })
+      )
+      lsp_enable(
+        "pyright",
+        config({
+          before_init = function(_, conf)
+            conf.settings.python.pythonPath = get_python_path(conf.root_dir)
+          end,
+        })
+      )
+      lsp_enable(
+        "texlab",
+        config({
+          settings = { texlab = { chktex = { onOpenAndSave = true } } },
+        }, function(client, bufnr)
+          ---@diagnostic disable-next-line: assign-type-mismatch
+          client.server_capabilities.completionProvider = false -- we use `vimtex` completion!
+          vim.keymap.set(
+            "n",
+            "<LocalLeader>lw",
+            "<Cmd>w<CR><Cmd>TexWordCount<CR>",
+            { noremap = true, silent = true, buffer = bufnr }
+          )
+        end)
+      )
+      lsp_enable(
+        "yamlls",
+        config({
+          settings = {
+            yaml = {
+              schemaStore = { enable = false, url = "" },
+              schemas = require("schemastore").yaml.schemas(),
+            },
           },
-        },
-      }))
+        })
+      )
     end,
   },
 }
