@@ -96,7 +96,6 @@ return {
                 },
               },
               cargo = {
-                buildScripts = { enable = false },
                 extraEnv = {
                   CARGO_BUILD_JOBS = vim.env.CARGO_BUILD_JOBS,
                   SKIP_WASM_BUILD = "1",
@@ -104,7 +103,14 @@ return {
                 features = "all",
               },
               numThreads = tonumber(vim.env.CARGO_BUILD_JOBS),
-              procMacro = { enable = false },
+              procMacro = {
+                ignored = {
+                  ["async-trait"] = { "async_trait" },
+                  ["napi-derive"] = { "napi" },
+                  ["async-recursion"] = { "async_recursion" },
+                  ["async-std"] = { "async_std" },
+                },
+              },
             },
           },
         },
