@@ -22,6 +22,7 @@ return {
       require("mason-tool-installer").check_install(false) -- false stands for not updating, only installing
 
       vim.diagnostic.config({
+        virtual_text = true,
         severity_sort = true,
         update_in_insert = false,
         signs = { text = require("carlosala.icons").diagnostics },
