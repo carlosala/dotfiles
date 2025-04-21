@@ -122,9 +122,7 @@ return {
         vim.lsp.enable(server)
       end
 
-      -- TODO: track eslint config migration
-      require("lspconfig").eslint.setup(config())
-
+      lsp_enable("eslint", config())
       lsp_enable("lua_ls", config())
       lsp_enable("r_language_server", config())
       lsp_enable("ruff", config())
