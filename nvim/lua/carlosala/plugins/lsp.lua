@@ -6,18 +6,33 @@ return {
     dependencies = {
       "hrsh7th/cmp-nvim-lsp",
       "williamboman/mason.nvim",
-      "williamboman/mason-lspconfig.nvim",
       "whoissethdaniel/mason-tool-installer.nvim",
       "mrcjkb/rustaceanvim",
       "b0o/schemastore.nvim",
     },
     config = function()
       require("mason").setup()
-      require("mason-lspconfig").setup({
-        automatic_installation = { exclude = { "clangd", "r_language_server" } },
-      })
       require("mason-tool-installer").setup({
-        ensure_installed = { "luacheck", "prettier", "stylua", "taplo" },
+        run_on_start = false,
+        ensure_installed = {
+          -- lsp
+          "eslint-lsp",
+          "json-lsp",
+          "lua-language-server",
+          "pyright",
+          "ruff",
+          "texlab",
+          "typescript-language-server",
+          "yaml-language-server",
+
+          -- formatters
+          "prettier",
+          "stylua",
+          "taplo",
+
+          -- linters
+          "luacheck",
+        },
       })
       require("mason-tool-installer").check_install(false) -- false stands for not updating, only installing
 
