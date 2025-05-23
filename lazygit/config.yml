@@ -11,7 +11,8 @@ gui:
 git:
   autoFetch: false
   branchLogCmd: git log --graph --format='%C(auto)%h%d %s %C(dim)<%an> %C(green)%cr' {{branchName}}
-  allBranchesLogCmd: git log --all --graph --format='%C(auto)%h%d %s %C(dim)<%an> %C(green)%cr'
+  allBranchesLogCmds:
+    - git log --all --graph --format='%C(auto)%h%d %s %C(dim)<%an> %C(green)%cr'
   overrideGpg: true
   paging:
     colorArg: always
