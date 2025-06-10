@@ -2,9 +2,9 @@
 return {
   {
     "nvim-treesitter/nvim-treesitter",
+    branch = "main",
     build = ":TSUpdate",
-    cmd = "TSUpdate",
-    event = { "BufReadPre", "BufNewFile", "VeryLazy" },
+    lazy = false,
     dependencies = {
       "nvim-treesitter/nvim-treesitter-context",
     },
@@ -21,19 +21,28 @@ return {
         "vim",
         "vimdoc",
       }
-      require("nvim-treesitter.configs").setup({
-        auto_install = true,
-        ensure_installed = ensure_installed,
-        highlight = { enable = true, disable = { "latex" } },
-        ignore_install = { "latex" },
-        incremental_selection = { enable = true },
-        indent = { enable = true },
+      local ignored_langs = { "latex" }
+
+      require("nvim-treesitter").install(ensure_installed)
+
+      vim.api.nvim_create_autocmd("FileType", {
+        group = vim.api.nvim_create_augroup("UserTreesitter", {}),
+        callback = function()
+          local ft = vim.treesitter.language.get_lang(vim.bo.filetype) or vim.bo.filetype
+          for _, v in ipairs(ignored_langs) do
+            if ft == v then
+              return
+            end
+          end
+          require("nvim-treesitter").install(ft):await(function()
+            if pcall(vim.treesitter.start) then
+              vim.wo.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+              vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+            end
+          end)
+        end,
       })
       require("treesitter-context").setup({ max_lines = 10, multiline_threshold = 4 })
-
-      vim.opt.foldmethod = "expr"
-      vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
-      vim.opt.foldenable = false
 
       -- register jsonc and mdx
       vim.filetype.add({ extension = { mdx = "mdx" } })
