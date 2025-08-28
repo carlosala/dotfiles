@@ -32,7 +32,7 @@
   diffFilter = delta --color-only --features=interactive
 
 [merge]
-  conflictStyle = diff3
+  conflictStyle = zdiff3
 
 [rebase]
   autoStash = true
