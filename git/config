@@ -42,6 +42,7 @@
 
 [push]
   autoSetupRemote = true
+  default = upstream
 
 [submodule]
   fetchJobs = 0
