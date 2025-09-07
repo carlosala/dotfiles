@@ -12,7 +12,7 @@ return {
     config = function()
       local telescope = require("telescope")
       telescope.setup({
-        defaults = { file_ignore_patterns = { ".git/" } },
+        defaults = { file_ignore_patterns = { "/?%.git/" } },
         pickers = {
           find_files = { hidden = true },
           grep_string = { additional_args = { "--hidden" }, disable_coordinates = true },
