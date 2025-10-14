@@ -10,9 +10,9 @@ gui:
       - yellow
 git:
   autoFetch: false
-  branchLogCmd: git log --graph --format='%C(auto)%h%d %s %C(dim)<%an> %C(green)%cr' {{branchName}}
+  branchLogCmd: git log --color=always --graph --format='%C(auto)%h%d %s %C(dim)<%an> %C(green)%cr' {{branchName}}
   allBranchesLogCmds:
-    - git log --all --graph --format='%C(auto)%h%d %s %C(dim)<%an> %C(green)%cr'
+    - git log --color=always --all --graph --format='%C(auto)%h%d %s %C(dim)<%an> %C(green)%cr'
   overrideGpg: true
   paging:
     colorArg: always
