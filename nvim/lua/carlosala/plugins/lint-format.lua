@@ -17,6 +17,7 @@ return {
           jsonc = { require("formatter.filetypes.json").prettier },
           lua = { require("formatter.filetypes.lua").stylua },
           markdown = { require("formatter.filetypes.markdown").prettier },
+          mdx = { require("formatter.filetypes.markdown").prettier },
           python = { require("formatter.filetypes.python").ruff },
           rust = { require("formatter.filetypes.rust").rustfmt },
           toml = { require("formatter.filetypes.toml").taplo },
