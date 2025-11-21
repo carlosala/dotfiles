@@ -22,6 +22,7 @@ return {
           "pyright",
           "ruff",
           "svelte-language-server",
+          "tailwindcss-language-server",
           "texlab",
           "typescript-language-server",
           "yaml-language-server",
@@ -143,6 +144,7 @@ return {
       lsp_enable("r_language_server", config())
       lsp_enable("ruff", config())
       lsp_enable("svelte", config())
+      lsp_enable("tailwindcss", config())
       lsp_enable("ts_ls", config())
 
       lsp_enable(
