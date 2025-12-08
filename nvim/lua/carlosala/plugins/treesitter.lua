@@ -44,10 +44,9 @@ return {
       })
       require("treesitter-context").setup({ max_lines = 10, multiline_threshold = 4 })
 
-      -- register jsonc and mdx
+      -- register mdx
       vim.filetype.add({ extension = { mdx = "mdx" } })
       vim.treesitter.language.register("markdown", "mdx")
-      vim.treesitter.language.register("jsonc", "json")
     end,
   },
 }
