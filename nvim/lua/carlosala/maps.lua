@@ -38,9 +38,9 @@ map({ "n", "v" }, "<Leader>b", ":Format<CR>", silent)
 map("n", "<Leader>vd", "<Cmd>Gvdiffsplit!<CR>", silent)
 map("n", "<Leader>o", "<Cmd>NoiceDismiss<CR>", silent)
 
--- telescope
-map("n", "<Leader>ff", "<Cmd>Telescope find_files<CR>", silent)
-map("n", "<Leader>fg", "<Cmd>Telescope git_files<CR>", silent)
-map("n", "<Leader>fs", '<Cmd>Telescope grep_string search=""<CR>', silent)
-map("n", "<Leader>fh", "<Cmd>Telescope help_tags<CR>", silent)
-map("n", "<Leader>fo", "<Cmd>Telescope buffers<CR>", silent)
+-- fzf
+map("n", "<Leader>ff", "<Cmd>FzfLua global<CR>", silent)
+map("n", "<Leader>fg", "<Cmd>FzfLua git_files<CR>", silent)
+map("n", "<Leader>fs", '<Cmd>FzfLua grep search=""<CR>', silent)
+map("n", "<Leader>fh", "<Cmd>FzfLua helptags<CR>", silent)
+map("n", "<Leader>fo", "<Cmd>FzfLua buffers<CR>", silent)

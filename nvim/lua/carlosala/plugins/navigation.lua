@@ -1,26 +1,24 @@
 ---@type LazySpec
 return {
   {
-    "nvim-telescope/telescope.nvim",
-    cmd = "Telescope",
+    "ibhagwan/fzf-lua",
+    cmd = "FzfLua",
     event = "VeryLazy",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
-      "nvim-telescope/telescope-ui-select.nvim",
-    },
+    dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function()
-      local telescope = require("telescope")
-      telescope.setup({
-        defaults = { file_ignore_patterns = { "/?%.git/", "%.min.js" } },
-        pickers = {
-          find_files = { hidden = true },
-          grep_string = { additional_args = { "--hidden" }, disable_coordinates = true },
+      require("fzf-lua").setup({
+        "border-fused",
+        winopts = {
+          backdrop = false,
+          treesitter = { enabled = false },
         },
-        extensions = { ["ui-select"] = { require("telescope.themes").get_dropdown() } },
+        grep = {
+          multiprocess = true,
+          rg_opts = "--column --line-number --no-heading --color=never --smart-case --max-columns=4096 -e",
+          _headers = { "cwd" },
+        },
       })
-      telescope.load_extension("fzf")
-      telescope.load_extension("ui-select")
+      require("fzf-lua").register_ui_select()
     end,
   },
   {

@@ -55,16 +55,14 @@ return {
       local function common_on_attach(_, bufnr)
         local bufopts = { noremap = true, silent = true, buffer = bufnr }
         local map = vim.keymap.set
-        map("n", "gd", "<Cmd>Telescope lsp_definitions<CR>", bufopts)
-        map("n", "gi", "<Cmd>Telescope lsp_implementations<CR>", bufopts)
-        map("n", "gy", "<Cmd>Telescope lsp_type_definitions<CR>", bufopts)
-        map("n", "gr", "<Cmd>Telescope lsp_references<CR>", bufopts)
+        map("n", "gd", "<Cmd>FzfLua lsp_definitions<CR>", bufopts)
+        map("n", "gi", "<Cmd>FzfLua lsp_implementations<CR>", bufopts)
+        map("n", "gy", "<Cmd>FzfLua lsp_typedefs<CR>", bufopts)
+        map("n", "gr", "<Cmd>FzfLua lsp_references<CR>", bufopts)
         map("n", "<Leader>rn", vim.lsp.buf.rename, bufopts)
         map("n", "<Leader>ca", function()
           vim.lsp.buf.code_action({ apply = true })
         end, bufopts)
-        map("n", "<Leader>sd", "<Cmd>Telescope lsp_document_symbols<CR>", bufopts)
-        map("n", "<Leader>sw", "<Cmd>Telescope lsp_dynamic_workspace_symbols<CR>", bufopts)
       end
 
       --- @class (partial) Config.P: vim.lsp.Config
