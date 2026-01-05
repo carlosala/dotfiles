@@ -21,22 +21,27 @@ return {
         "vim",
         "vimdoc",
       }
-      local ignored_langs = { "latex" }
-
       require("nvim-treesitter").install(ensure_installed)
+
+      local ignored_langs = { latex = true }
+      local all_langs = {}
+
+      for k in pairs(require("nvim-treesitter.parsers")) do
+        all_langs[k] = true
+      end
 
       vim.api.nvim_create_autocmd("FileType", {
         group = vim.api.nvim_create_augroup("UserTreesitter", {}),
         callback = function()
           local ft = vim.treesitter.language.get_lang(vim.bo.filetype) or vim.bo.filetype
-          for _, v in ipairs(ignored_langs) do
-            if ft == v then
-              return
-            end
+          if not all_langs[ft] or ignored_langs[ft] then
+            return
           end
           require("nvim-treesitter").install(ft):await(function()
             if pcall(vim.treesitter.start) then
-              vim.wo.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+              vim.wo[0][0].foldexpr = "v:lua.vim.treesitter.foldexpr()"
+              vim.wo[0][0].foldmethod = "expr"
+              vim.wo[0][0].foldenable = false
               vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
             end
           end)
