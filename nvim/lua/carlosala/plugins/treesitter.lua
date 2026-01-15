@@ -39,10 +39,14 @@ return {
           end
           require("nvim-treesitter").install(ft):await(function()
             if pcall(vim.treesitter.start) then
+              vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+              -- this means we are in `vim-fugitive` situation
+              if vim.wo[0][0].foldmethod == "diff" then
+                return
+              end
               vim.wo[0][0].foldexpr = "v:lua.vim.treesitter.foldexpr()"
               vim.wo[0][0].foldmethod = "expr"
               vim.wo[0][0].foldenable = false
-              vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
             end
           end)
         end,
