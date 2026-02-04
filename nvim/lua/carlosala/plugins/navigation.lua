@@ -13,10 +13,12 @@ return {
           treesitter = { enabled = false },
         },
         grep = {
+          hidden = true,
           multiprocess = true,
-          rg_opts = "--column --line-number --no-heading --color=never --smart-case --max-columns=4096 -e",
+          rg_opts = '-g "!.git/" --column --line-number --no-heading --color=never --smart-case --max-columns=4096 -e',
           _headers = { "cwd" },
         },
+        lsp = { async_or_timeout = true },
       })
       require("fzf-lua").register_ui_select()
     end,
