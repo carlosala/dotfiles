@@ -32,7 +32,7 @@ return {
         git = { ignore = false },
         view = { width = 40 },
         on_attach = function(bufnr)
-          require("nvim-tree.api").config.mappings.default_on_attach(bufnr)
+          require("nvim-tree.api").map.on_attach.default(bufnr)
           vim.keymap.del("n", "<C-k>", { buffer = bufnr })
         end,
       })
