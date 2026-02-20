@@ -8,6 +8,14 @@ return {
     config = function()
       require("fzf-lua").setup({
         "border-fused",
+        ---@diagnostic disable-next-line: missing-fields
+        previewers = {
+          builtin = {
+            title_fnamemodify = function(path)
+              return require("fzf-lua.path").relative_to(path, require("fzf-lua.utils").cwd())
+            end,
+          },
+        },
         winopts = {
           backdrop = false,
           treesitter = { enabled = false },
