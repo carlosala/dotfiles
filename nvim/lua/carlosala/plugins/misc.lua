@@ -23,13 +23,6 @@ return {
     ft = "markdown",
   },
   {
-    "jalvesaq/nvim-r",
-    ft = "r",
-    init = function()
-      vim.g.R_assign = 2
-    end,
-  },
-  {
     "joosepalviste/nvim-ts-context-commentstring",
     event = "VeryLazy",
     config = function()
