@@ -62,16 +62,12 @@ return {
   },
   {
     "folke/todo-comments.nvim",
-    dependencies = { "nvim-lua/plenary.nvim" },
     event = "VeryLazy",
-    opts = {
-      highlight = { pattern = [[.*<(KEYWORDS)\s*]] },
-      search = { pattern = [[\b(KEYWORDS)\b]] },
-    },
+    dependencies = { "nvim-lua/plenary.nvim" },
+    config = true,
   },
   {
     "knubie/vim-kitty-navigator",
-    build = "cp *.py ~/.config/kitty",
     event = "VeryLazy",
     init = function()
       vim.g.kitty_navigator_no_mappings = 1
