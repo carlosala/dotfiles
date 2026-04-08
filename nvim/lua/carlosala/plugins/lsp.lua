@@ -16,6 +16,7 @@ return {
         run_on_start = false,
         ensure_installed = {
           -- lsp
+          "astro-language-server",
           "eslint-lsp",
           "json-lsp",
           "lua-language-server",
@@ -150,6 +151,7 @@ return {
         },
       }
 
+      lsp_enable("astro")
       lsp_enable("eslint")
       lsp_enable("lua_ls")
       lsp_enable("r_language_server")

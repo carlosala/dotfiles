@@ -8,6 +8,7 @@ return {
       require("formatter").setup({
         log_level = vim.log.levels.INFO,
         filetype = {
+          astro = { require("formatter.filetypes.javascript").prettier },
           c = { require("formatter.filetypes.c").clangformat },
           cpp = { require("formatter.filetypes.cpp").clangformat },
           css = { require("formatter.filetypes.css").prettier },
