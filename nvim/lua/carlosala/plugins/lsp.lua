@@ -34,7 +34,6 @@ return {
           "taplo",
 
           -- linters
-          "luacheck",
         },
       })
       require("mason-tool-installer").check_install(false) -- false stands for not updating, only installing

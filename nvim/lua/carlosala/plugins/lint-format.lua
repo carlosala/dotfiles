@@ -68,7 +68,6 @@ return {
       require("lint").linters_by_ft = {
         c = { "clangtidy" },
         cpp = { "clangtidy" },
-        lua = { "luacheck" },
       }
       vim.api.nvim_create_autocmd({ "BufWritePost" }, {
         callback = function()
