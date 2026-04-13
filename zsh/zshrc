@@ -42,3 +42,11 @@ alias sage="sage --notebook=jupyter"
 alias torrentrackers="curl -s https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_best_ip.txt | clipcopy"
 alias ygul="yarn global upgrade --latest"
 alias yupl="yarn upgrade --latest"
+
+### KITTY STUFF
+if [[ -z "$KITTY_SHELL_INTEGRATION" ]] && [[ -n "$KITTY_INSTALLATION_DIR" ]]; then
+  export KITTY_SHELL_INTEGRATION="enabled"
+  autoload -Uz -- "$KITTY_INSTALLATION_DIR"/shell-integration/zsh/kitty-integration
+  kitty-integration
+  unfunction kitty-integration
+fi
