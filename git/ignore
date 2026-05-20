@@ -3,6 +3,5 @@ compile_commands*.json
 .venv
 __pycache__
 .idea
-.codex
 
 .carlorc
