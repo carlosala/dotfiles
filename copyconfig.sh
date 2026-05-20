@@ -12,6 +12,7 @@ cp -r $DIR/lazydocker ~/.config
 cp -r $DIR/lazygit ~/.config
 cp -r $DIR/nvim ~/.config
 cp -r $DIR/vale/vale.ini ~/.vale.ini
+cp -r $DIR/yay ~/.config
 cp -r $DIR/zathura ~/.config
 cp $DIR/zsh/zshenv ~/.zshenv
 cp $DIR/zsh/zshrc ~/.zshrc

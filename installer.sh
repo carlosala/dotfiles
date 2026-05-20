@@ -56,9 +56,11 @@ typeset -a nvim_req=(
   xdotool
 )
 
+local pacman=yay
+
 # needed stuff
-if ! check_req zsh paru; then
-  echo "Make sure you have zsh and paru installed!"
+if ! check_req zsh $pacman; then
+  echo "Make sure you have zsh and $pacman installed!"
   return 1
 fi
 
@@ -68,18 +70,18 @@ if [[ ! $SHELL =~ zsh$ ]]; then
   chsh -s /bin/zsh
 fi
 
-# setup paru and upgrade all packages
-paru --gendb
-paru -Syyuu
+# setup yay and upgrade all packages
+$pacman -Y --gendb
+$pacman -Syyuu
 
 # important stuff
-paru -S --noconfirm --needed "${needed_req[@]}"
+$pacman -S --noconfirm --needed "${needed_req[@]}"
 
 # shell requirements
-paru -S --noconfirm --needed "${shell_req[@]}"
+$pacman -S --noconfirm --needed "${shell_req[@]}"
 
 # neovim requirements
-paru -S --noconfirm --needed "${nvim_req[@]}"
+$pacman -S --noconfirm --needed "${nvim_req[@]}"
 yarn global add neovim
 
 # install ohmyzsh
