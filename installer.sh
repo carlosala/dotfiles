@@ -50,10 +50,16 @@ typeset -a nvim_req=(
   neovim
   python-pynvim
   ripgrep
+  texlive
   tree-sitter
   tree-sitter-cli
   xclip
   xdotool
+)
+
+typeset -a opt_req=(
+  perl-file-homedir
+  perl-yaml-tiny
 )
 
 local pacman=yay
@@ -82,6 +88,9 @@ $pacman -S --noconfirm --needed "${shell_req[@]}"
 
 # neovim requirements
 $pacman -S --noconfirm --needed "${nvim_req[@]}"
+
+# optional dependencies, with asdeps
+$pacman -S --noconfirm --needed --asdeps "${opt_req[@]}"
 yarn global add neovim
 
 # install ohmyzsh
