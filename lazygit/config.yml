@@ -14,9 +14,9 @@ git:
   allBranchesLogCmds:
     - git log --color=always --all --graph --format='%C(auto)%h%d %s %C(dim)<%an> %C(green)%cr'
   overrideGpg: true
-  pagers:
+  diffRenderers:
     - colorArg: always
-      pager: DELTA_FEATURES=+lazygit delta --dark --paging=never
+      command: DELTA_FEATURES=+lazygit delta --dark --paging=never
 notARepository: quit
 promptToReturnFromSubprocess: false
 keybinding:
