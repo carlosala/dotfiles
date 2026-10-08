@@ -3,6 +3,8 @@ gui:
   theme:
     selectedLineBgColor:
       - default
+    inactiveViewSelectedLineBgColor:
+      - default
     cherryPickedCommitBgColor:
       - default
       - underline
@@ -21,5 +23,5 @@ notARepository: quit
 promptToReturnFromSubprocess: false
 keybinding:
   commits:
-    moveDownCommit: <c-d>
-    moveUpCommit: <c-u>
+    moveDownCommit: <alt+j>
+    moveUpCommit: <alt+k>
